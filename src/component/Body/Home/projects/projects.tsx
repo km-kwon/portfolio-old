@@ -39,6 +39,10 @@ const ProjectsSection: React.FC = () => {
     null
   );
 
+  // 터치 스크롤을 위한 상태
+  const touchStartX = React.useRef<number>(0);
+  const touchEndX = React.useRef<number>(0);
+
   // 🎠 자동 슬라이드: 3초마다 다음 카드로 이동
   useEffect(() => {
     if (isPaused || activeId) return; // 일시정지 중이거나 모달 열려있으면 중지
@@ -145,6 +149,38 @@ const ProjectsSection: React.FC = () => {
   const baseSpread = getBaseSpread();
   const middle = (projects.length - 1) / 2;
 
+  // 터치 이벤트 핸들러
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const diff = touchStartX.current - touchEndX.current;
+    const threshold = 50; // 최소 스와이프 거리
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        // 왼쪽으로 스와이프 -> 다음
+        setFocusedIndex((prev) => (prev + 1) % projects.length);
+      } else {
+        // 오른쪽으로 스와이프 -> 이전
+        setFocusedIndex(
+          (prev) => (prev - 1 + projects.length) % projects.length
+        );
+      }
+    }
+
+    // 초기화
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
   return (
     <>
       <section id="projects" className="mb-16">
@@ -167,7 +203,12 @@ const ProjectsSection: React.FC = () => {
             onMouseLeave={() => setIsPaused(false)}
           >
             {/* 카드 슬라이더 */}
-            <div className="w-full overflow-hidden">
+            <div
+              className="w-full overflow-hidden"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               <div
                 className="flex w-full transition-transform duration-700 ease-[cubic-bezier(0.22,0.61,0.36,1)] will-change-transform"
                 style={{
@@ -181,13 +222,13 @@ const ProjectsSection: React.FC = () => {
                   >
                     <article
                       data-project-id={project.id}
-                      className="w-full max-w-3xl rounded-2xl bg-(--bg-elevated) shadow-[0_16px_36px_rgba(0,0,0,0.55)] [html[data-theme='light']_&]:shadow-[0_10px_24px_rgba(0,0,0,0.12)] border border-(--border-subtle) cursor-pointer overflow-hidden"
+                      className="w-full max-w-3xl min-h-[320px] flex flex-col rounded-2xl bg-(--bg-elevated) shadow-[0_16px_36px_rgba(0,0,0,0.55)] [html[data-theme='light']_&]:shadow-[0_10px_24px_rgba(0,0,0,0.12)] border border-(--border-subtle) cursor-pointer overflow-hidden"
                       onClick={(e) =>
                         openModal(project.id, e.currentTarget as HTMLElement)
                       }
                     >
                       {project.banner && (
-                        <div className="relative w-full h-32 overflow-hidden">
+                        <div className="relative w-full h-32 shrink-0 overflow-hidden">
                           <img
                             src={project.banner}
                             alt=""
@@ -197,23 +238,26 @@ const ProjectsSection: React.FC = () => {
                         </div>
                       )}
 
-                      <div className="relative z-10 p-4 text-[13px] text-fg-muted leading-[1.6]">
-                        <h3 className="mb-1.5 text-fg text-[15px] font-semibold tracking-[0.02em]">
-                          {project.title}
-                        </h3>
+                      <div className="relative flex flex-col flex-1 justify-between z-10 p-4 text-[13px] text-fg-muted leading-[1.6]">
+                        <div>
+                          <h3 className="mb-1.5 text-fg text-[15px] font-semibold tracking-[0.02em]">
+                            {project.title}
+                          </h3>
 
-                        <p className="text-[12px] mb-2.5 line-clamp-2 text-fg opacity-100">
-                          {project.summary}
-                        </p>
+                          <p className="text-[12px] mb-2.5 line-clamp-2 text-fg opacity-100">
+                            {project.summary}
+                          </p>
 
-                        <div className="flex flex-wrap gap-1.5 mb-2.5">
-                          {project.tags.slice(0, 6).map((t: string) => (
-                            <span key={t} className={pillClass}>
-                              {t}
-                            </span>
-                          ))}
+                          <div className="flex flex-wrap gap-1.5">
+                            {project.tags.slice(0, 6).map((t: string) => (
+                              <span key={t} className={pillClass}>
+                                {t}
+                              </span>
+                            ))}
+                          </div>
                         </div>
-                        <div className="flex gap-3 text-[11px] mt-1">
+
+                        <div className="flex gap-3 text-[11px]  mt-3">
                           {project.links.map((link) => (
                             <a
                               key={link.label}

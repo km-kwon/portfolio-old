@@ -3,7 +3,7 @@ import type { Activity } from "../../types";
 export const studentCouncilActivity: Activity = {
   id: "cyber-security-student-council-director",
   title: "사이버보안학과 학생회 (집행국장)",
-  subTitle: "학과 주요 행사 및 학습 커뮤니티 운영 기획 총괄",
+  subTitle: "사이버보안학과 학생회",
   period: ["2022.09", "2023.12"],
 
   mainContent: [

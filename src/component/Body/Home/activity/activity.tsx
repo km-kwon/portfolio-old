@@ -30,6 +30,10 @@ const ActivitySection: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // 터치 스크롤을 위한 상태
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
+
   const totalItems = activities.length;
 
   // 반응형: 모바일 여부
@@ -96,6 +100,36 @@ const ActivitySection: React.FC = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [goToNext, goToPrev]);
 
+  // 터치 이벤트 핸들러
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const diff = touchStartX.current - touchEndX.current;
+    const threshold = 50; // 최소 스와이프 거리
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        // 왼쪽으로 스와이프 -> 다음
+        goToNext();
+      } else {
+        // 오른쪽으로 스와이프 -> 이전
+        goToPrev();
+      }
+    }
+
+    // 초기화
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
   return (
     <section id="activity" className="mb-16">
       {/* 섹션 헤더 */}
@@ -115,7 +149,13 @@ const ActivitySection: React.FC = () => {
           onMouseLeave={() => setIsHovering(false)}
         >
           {/* 카드 슬라이더 */}
-          <div ref={carouselRef} className="w-full overflow-hidden">
+          <div
+            ref={carouselRef}
+            className="w-full overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div
               className="
                 flex w-full

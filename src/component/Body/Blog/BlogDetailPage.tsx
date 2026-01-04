@@ -82,7 +82,7 @@ const TocSidebar: React.FC<{
   if (!toc.length) return null;
 
   return (
-    <aside className="fixed left-[calc(50%+780px/2+48px)] top-[calc(var(--header-height)+48px)] hidden xl:block w-56 2xl:w-64 h-[calc(100vh-var(--header-height)-96px)] overflow-y-auto overflow-x-hidden">
+    <aside className="fixed left-[calc(50%+870px/2+48px)] top-[calc(var(--header-height)+48px)] hidden xl:block w-56 2xl:w-64 h-[calc(100vh-var(--header-height)-96px)] overflow-y-auto overflow-x-hidden">
       <div className="border-l border-(--border-subtle) pl-4 pr-2">
         <nav aria-label="Table of contents">
           <ul className="space-y-2">
@@ -141,8 +141,9 @@ const CircleIcon: React.FC<{ dir: "left" | "right" }> = ({ dir }) => (
   <span
     className={[
       "shrink-0 w-11 h-11 rounded-full flex items-center justify-center",
-      "border border-(--accent)/70 text-(--accent)",
-      "bg-transparent group-hover:bg-(--accent)/10",
+      // ✅ 아이콘 테두리/색 green-400 로 변경
+      "border border-green-400 text-green-400",
+      "bg-transparent group-hover:bg-green-400/10",
       "transition-colors duration-200",
     ].join(" ")}
   >
@@ -208,44 +209,64 @@ const PostNavigation: React.FC<{
     <nav className="mt-16 pt-8 border-t border-(--border-subtle)">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* 이전 포스트 */}
-        <div className="md:col-span-1">
+        <div className="md:col-span-1 h-[88px]">
           {prevPost ? (
             <CardShell align="left" onClick={() => onNavigate(prevPost.slug)}>
-              <div className="flex items-center justify-between gap-4">
-                <div>
+              <div className="flex items-center justify-between gap-4 h-full">
+                <CircleIcon dir="left" />
+
+                <div className="min-w-0">
                   <div className="text-[12px] font-semibold text-fg-muted mb-1">
                     이전 포스트
                   </div>
-                  <h3 className="text-[18px] font-bold text-(--fg-base) truncate">
+
+                  {/* 🔥 두 줄까지 줄바꿈 + 고정 높이 */}
+                  <h3
+                    className="
+                      text-[18px] font-bold text-(--fg-base)
+                      whitespace-normal break-words
+                      line-clamp-2 overflow-hidden
+                      max-h-[48px]
+                    "
+                  >
                     {prevPost.title}
                   </h3>
                 </div>
-                <CircleIcon dir="left" />
               </div>
             </CardShell>
           ) : (
-            <div className="w-full h-[88px] md:h-full" />
+            <div className="w-full h-full" />
           )}
         </div>
 
         {/* 다음 포스트 */}
-        <div className="md:col-span-1">
+        <div className="md:col-span-1 h-[88px]">
           {nextPost ? (
             <CardShell align="right" onClick={() => onNavigate(nextPost.slug)}>
-              <div className="flex items-center justify-between gap-4">
-                <CircleIcon dir="right" />
-                <div className="min-w-0">
+              <div className="flex items-center justify-between gap-4 h-full">
+                <div className="min-w-0 text-right">
                   <div className="text-[12px] font-semibold text-fg-muted mb-1">
                     다음 포스트
                   </div>
-                  <h3 className="text-[18px] font-bold text-(--fg-base) truncate">
+
+                  {/* 🔥 동일하게 두 줄까지 제한 */}
+                  <h3
+                    className="
+                      text-[18px] font-bold text-(--fg-base)
+                      whitespace-normal break-words
+                      line-clamp-2 overflow-hidden
+                      max-h-[48px]
+                    "
+                  >
                     {nextPost.title}
                   </h3>
                 </div>
+
+                <CircleIcon dir="right" />
               </div>
             </CardShell>
           ) : (
-            <div className="w-full h-[88px] md:h-full" />
+            <div className="w-full h-full" />
           )}
         </div>
       </div>
@@ -476,7 +497,7 @@ const BlogDetailPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-(--bg-base) text-(--fg-base) overflow-x-hidden">
-      <div className="mx-auto max-w-[780px] px-5 md:px-8 pt-[calc(var(--header-height)+48px)] pb-16">
+      <div className="mx-auto max-w-[870px] px-5 md:px-8 pt-[calc(var(--header-height)+48px)] pb-16">
         <article className="w-full">
           <button
             onClick={() => navigate("/blog")}
@@ -508,7 +529,7 @@ const BlogDetailPage: React.FC = () => {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-fg-muted"
+                    className="text-[13px] text-green-300 px-2.5 py-1.5 rounded-full  border border-(--border-subtle) text-fg-muted"
                   >
                     {tag}
                   </span>
