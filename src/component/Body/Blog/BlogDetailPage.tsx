@@ -226,7 +226,6 @@ const PostNavigation: React.FC<{
                       text-[18px] font-bold text-(--fg-base)
                       whitespace-normal break-words
                       line-clamp-2 overflow-hidden
-                      max-h-[48px]
                     "
                   >
                     {prevPost.title}
@@ -255,7 +254,6 @@ const PostNavigation: React.FC<{
                       text-[18px] font-bold text-(--fg-base)
                       whitespace-normal break-words
                       line-clamp-2 overflow-hidden
-                      max-h-[48px]
                     "
                   >
                     {nextPost.title}

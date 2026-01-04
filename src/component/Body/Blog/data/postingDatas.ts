@@ -17,7 +17,7 @@ export const MOCK_ALL_POSTS: Post[] = [
   {
     id: "react-zustand-closure",
     slug: "react-zustand-closure-stale-closure",
-    title: "📌 React × Zustand × Closure: stale closure 방지 전략 기술 정리",
+    title: "React × Zustand × Closure: stale closure 방지 전략 기술 정리",
     excerpt:
       "Zustand 쓰다가 '아니 왜 값이 안 바뀌지?' 하고 3시간 멍때린 적 있나요? 저도요. 결국 범인은 stale closure였습니다… 진짜 황당해서 정리해둔 글입니다. 나처럼 고통받지 말라고.",
     date: "2024-12-15",
