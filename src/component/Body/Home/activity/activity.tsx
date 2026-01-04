@@ -16,7 +16,7 @@ const activities: Activity[] = Object.values(modules).map((m: any) => {
 
 // 스타일 토큰
 const sectionHeaderBase =
-  "flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-8";
+  "flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-3";
 
 const labelClass = "text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3";
 const sectionTitleClass = "text-[20px] font-semibold tracking-[0.02em]";
@@ -131,7 +131,7 @@ const ActivitySection: React.FC = () => {
   };
 
   return (
-    <section id="activity" className="mb-16">
+    <section id="activity" className="mb-13">
       {/* 섹션 헤더 */}
       <div className={sectionHeaderBase}>
         <div>

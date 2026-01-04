@@ -57,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 h-(--header-height) z-20 border-b border-white/5 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 h-(--header-height) z-20 border-b backdrop-blur-xl [html[data-theme='dark']_&]:border-white/5 [html[data-theme='light']_&]:border-black/5">
         <div className="max-w-[1040px] mx-auto h-full px-5 flex items-center justify-between gap-3">
           {/* LEFT */}
           <Link
