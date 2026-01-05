@@ -194,7 +194,7 @@ const CardShell: React.FC<{
       <span className="absolute inset-0 bg-gradient-to-r from-(--accent)/0 via-(--accent)/10 to-(--accent)/0" />
     </span>
 
-    <div className="relative p-6">{children}</div>
+    <div className="relative p-6 cursor-pointer">{children}</div>
   </button>
 );
 
@@ -224,8 +224,7 @@ const PostNavigation: React.FC<{
                   <h3
                     className="
                       text-[18px] font-bold text-(--fg-base)
-                      whitespace-normal break-words
-                      line-clamp-2 overflow-hidden
+                      truncate overflow-hidden
                     "
                   >
                     {prevPost.title}
@@ -239,7 +238,7 @@ const PostNavigation: React.FC<{
         </div>
 
         {/* 다음 포스트 */}
-        <div className="md:col-span-1 h-[88px]">
+        <div className="md:col-span-1  h-[88px]">
           {nextPost ? (
             <CardShell align="right" onClick={() => onNavigate(nextPost.slug)}>
               <div className="flex items-center justify-between gap-4 h-full">
@@ -250,10 +249,9 @@ const PostNavigation: React.FC<{
 
                   {/* 🔥 동일하게 두 줄까지 제한 */}
                   <h3
-                    className="
+                    className=" 
                       text-[18px] font-bold text-(--fg-base)
-                      whitespace-normal break-words
-                      line-clamp-2 overflow-hidden
+                      truncate overflow-hidden
                     "
                   >
                     {nextPost.title}
