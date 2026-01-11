@@ -13,7 +13,7 @@ export const mogangProject: Project = {
   links: [
     { label: "Github", href: "#" }, // 실제 링크 입력 필요
   ],
-  period: "~ 2024. 3.",
+  period: "2023.9 ~ 2024.03",
   team: "Frontend 1명, Backend 1명, 기획 2명, Designer 1명",
   overview:
     "수강하고 싶은 SW 강의를 선택하기 어려운 소비자들을 위한 'SW 강의용 다나와' 서비스입니다. 1000개 이상의 방대한 강의 데이터를 효율적으로 처리하고 비교하기 위해 Next.js(SSR)를 도입했습니다. 실제 교내 후배들을 대상으로 서비스를 제공하여 50명 이상의 유저로부터 긍정적인 피드백을 도출했습니다.",

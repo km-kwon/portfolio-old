@@ -83,7 +83,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 <div>👥 {project.team}</div>
               </>
             )}
-            {project.links.length > 0 && (
+            {/* {project.links.length > 0 && (
               <>
                 <div className="w-px h-3 bg-(--border-subtle) self-center" />
                 <div className="flex gap-2">
@@ -100,7 +100,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                   ))}
                 </div>
               </>
-            )}
+            )} */}
           </div>
 
           {/* Body Content */}
@@ -166,7 +166,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             {project.role && (
               <section>
                 <h4 className="text-fg font-semibold text-base mb-3">
-                  👩🏻‍💻 수행 역할 (기여도 {project.role.percentage})
+                  👩🏻‍💻 수행 역할 ( 기여도 {project.role.percentage} )
                 </h4>
                 <ul className="list-disc pl-5 space-y-2">
                   {project.role.tasks.map((task, idx) => (

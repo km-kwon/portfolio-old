@@ -4,7 +4,7 @@ import sureLogo from "./assets/SURE_LOGO.png";
 export const careerData: CareerItem[] = [
   {
     id: "career-1",
-    company: "SURESOFT TECH",
+    company: "SURESOFTTECH",
     companyLogo: sureLogo,
     position: "Frontend Developer",
     period: "2023.03 - 현재",
@@ -57,7 +57,7 @@ export const careerData: CareerItem[] = [
         ],
         achievements: [
           "100만 건 로그 로딩/탐색 평균 응답 속도 2s 이내 달성",
-          "사용자 맞춤 레이아웃 제공으로 업무 효율 40%+ 개선",
+          "사용자 맞춤 레이아웃 제공으로 업무 효율 40% 이상 개선",
           "외부 뷰어 연동 및 Export 자동화로 워크플로우 30% 단축",
         ],
         techStack: {
@@ -76,7 +76,7 @@ export const careerData: CareerItem[] = [
         period: "2025.09 - 현재",
         role: "Frontend Developer / 유지보수·아키텍처 개선",
         description:
-          "차량 테스트/평가 산출물을 클라우드에서 통합 관리하는 웹 플랫폼(SaaS) 유지보수 및 고도화. 레거시 기술 부채로 인한 유지보수 난이도와 대용량 조회 성능 문제를 해결하기 위해 도메인 중심 재설계 및 렌더링 파이프라인 최적화를 주도.",
+          "차량 테스트/평가 산출물을 클라우드에서 통합 관리하는 웹 플랫폼(SaaS) 유지보수 및 고도화. 레거시 기술 부채로 인한 유지보수 난이도와 대용량 조회 성능 문제를 해결하기 위해 도메인 중심 재설계 및 렌더링 최적화 주도.",
         tasks: [
           "DDD 도입으로 기능 중심 파편화 구조를 도메인 중심으로 재편, 공통 로직을 Util/Custom Hook으로 모듈화하여 LOC 30% 절감 및 유지보수 효율 향상",
           "컴포넌트 의존성 그래프 분석 후 Global State → Local State 전환 및 렌더 트리거 통합으로 불필요 리렌더링 5회 → 1회로 단축",

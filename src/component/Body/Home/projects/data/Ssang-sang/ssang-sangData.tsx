@@ -20,7 +20,7 @@ export const ssangsangProjects: Project = {
     { label: "Github", href: "https://github.com/your-repo" },
     { label: "Live", href: "https://your-service.com" },
   ],
-  period: "2023.01 – 현재 운영중",
+  period: "2023.01 ~ 현재 운영중",
   team: "Frontend 2명, Backend 1명",
   overview:
     "자원봉사자와 봉사를 받고 싶어하는 사람들을 매칭하기 위한 웹/앱 크로스 플랫폼 서비스입니다. 현재 100명 이상의 동아리 회원들이 실제 봉사 신청 및 관리에 사용하고 있습니다.",

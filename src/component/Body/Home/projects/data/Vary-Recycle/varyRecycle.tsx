@@ -29,7 +29,7 @@ export const varyRecycleProjects: Project = {
       href: "https://youtu.be/your-vary-recycle-demo",
     },
   ],
-  period: " ~ 2023.02 (동계 프로젝트)",
+  period: "2022.09 ~ 2023.08",
   team: "Frontend 2명, Backend 1명, AI 모델 2명, 데이터 생성 1명",
 
   overview:

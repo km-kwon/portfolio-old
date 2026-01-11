@@ -55,9 +55,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <article
       // ✅ 열려있을 때는 “아무데나 클릭하면 닫힘”
-      onClick={() => {
+      /*  onClick={() => {
         if (isExpanded) setIsExpanded(false);
-      }}
+      }} */
       className={[
         "rounded-2xl border bg-[var(--bg-soft)] px-4 py-3",
         "transition-colors duration-200",
@@ -111,9 +111,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div
           className="mt-3"
           // ✅ 내용 영역 클릭도 닫히게(원하면 제거 가능)
-          onClick={() => {
+          /*   onClick={() => {
             if (isExpanded) setIsExpanded(false);
-          }}
+          }} */
         >
           {project.description && (
             <p className="text-[12.5px] leading-relaxed text-fg-muted">
