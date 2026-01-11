@@ -45,7 +45,7 @@ URL은 그냥 주소가 아니다. “리소스 식별자”다.
 - `https://cdn.example.com/app.js`
 - `https://api.example.com/users`
 
-이건 전부 **“무언가를 가리키는 것”**이지, 꼭 HTML만 가리키는 게 아니다.
+이건 전부 **“무언가를 가리키는 것”** 이지, 꼭 HTML만 가리키는 게 아니다.
 
 웹에서 리소스는:
 
