@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const pageBg =
   "relative min-h-screen pt-[calc(var(--header-height)+56px)] pb-24 px-5 overflow-hidden";
@@ -33,10 +33,6 @@ const pill =
   "[html[data-theme='light']_&]:bg-[#f5f5fb]";
 
 const ContactPage: React.FC = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <main className={pageBg}>
       <div className={bgDecor} />

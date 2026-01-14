@@ -371,11 +371,6 @@ const BlogDetailPage: React.FC = () => {
   const [activeId, setActiveId] = useState<string | undefined>();
   const isScrollingRef = React.useRef(false);
 
-  // 페이지 진입/slug 변경 시 스크롤 맨 위로 이동
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [slug]);
-
   const handleTocClick = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;

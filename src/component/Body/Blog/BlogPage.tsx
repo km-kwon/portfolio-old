@@ -19,11 +19,6 @@ function cx(...cls: Array<string | false | null | undefined>) {
 const BlogPage: React.FC = () => {
   const navigate = useNavigate();
 
-  // 페이지 진입 시 스크롤을 맨 위로
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   /** ------------------------------
    *  상단 필터(칩) - 스샷 느낌
    *  ------------------------------ */

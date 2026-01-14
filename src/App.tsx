@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./component/Header/header";
 import Footer from "./component/Footer/footer";
+import ScrollToTop from "./component/common/ScrollToTop";
 import HomePage from "./component/Body/Home/HomePage";
 import BlogPage from "./component/Body/Blog/BlogPage";
 import BlogDetailPage from "./component/Body/Blog/BlogDetailPage";
@@ -61,6 +62,9 @@ const App: React.FC = () => {
   const basename = import.meta.env.BASE_URL.replace(/\/$/, ""); // '/' -> '' , '/portfolio/' -> '/portfolio'
   return (
     <BrowserRouter basename={basename === "" ? undefined : basename}>
+      {/* 라우트 변경 시 스크롤 맨 위로 */}
+      <ScrollToTop />
+
       {/* 헤더 */}
       <Header
         theme={theme}
