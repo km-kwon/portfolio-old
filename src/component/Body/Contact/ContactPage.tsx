@@ -127,7 +127,7 @@ const ContactPage: React.FC = () => {
               <ContactItem
                 label="Apply"
                 value="Resume (PDF)"
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download="resume.pdf"
                 icon={<ResumeIcon />}
               />
