@@ -130,14 +130,15 @@ const Header: React.FC<HeaderProps> = ({
             >
               {theme === "dark" ? <SunIcon /> : <MoonIcon />}
             </button>
-            <button
-              className="hidden sm:inline-flex text-[13px] px-4 py-2 rounded-full border border-(--border-subtle)
+            <Link
+              to="/contact"
+              className={`hidden sm:inline-flex text-[13px] px-4 py-2 rounded-full border border-(--border-subtle)
                          bg-(--bg-soft) hover:bg-(--bg-elevated) hover:border-(--accent)/50 hover:-translate-y-px
-                         transition-all duration-150 ease-out"
-              onClick={() => handleNavClick("contact")}
+                         transition-all duration-150 ease-out
+                         ${location.pathname === "/contact" ? "text-fg border-(--accent)/50" : ""}`}
             >
               Contact
-            </button>
+            </Link>
           </div>
         </div>
       </header>
@@ -203,14 +204,16 @@ const Header: React.FC<HeaderProps> = ({
           </Link>
 
           <div className="mt-4 pt-4 border-t border-(--border-subtle)">
-            <button
-              className="w-full text-[14px] px-4 py-3 rounded-lg border border-(--border-subtle)
+            <Link
+              to="/contact"
+              className={`block w-full text-center text-[14px] px-4 py-3 rounded-lg border border-(--border-subtle)
                          bg-(--bg-soft) hover:bg-(--bg-elevated) hover:border-(--accent)/50
-                         transition-all duration-150 ease-out text-fg"
-              onClick={() => handleNavClick("contact")}
+                         transition-all duration-150 ease-out text-fg
+                         ${location.pathname === "/contact" ? "border-(--accent)/50" : ""}`}
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
-            </button>
+            </Link>
           </div>
         </nav>
       </div>
