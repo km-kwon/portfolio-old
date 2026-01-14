@@ -57,15 +57,15 @@ const ContactPage: React.FC = () => {
           <p className="text-[15px] md:text-[16px] text-fg-muted leading-relaxed max-w-lg mx-auto">
             프로젝트 제안, 협업, 채용 어떤 주제든 좋습니다.
             <br className=" md:block" />
-            가능한 빠르게 확인하고 답변 드릴게요.
+            가능한 빠르게 확인하고 답변 드리겠습니다.
           </p>
 
           {/* quick stats */}
-          <div className="mt-6 flex flex-wrap justify-center gap-2">
+          {/*      <div className="mt-6 flex flex-wrap justify-center gap-2">
             <span className={pill}>평균 응답 24시간 이내</span>
             <span className={pill}>Seongnam, KR</span>
             <span className={pill}>Remote 협업 가능</span>
-          </div>
+          </div> */}
         </section>
 
         {/* Contact Cards */}
@@ -128,7 +128,7 @@ const ContactPage: React.FC = () => {
                 label="Apply"
                 value="Resume (PDF)"
                 href={`${import.meta.env.BASE_URL}resume.pdf`}
-                download="resume.pdf"
+                external
                 icon={<ResumeIcon />}
               />
             </div>
