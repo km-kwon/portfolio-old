@@ -97,8 +97,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onScrollTo }) => {
               Frontend Engineer · Security Researcher
             </div>
           </div>
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[rgba(0,255,128,0.35)] text-[11px] uppercase tracking-[0.16em]">
-            <span className="w-[7px] h-[7px] rounded-full bg-[rgba(0,255,153,0.8)] shadow-[0_0_8px_rgba(0,255,153,0.7)] animate-pulse" />
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border [html[data-theme='light']_&]:border-green-500 border-green-300 text-[11px] uppercase tracking-[0.16em]">
+            <span className="w-[7px] h-[7px] rounded-full [html[data-theme='light']_&]:bg-green-500 bg-green-300 shadow-[0_0_8px_rgba(0,255,153,0.7)] animate-pulse" />
             <span>Building Stable Products</span>
           </div>
         </div>
