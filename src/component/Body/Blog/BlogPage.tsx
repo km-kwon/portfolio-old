@@ -283,10 +283,10 @@ const BlogPage: React.FC = () => {
                 "focus:outline-none focus:ring-2 focus:ring-(--accent)/40"
               )}
             >
-              <div className="grid md:grid-cols-[240px_1fr] md:h-56">
+              <div className="grid md:grid-cols-[240px_1fr] md:h-60">
                 {/* 왼쪽 커버(있을 때만) */}
                 {p.cover && (
-                  <div className="relative h-[180px] md:h-56 bg-(--bg-soft)">
+                  <div className="relative h-[180px] md:h-60 bg-(--bg-soft)">
                     <img
                       src={p.cover}
                       alt=""
