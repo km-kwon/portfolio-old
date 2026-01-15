@@ -44,7 +44,8 @@ const ALL_POSTS_UNSORTED: Post[] = [
   {
     id: "react-trigger-optimization",
     slug: "react-realtime-trigger-optimization",
-    title: "React 실시간 Trigger 처리 최적화 삽질기",
+    title:
+      "React 실시간 Trigger 처리 최적화 삽질기 (Worker, Throttle, Time-slicing… 결국 Baseline이 이겼다.)",
     excerpt:
       "실시간 이벤트 들어올 때 UI가 뚝뚝 끊기길래, WebWorker부터 throttle까지 별짓 다 해봤습니다. 근데 결국… 가장 단순한 방법이 이겼습니다. 내 삽질의 역사 공유합니다.",
     date: "2025년 11월 28일",
@@ -173,7 +174,7 @@ const ALL_POSTS_UNSORTED: Post[] = [
     id: "senior-ai-idea",
     slug: "senior-ai-idea",
     title:
-      "“AI로 업무 전체 자동화하면 끝 아니야 ”이라는 시니어를 보며 느낀 찝찝함",
+      "“AI로 업무 전체 자동화하면 끝 아니야?” 라고 말씀하시는 시니어를 보며 느낀 찝찝함",
     excerpt:
       "요즘 들어서 AI 쓰면 금방이잖아? 라는 말을 너무 많이 듣는다. 그리고 마치 구호처럼 느껴진다... 나에게 와닿지 않았던 이유에 대한 고찰과정과 개발자란 직업은 어떻게 변화되어가는지에 대해서 스스로 생각해 보았다. (제발 해피엔딩이었으면!!!!! 젭알!!!)",
     date: "2026년 1월 15일",

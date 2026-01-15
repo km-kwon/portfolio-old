@@ -1,7 +1,3 @@
-# React 실시간 Trigger 처리 최적화 삽질기
-
-### Worker, Throttle, Time-slicing… 결국 Baseline이 이겼다
-
 실차/로그 기반 모니터링 UI를 만들다 보면, 어느 순간부터 이런 문장이 몸에 새겨진다.
 
 > “데이터는 계속 들어오고, UI는 멈추면 안 된다.”

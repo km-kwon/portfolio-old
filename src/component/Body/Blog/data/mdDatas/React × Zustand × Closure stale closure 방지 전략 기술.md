@@ -1,5 +1,3 @@
-# React × Zustand × Closure: `useCallback` 쓰다가 stale closure에 뚝배기 맞은 썰 (그리고 구조적으로 막는 법)
-
 React에서 Zustand를 쓰다 보면 “상태는 분명 바뀌었는데 이벤트 핸들러가 옛날 값을 찍는다” 같은 현상을 한 번쯤 만나게 된다.
 처음엔 **“zustand가 렌더 안 타나?”**, **“React가 업데이트 안 하나?”** 같은 느낌인데… 결국 원인은 React의 아주 고전적인 함정:
 
