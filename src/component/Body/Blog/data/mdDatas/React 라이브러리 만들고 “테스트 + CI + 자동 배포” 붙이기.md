@@ -21,11 +21,6 @@
 
 ✅ **그리고 마지막 보스: EOTP(OTP) 에러 해결**
 
-프로젝트는 이런 느낌:
-
-- TypeScript 기반 원형 큐/버퍼 라이브러리
-- 저수준 CircularBuffer + 고수준 BufferManager + React hook(useCircularBuffer)
-
 ---
 
 ## 1. 테스트 환경 세팅 (여기까진 “음… 쉽네?”)
@@ -46,13 +41,11 @@ npm install -D vitest@2.1.6 \
   happy-dom
 ```
 
-> 여기서 “happy-dom”은 뒤에서 나온다. (jsdom이 CI에서 나를 배신함)
+> 여기서 “happy-dom”을 설치한 이유는 뒤에서 나온다. (jsdom이 CI에서 나를 배신함)
 
 ---
 
 ### 1-2) vitest config
-
-Vite쪽 경고 싫어서 config 확장자는 `.mts`로 갔다.
 
 **vitest.config.mts**
 
@@ -108,15 +101,11 @@ import "@testing-library/jest-dom/vitest";
 
 처음에는 솔직히 테스트를 빨리 늘리고 싶어서, 기본 케이스들은 AI 도움도 받았다.
 
-근데 딱 테스트 돌려보면 느낌이 온다.
+> “응… 근데 성공 케이스만 잔뜩 있네?, 실패 상정을 안했네..?”
 
-> “응… 성공 케이스만 잔뜩 있네?”
+이때부터 **Coverage 기반 라인 추격 게임**이 시작되었다
 
-그래서 방향을 바꿨다.
-
-이때부터는 “테스트 많이 쓰기”가 아니라 **Coverage 기반 라인 추격 게임**이 시작된다.
-
-### 내가 했던 루프 (이거 진짜 중요)
+### 내가 했던 루프
 
 1. `npm run test:coverage` 돌림
 2. coverage report에서 **빨간 줄(미커버 라인)** 찾음
@@ -209,11 +198,11 @@ npm error This operation requiresa one-time passwordfrom your authenticator.
 
 딱 이때 깨달았다.
 
-**CI에서 `npm publish`는 ‘사람이 개입할 수 없는데’, 내 계정은 publish에 OTP(2FA)를 요구하고 있었던 것.**
+**CI에서 `npm publish`는 ‘사람이 개입할 수 없는데’, NPM의 내 계정은 publish에 OTP(2FA)를 요구하고 있었던 것.**
 
 ---
 
-## 6. EOTP가 왜 뜨는지 “진짜로” 뜯어보기
+## 6. EOTP가 왜 뜨는지?
 
 ### 6-1) 로컬 배포 vs CI 배포는 완전히 다르다
 
@@ -229,15 +218,11 @@ npm error This operation requiresa one-time passwordfrom your authenticator.
 
 ---
 
-## 7. 해결: CI에서는 “Automation(자동화) 용 토큰”으로 간다
+## 7. 해결: CI에서는 “Automation(자동화)용 토큰”으로 간다
 
-내가 한 해결 흐름은 이거다.
+### 7-1) npm 토큰을 “CI용”으로 발급
 
-### 7-1) npm 토큰을 “CI용”으로 새로 발급
-
-npm 사이트에서 토큰 만들 때, 핵심은 이런 느낌이다.
-
-- **CI에서 사용할 거니까** 사람이 OTP 치는 방식이 아니라
+- 사람이 OTP 치는 방식이 아니라 **CI에서 토큰으로 사용할 거니까**
 - **토큰으로 인증이 끝나야 한다**
 - 그리고 publish 권한이 있어야 한다
 
@@ -287,7 +272,7 @@ EOTP 지옥을 뚫고 `npm publish`가 초록불로 끝나면
 
 ---
 
-## 8. docs-only 릴리즈: “문서만 바뀌었는데 배포는 하기 싫다”의 현실 해결
+## 8. docs-only 릴리즈: “문서만 바뀌었는데 배포는 하기 싫다”의 해결
 
 이거 나도 엄청 고민했다.
 
@@ -301,11 +286,11 @@ EOTP 지옥을 뚫고 `npm publish`가 초록불로 끝나면
 
 **npm 페이지의 README까지 최신으로 유지하려면 결국 “patch 릴리즈”를 해야 한다.**
 
-그래서 나는 docs-only 릴리즈를 “공식 프로세스”로 만들었다.
+그래서 나는 docs-only 릴리즈를 공식 프로세스로 만들었다.
 
 ---
 
-### docs-only 릴리즈 커맨드 (진짜 그대로 따라하면 됨)
+### docs-only 릴리즈 커맨드
 
 ### 1) 문서 수정 커밋
 
@@ -362,7 +347,7 @@ git push origin v1.0.3
 
 그때는 그냥 “환경 차이”라고 생각했고, 빠르게 happy-dom으로 갈아탔다.
 
-- 결론: CI에서 안정적으로 돌아가는 게 더 중요했다
+- 결론: CI에서 안정적으로 돌아가는 게 더 중요했다. (절대 아직도 원인 못찾은건 비밀)
 
 ---
 
@@ -430,9 +415,9 @@ expect(popped).toEqual([1, 2, 3]);
 - 사람이 하는 일 최소화
 - 실수 확 줄어듦
 
-### ✅ 그리고 제일 중요한 것
+### ✅ 그리고 제일 중요한 건
 
-이건 포트폴리오로도 “설득력”이 생긴다.
+이건 포트폴리오로도 “설득력”이 생기지 않을까..?
 
 - “테스트 했다”가 아니라
 - “테스트+커버리지+CI+자동배포까지 붙여서 운영 가능한 라이브러리로 만들었다”
@@ -475,4 +460,4 @@ expect(popped).toEqual([1, 2, 3]);
 
 나머지는 GitHub Actions가 다 한다.
 
-(그리고 이게 제일 좋다)
+(그리고 난 DevOps 뉴비이기 떄문에 이게 제일 좋은것 같다. 왜냐? 편하니까!)

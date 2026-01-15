@@ -31,7 +31,7 @@ UI 버벅임을 줄이기 위해 **WebWorker / throttle / frame time-slicing / b
 
 ## 1. 배경: Trigger가 하는 일
 
-Trigger 메시지는 대략 이런 역할을 수행한다.
+Trigger 메시지는 대략 다음과 같은 내용이 있다.
 
 - `FilterType.Log` → 이벤트 버스 emit (로그 리스트 등)
 - `FilterType.View` → 여러 탭/뷰 스토어 업데이트
@@ -40,7 +40,7 @@ Trigger 메시지는 대략 이런 역할을 수행한다.
   - Sync 업데이트 중이면 `isUpdatingFromSync` 기준으로 무시
 - `FilterType.Chart` → chart store 갱신 + 다른 chart window에 broadcast
 
-핵심은 **메시지 양이 많고(초당 수백~수천), View 업데이트/Chart broadcast가 UI thread를 잡아먹으면 화면이 끊긴다**는 점이었다.
+이 Trigger의 문제는 **메시지 양이 많고(초당 수백~수천), View 업데이트/Chart broadcast가 UI thread를 잡아먹으면 화면이 끊긴다**는 점이었다.
 
 ---
 
@@ -55,7 +55,7 @@ Trigger 메시지는 대략 이런 역할을 수행한다.
 - store 업데이트/handler 호출이 곧바로 실행됨
 - 단점: 특정 타이밍에 데이터가 몰리면, 한 프레임에 처리량이 커져서 **“뚝” 끊길 수 있음**
 
-그럼에도 구조 자체는 단순했고, 그래서 더더욱 “최적화가 진짜 필요한지”가 궁금해졌다.
+그럼에도 구조 자체는 단순했고, 그래서 더더욱 개발자의 입장에서 “최적화가 진짜 필요한지”가 궁금해졌다.
 
 ---
 
@@ -163,7 +163,7 @@ UI 관점에서 중요한 이유:
 - worker는 `datas`를 돌며 `actions`를 생성해서 전달
 - main thread는 actions를 받아 handler/store update 수행
 
-대략 이런 느낌:
+Wroker의 코드는 대략 이런 느낌:
 
 ```tsx
 self.onmessage =(e) => {
@@ -201,18 +201,6 @@ postMessage(actions);
 
 실측 로그를 보면 worker쪽이 크게 느렸다.
 
-예시:
-
-```
-[PERF:worker] avgTotal=227.87ms | avgWorker=225.76ms | avgApply=2.11ms | msgs/s=212 | actions/s=672
-```
-
-반면 baseline:
-
-```
-[PERF:baseline] avgTotal=3.23ms | avgApply=3.23ms | msgs/s=496
-```
-
 개선 작업을 이어가도 결론은 비슷했다.
 
 - **Samples**
@@ -239,7 +227,7 @@ postMessage(actions);
 - 수치상으론 optimized/worker가 느린데
 - 체감으로는 “버벅임이 줄어든 것 같다”는 순간도 있었다
 
-이 괴리는 **우리가 찍는 지표가 ‘무엇을 측정하는지’** 와 관련이 있었다.
+이 괴리는 **확인하는 지표가 ‘무엇을 측정하는지’** 와 관련이 있었다.
 
 ### 7-1) queue 대기 시간/스케줄링 비용이 포함된다
 
@@ -454,11 +442,10 @@ Baseline이 이미 p95 12ms라 충분히 좋다.
 
 ## 15. 다음에 내가 한다면(추천 체크리스트)
 
-1. baseline 유지
-2. datas가 커질 때만 time-slice 발동
-3. 지표는 avg보다 **p95/p99 + worstFrame** 중심으로 본다
-4. 최적화 대상은 분기 로직이 아니라 **handler 내부 핫스팟**
-5. 필요하면 “전체 pipeline”이 아니라 “특정 핫스팟만” worker로 뺀다
+1. datas가 커질 때만 time-slice 발동
+2. 지표는 avg보다 **p95/p99 + worstFrame** 중심으로 본다
+3. 최적화 대상은 분기 로직이 아니라 **handler 내부 핫스팟**
+4. 필요하면 “전체 pipeline”이 아니라 “특정 핫스팟만” worker로 뺀다
 
 ---
 
@@ -470,4 +457,4 @@ worker도, batching도, throttle도 다 멋있다.
 
 근데 내 시스템에서는 baseline이 가장 빠르다.
 
-그리고 이건 실패가 아니라, **제대로 된 결론**이다.
+그리고 이건 실패가 아니라, **제대로 된 결론** 이며 나의 삽질은 나중에 다른 문제를 위한 거름을 옮긴 과정이다.
