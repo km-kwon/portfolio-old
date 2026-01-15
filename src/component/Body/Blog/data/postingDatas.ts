@@ -164,9 +164,31 @@ const ALL_POSTS_UNSORTED: Post[] = [
     tags: ["AI", "Software Engineering", "Maintenance", "Opinion"],
     cover:
       "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1800&q=80",
-    category: "frontend",
+    category: "devloper",
     content: getMdContent(
       "AI 시대, “유지보수도 AI가 하면 되지 않나요 ”라는 말에 대하여"
+    ),
+  },
+  {
+    id: "senior-ai-idea",
+    slug: "senior-ai-idea",
+    title:
+      "“AI로 업무 전체 자동화하면 끝 아니야 ”이라는 시니어를 보며 느낀 찝찝함",
+    excerpt:
+      "요즘 들어서 AI 쓰면 금방이잖아? 라는 말을 너무 많이 듣는다. 그리고 마치 구호처럼 느껴진다... 나에게 와닿지 않았던 이유에 대한 고찰과정과 개발자란 직업은 어떻게 변화되어가는지에 대해서 스스로 생각해 보았다. (제발 해피엔딩이었으면!!!!! 젭알!!!)",
+    date: "2026년 1월 15일",
+    tags: [
+      "AI",
+      "Automation",
+      "Technical Debt",
+      "Junior Developers",
+      "Engineering Culture",
+    ],
+    cover:
+      "https://plus.unsplash.com/premium_photo-1764695396810-3992d6bc4e51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "devloper",
+    content: getMdContent(
+      "“AI로 업무 전체 자동화하면 끝 아니야 ”이라는 시니어를 보며 느낀 찝찝함"
     ),
   },
 ];

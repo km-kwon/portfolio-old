@@ -520,7 +520,7 @@ const BlogDetailPage: React.FC = () => {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[13px] text-green-300 px-2.5 py-1.5 rounded-full  border border-(--border-subtle) text-fg-muted"
+                    className="text-[13px] text-green-300 [html[data-theme='light']_&]:text-green-500 px-2.5 py-1.5"
                   >
                     {tag}
                   </span>
