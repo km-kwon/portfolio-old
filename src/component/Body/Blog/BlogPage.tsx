@@ -283,10 +283,10 @@ const BlogPage: React.FC = () => {
                 "focus:outline-none focus:ring-2 focus:ring-(--accent)/40"
               )}
             >
-              <div className="grid md:grid-cols-[240px_1fr] md:h-[200px]">
+              <div className="grid md:grid-cols-[240px_1fr] md:h-56">
                 {/* 왼쪽 커버(있을 때만) */}
                 {p.cover && (
-                  <div className="relative h-[180px] md:h-[200px] bg-(--bg-soft)">
+                  <div className="relative h-[180px] md:h-56 bg-(--bg-soft)">
                     <img
                       src={p.cover}
                       alt=""
@@ -297,16 +297,16 @@ const BlogPage: React.FC = () => {
                   </div>
                 )}
 
-                <div className="p-6 md:overflow-hidden">
-                  <h3 className="text-[20px] font-semibold leading-snug mb-2">
+                <div className="p-6 md:overflow-hidden flex flex-col h-full">
+                  <h3 className="text-[20px] font-semibold leading-snug mb-2 line-clamp-2">
                     {p.title}
                   </h3>
 
-                  <p className="text-[13px] text-fg-muted leading-relaxed mb-4 line-clamp-2">
+                  <p className="text-[13px] text-fg-muted leading-relaxed mb-4 line-clamp-2 shrink-0">
                     {p.excerpt}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-4 overflow-hidden max-h-[52px]">
                     {p.tags.slice(0, 8).map((t) => (
                       <span
                         key={t}
@@ -317,7 +317,7 @@ const BlogPage: React.FC = () => {
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between text-[12px] text-fg-muted">
+                  <div className="flex items-center justify-between text-[12px] text-fg-muted mt-auto">
                     <span>{p.date}</span>
                   </div>
                 </div>
