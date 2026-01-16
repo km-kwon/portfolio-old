@@ -44,7 +44,7 @@ Please change the parent <Route path="${H}"> to <Route path="${H==="/"?"*":`${H}
                    shadow-[0_18px_40px_rgba(0,0,0,0.35)]\r
                    flex flex-col gap-3.5 text-[13px] p-4.5\r
                    [html[data-theme='light']_&]:bg-[linear-gradient(135deg,#ffffff,#f3f3f8)]\r
-                   [html[data-theme='light']_&]:shadow-[0_10px_24px_rgba(0,0,0,0.1)]`,children:[g.jsxs("div",{className:"flex items-center justify-between gap-3",children:[g.jsxs("div",{children:[g.jsx("div",{className:"text-[16px] font-semibold",children:"Kwon Kyung-Min"}),g.jsx("div",{className:"text-[12px] text-fg-muted",children:"Frontend Engineer · Security Researcher"})]}),g.jsxs("div",{className:"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[rgba(0,255,128,0.35)] text-[11px] uppercase tracking-[0.16em]",children:[g.jsx("span",{className:"w-[7px] h-[7px] rounded-full bg-[rgba(0,255,153,0.8)] shadow-[0_0_8px_rgba(0,255,153,0.7)] animate-pulse"}),g.jsx("span",{children:"Building Stable Products"})]})]}),g.jsxs("div",{className:"flex flex-col gap-2.5",children:[g.jsx(fc,{title:"Focus",value:"Risk Mgmt, Safety, UI Arch"}),g.jsx(fc,{title:"Strength",value:"Critical Thinking, Stability"}),g.jsx(fc,{title:"Based in",value:"Seongnam, KR (KST)"})]}),g.jsx("p",{className:"text-[11px] text-fg-muted mt-1 leading-relaxed",children:"최근에는 차량 데이터 시각화 성능 개선, Web Worker를 활용한 렌더링 최적화, 그리고 팀의 심리적 안전지대를 만드는 일에 집중하고 있습니다."})]})]}),Np="rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.32)] transition-transform transition-shadow transition-colors duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.5)] hover:border-white/20 [html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)] [html[data-theme='light']_&]:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]",tv="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-5",rv="text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3",lv="text-[20px] font-semibold tracking-[0.02em]",av="text-[13px] text-fg-muted leading-relaxed",iv="text-[11px] px-2.5 py-1 rounded-full border border-[var(--border-subtle)] text-fg-muted",uv=()=>g.jsxs("section",{id:"about",className:"mb-14",children:[g.jsxs("div",{className:tv,children:[g.jsxs("div",{children:[g.jsx("p",{className:rv,children:"About"}),g.jsx("h2",{className:lv,children:"개발자로서의 가치관"})]}),g.jsx("p",{className:av,children:"최고의 성과를 지향하되, 최악의 상황을 먼저 대비하는 '안전한 혁신'을 추구합니다."})]}),g.jsxs("div",{className:"grid gap-4.5 md:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)]",children:[g.jsxs("div",{className:Np,children:[g.jsx("div",{className:"flex items-center justify-between gap-2 mb-2",children:g.jsx("h3",{className:"text-[15px] font-bold",children:"안전한 혁신 (Safe Innovation)"})}),g.jsxs("div",{className:"text-[13px] text-fg-muted leading-[1.7]",children:[g.jsxs("p",{children:["새로운 기술로 사람들에게 가치를 주는 것을 좋아하지만, 그 과정에서",g.jsx("strong",{children:' "누군가 피해를 보지 않도록" '}),"하는 것을 더 중요하게 생각합니다.",g.jsx("br",{}),g.jsx("br",{}),"보안을 전공하며 익힌 ",g.jsx("strong",{children:"Risk Management"})," 사고방식을 개발에 적용하여, 화려한 기능 이전에 발생할 수 있는 최악의 시나리오를 먼저 방어합니다."]}),g.jsxs("ul",{className:"mt-3 pl-4 list-disc space-y-1",children:[g.jsx("li",{children:"사용자 피해 방지를 최우선으로 하는 설계"}),g.jsx("li",{children:"통제 가능한 리스크 안에서의 과감한 기술 도전"}),g.jsx("li",{children:"보안적/비판적 사고를 통한 견고한 아키텍처 구축"})]})]})]}),g.jsxs("div",{className:Np,children:[g.jsxs("div",{className:"flex items-center justify-between gap-2 mb-2",children:[g.jsx("h3",{className:"text-[15px] font-bold",children:"일하는 태도"}),g.jsx("span",{className:iv,children:"Mindset"})]}),g.jsxs("div",{className:"text-[13px] text-fg-muted leading-[1.7]",children:[g.jsxs("p",{className:"mb-2",children:[g.jsx("strong",{children:'"팀의 심리적 안전지대"'}),"가 되고자 합니다."]}),g.jsxs("ul",{className:"mt-1.5 pl-4 list-disc space-y-1",children:[g.jsx("li",{children:"'나'보다 '우리(Team)'의 이익을 먼저 고려"}),g.jsx("li",{children:"문제가 생기면 외부 탓보다 해결책과 내 안의 원인 분석"}),g.jsx("li",{children:"끝까지 파고드는 집요함 (Log Consistency 해결 경험)"}),g.jsx("li",{children:"동료가 안심하고 등을 맡길 수 있는 신뢰 구축"})]})]})]})]})]}),sv="rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.32)] transition-transform transition-shadow transition-colors duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.5)] hover:border-white/20 [html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)] [html[data-theme='light']_&]:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]",ov="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-5",cv="text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3",fv="text-[20px] font-semibold tracking-[0.02em]",dv="text-[13px] text-fg-muted leading-relaxed",Yg="text-[11px] px-2.5 py-1 rounded-full border border-[var(--border-subtle)] text-fg-muted",Ba="text-[11px] px-2.5 py-1.5 rounded-full bg-[var(--bg-soft)] border border-[var(--border-subtle)] text-fg-muted",hv=t=>`px-4 py-2 text-[13px] font-medium rounded-lg transition-all duration-200 border ${t?"bg-[var(--bg-soft)] text-fg border-[var(--border-subtle)]":"text-fg-muted hover:text-fg hover:bg-[var(--bg-soft)]/50 border-transparent"}`,yu=({title:t,chipLabel:a,skills:l})=>g.jsxs("div",{children:[g.jsxs("div",{className:"flex items-center justify-between gap-2 mb-2",children:[g.jsx("h3",{className:"text-[15px] font-bold",children:t}),a?g.jsx("span",{className:Yg,children:a}):g.jsx(g.Fragment,{})]}),g.jsx("div",{className:"flex flex-wrap gap-2 mt-1",children:l.map(u=>g.jsx("span",{className:Ba,children:u},u))})]}),Mp=()=>{const t=[{title:"Frontend Core",skills:["React.js","Next.js","TypeScript","TailwindCSS","Electron","Node.js","Zustand","Redux","ZeroMQ"]},{title:"Architecture & Perf",skills:["Domain-Driven Design","Web Worker","Event Bus / IPC","Rendering Optimization","Memory Management"]},{title:"Security & Infra",skills:["Cyber Security","Network Forensics","Docker","Linux / Shell","GitLab / CI"]},{title:"AI & Mobile",skills:["Flutter","Python","TensorFlow","Firebase","OpenCV"]}];return g.jsxs("div",{className:"space-y-3",children:[g.jsxs("div",{className:"grid gap-3 md:grid-cols-2",children:[g.jsx(yu,{...t[0]}),g.jsx(yu,{...t[1]})]}),g.jsxs("div",{className:"grid gap-3 md:grid-cols-2",children:[g.jsx(yu,{...t[2]}),g.jsx(yu,{...t[3]})]})]})},mv="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfElEQVR4Ae2WA8wcQRiG39q2tTszu7XtNnYd1XZ7OzN7eyqDmmF/1jbipI7rhrVt97r/7SW/j81F9yTPYflh99tFmjQlQuc1BRHTQeU2EFdW0jKRCZUfg8LXQTEbICK62RtM7AGxnoLJIDQreXWf8626MqAHqqNUyNL6YOYu6N7wTu4gmJmcmtvWY//mJ+1vFRFhxgwQ/jZ0ciacA+QF0z6QuB1WBaEY10F5D0SFuvYVyprwH6DmVTCZCSpzEjAXzGvva45GTKjGcWiecOnszKl5CcQ9HEMCldHJVQ36nOrxafe79aTKiBliHA0H4FwD1NgOZX4lpAzFOALNKhAA3+ZkkCrse7VQAEweBOVNkTKYPA7dk3/7MPnCNoAOXAPlFMpSPW7belRn+MQCkVvA+B+nCjKs+A3NeA3KH4KJx3GpiidoJ+6CmRnQ+Eh0n1E12hQcCCJuQvcHoeUPkmR0jmH+AZH3ofE5iMyYcmBiGah4V/xgVgK685PQA0FQfglsCUFElEBNqMYEEPMEiHgGJj+CiQ/xab4HNb6A8L/hVjrjmPBPoNJCdPaXA7GagXk7Qrd6xW17b0+0W9odxPCBySdOJWw1aWvkImW0DtQGMbPQ3h8OIDTedyOlELka7QP51wOROSkOwJ0XQH4FqExhC4gYAMYvQPfmB6BFagGTk0DMzaB8Axhfl7jGWmhyPYi8HBpsTDoBMPEX1JWBUqHiHNqvDEL323qT0Oe8jIQyN22l85uYb6CKmRECMI47O1m27iQ189U9TlCaPBr54UZdp5wNPbbW/9EJ5gM0cTr0chMRKhZCWboXjO8E5TnJGho6RGSCCTdUrqEE0qT5B6CGc+DEAtyrAAAAAElFTkSuQmCC",pv=[{id:"career-1",company:"SURESOFTTECH",companyLogo:mv,position:"Frontend Developer",period:"2023.03 - 현재",projects:[{name:"차량 통합 제어기(CCU2) Log Monitor & Analyzer",period:"2024.07 - 2025.06",role:"Frontend Lead / 아키텍처 설계",description:"DLT/CAN/DoIP/SOMEIP 대용량 로그를 실시간 수집·분석하여 차량 상태를 진단하는 Electron 기반 Log Analyzer. 기존 DLT-Viewer 한계를 극복하고 비전문가도 쉽게 분석 가능한 UX/성능 중심 데스크톱 앱 구축.",tasks:["아키텍처 재설계: 기존 웹 뷰어(Web)를 Electron 데스크톱 앱으로 마이그레이션하여 시스템 접근성 및 성능 강화","비동기 파이프라인 구축: ZeroMQ와 IPC 통신을 활용해 대용량 로그 수집/처리 간 병목 현상 및 데이터 유실 방지","렌더링 엔진 튜닝: TraceTable 라이브러리의 내부 캐싱 로직을 오버라이딩하여 불필요한 리렌더링 차단","UX 고도화: 가상 스크롤(Virtual Scrolling) 및 gridBufferDataObj 활용 로직을 구현해 수십만 건 탐색 시 지연 시간 0.2초 미만 달성","데이터 정합성 관리: Zustand 기반의 전역 상태 관리 및 커스텀 스토어(CustomStore) 설계로 실시간 데이터 동기화 이슈 해결"],achievements:[" 성능 최적화: 렌더링 성능 2.3배 향상(1.04s → 450ms) 및 메모리 사용량 30% 절감(3.3GB → 2.0GB)"," 업무 효율화: 로그 분석 소요 시간 90% 단축(5분 → 30초) 및 분석 정확도 98% 확보"," 대용량 처리: 초당 80,000건 이상의 로그 데이터를 UI 멈춤(Freezing) 없이 실시간 시각화"," 안정성 확보: 테스트 코드 도입 및 스크립트 모듈화를 통해 기능 추가 시 장애 발생률 90% 감소"," 차트 개선: Aggregation 기법 적용으로 차트 렌더링 속도 85% 개선(3.2s → 0.48s)"],techStack:{languages:["React(TypeScript)","Electron","Node.js"],libs:["ZeroMQ","DevExtreme","Zustand","TailwindCSS"],patterns:["이벤트 버스(useEventOn)","CustomStore","무한 스크롤 버퍼링"]}},{name:"사용자 정의 필터링 기반 DLT 로그 분석 툴",period:"2025.07 - 2025.09",role:"Frontend Lead / 성능 최적화",description:"수백만 건 로그(DLT/CSV)를 실시간에 가깝게 시각화하고 사용자 맞춤 UI·필터링으로 분석 효율을 극대화하는 Electron 기반 로그 분석 툴. 현업 분석가 워크플로우 단축과 정확도 향상에 집중.",tasks:["가상 스크롤 엔진 최적화: DevExtreme DataGrid 기반의 가상 스크롤을 고도화하여 대용량 데이터 렌더링 병목 해소","스트리밍 파이프라인 구축: Node.js의 Stream 처리를 적용해 메모리 오버헤드 없이 대용량 데이터를 안정적으로 파일 시스템에 기록","UI/UX 커스터마이징: rc-dock 라이브러리를 활용해 사용자 작업 환경(패널 배치)을 저장·복원할 수 있는 도킹 레이아웃 시스템 구현","프로세스 자동화: IPC 통신을 활용하여 필터 파일 자동 생성 및 외부 DLT 뷰어 실행 과정을 원클릭으로 통합","기술 문서화: 정규식 호환성, UI 렌더링 이슈 등 반복되는 문제의 해결 과정을 문서화하여 팀 내 개발 생산성 기여"],achievements:[" 초고속 데이터 처리: 100만 건 이상의 대용량 로그 로딩 및 탐색 시 평균 응답 속도 2초 이내 달성"," 리소스 최적화: 스트리밍 방식(Stream API) 도입으로 대용량 CSV 내보내기(Export) 시 메모리 사용량 60% 절감"," 데이터 입출력 성능: 100만 행의 데이터를 3초 이내에 파일로 변환 및 저장하는 고속 Export 구현"," 업무 효율성 증대: 맞춤형 레이아웃 및 외부 뷰어 연동 자동화로 반복 작업을 제거하여 업무 워크플로우 30~40% 단축"," 운영 안정성: 정밀한 시간(μs) 동기화 및 트러블슈팅 `플레이북` 도입으로 이슈 대응 속도 향상"],techStack:{languages:["React(TypeScript)","Electron","Node.js"],libs:["rc-dock","DevExtreme DataGrid","Recharts"],patterns:["IPC 통신","가상 스크롤(Virtual Scrolling)","스트리밍 데이터 처리"]}},{name:"차량제어 시험산출물 관리 시스템 고도화(VTDM)",period:"2025.09 - 현재",role:"Frontend Developer / 유지보수·아키텍처 개선",description:"차량 테스트/평가 산출물을 클라우드에서 통합 관리하는 웹 플랫폼(SaaS) 유지보수 및 고도화. 레거시 기술 부채로 인한 유지보수 난이도와 대용량 조회 성능 문제를 해결하기 위해 도메인 중심 재설계 및 렌더링 최적화 주도.",tasks:["아키텍처 리팩토링: 기존 구조를 DDD(Domain-Driven Design)로 재편하고, 공통 로직을 커스텀 훅으로 추상화, 유지보수성 강화","스레드 최적화: 무한 스크롤의 DOM 연산 로직을 Web Worker로 분리하여 메인 스레드 블로킹(Blocking) 현상 및 UI 끊김 제거","상태 관리 개선: 불필요한 Global State를 Local State로 전환하고 렌더링 트리거를 통합 관리하여 성능 병목 해소","시각화 모듈 개발: AgGrid 및 AgChart를 커스터마이징하여 대시보드 내 시스템 로그 모니터링 및 분석 차트 구현","보안 시스템 구축: 화이트리스트 기반 접근 제어 및 이슈 대응(Hotfix) 프로세스를 정립하여 데이터 보안성 확보"],achievements:["코드 경량화: 도메인 주도 설계(DDD) 및 모듈화 도입으로 전체 코드베이스(LOC) 30% 절감","렌더링 성능: 컴포넌트 의존성 최적화로 불필요한 리렌더링 80% 감소 (5회 → 1회)","UX 최적화: 연산 부하 분산 처리를 통해 대용량 리스트 스크롤 시 프레임 드랍(Frame Drop) 0% 달성","운영 안정성: 전역 상태(Global State) 의존도 축소로 사이드 이펙트에 의한 버그 발생률 최소화"],techStack:{languages:["React(TypeScript)","Node.js"],libs:["AgGrid","AgChart"],patterns:["Domain-Driven Design(DDD)","Web Worker","Custom Hooks","Docker","Spring Boot 협업"]}}]}],gv=({techStack:t})=>g.jsxs("div",{className:"space-y-2",children:[g.jsx("div",{className:"text-[12px] font-semibold",children:"기술 스택"}),g.jsxs("div",{className:"space-y-1.5",children:[t.languages&&t.languages.length>0&&g.jsxs("div",{className:"flex gap-2 items-center",children:[g.jsx("span",{className:"text-[11px] text-fg-muted min-w-[80px] text-center",children:"언어/프레임워크"}),g.jsx("div",{className:"flex flex-wrap gap-1",children:t.languages.map(a=>g.jsx("span",{className:Ba,children:a},a))})]}),t.libs&&t.libs.length>0&&g.jsxs("div",{className:"flex gap-2 items-center",children:[g.jsx("span",{className:"text-[11px] text-fg-muted min-w-[80px] text-center",children:"라이브러리"}),g.jsx("div",{className:"flex flex-wrap gap-1",children:t.libs.map(a=>g.jsx("span",{className:Ba,children:a},a))})]}),t.patterns&&t.patterns.length>0&&g.jsxs("div",{className:"flex gap-2 items-center",children:[g.jsx("span",{className:"text-[11px] text-fg-muted min-w-[80px] text-center",children:"패턴/기법"}),g.jsx("div",{className:"flex flex-wrap gap-1",children:t.patterns.map(a=>g.jsx("span",{className:Ba,children:a},a))})]})]})]}),Pg=({open:t,children:a,durationMs:l=360})=>g.jsx("div",{className:["grid overflow-hidden","transition-[grid-template-rows]","ease-[cubic-bezier(.2,.8,.2,1)]",t?"grid-rows-[1fr]":"grid-rows-[0fr]"].join(" "),style:{transitionDuration:`${l}ms`},children:g.jsx("div",{className:"min-h-0 overflow-hidden",children:g.jsx("div",{className:["transition-[opacity,transform]","ease-[cubic-bezier(.2,.8,.2,1)]","will-change-[opacity,transform]",t?"opacity-100 translate-y-0":"opacity-0 -translate-y-1"].join(" "),style:{transitionDuration:`${Math.max(220,l-80)}ms`},children:a})})}),xv=({project:t})=>{const[a,l]=D.useState(!1);return g.jsxs("article",{className:["rounded-2xl border bg-[var(--bg-soft)] px-4 py-3","transition-colors duration-200",a?"border-gray-400":"border-[var(--border-subtle)]","hover:border-[var(--accent)]/50"].join(" "),children:[g.jsxs("button",{type:"button","aria-expanded":a,onClick:u=>{u.stopPropagation(),l(s=>!s)},className:"w-full flex items-center justify-between gap-3 text-left cursor-pointer",children:[g.jsxs("div",{className:"min-w-0 flex-1",children:[g.jsx("h4",{className:"text-[15px] font-semibold leading-snug",children:t.name}),g.jsx("div",{className:"mt-0.5 text-[12px] text-fg-muted",children:t.role})]}),g.jsx("span",{className:"shrink-0 text-[11px] text-fg-muted",children:t.period}),g.jsx("svg",{className:["w-4 h-4 shrink-0 text-fg-muted transition-transform duration-200",a?"rotate-180":""].join(" "),fill:"none",viewBox:"0 0 24 24",stroke:"currentColor",children:g.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:2,d:"M19 9l-7 7-7-7"})})]}),g.jsx(Pg,{open:a,durationMs:360,children:g.jsxs("div",{className:"mt-3",children:[t.description&&g.jsx("p",{className:"text-[12.5px] leading-relaxed text-fg-muted",children:t.description}),g.jsx("div",{className:"my-3 h-px bg-[var(--border-subtle)]/70"}),g.jsx("ul",{className:"space-y-1.5 text-[12.5px] leading-relaxed text-fg-muted",children:t.tasks.map((u,s)=>g.jsxs("li",{className:"flex gap-2",children:[g.jsx("span",{className:"mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--fg-muted)]/40"}),g.jsx("span",{className:"min-w-0",children:u})]},s))}),t.achievements?.length?g.jsxs(g.Fragment,{children:[g.jsx("div",{className:"my-3 h-px bg-[var(--border-subtle)]/70"}),g.jsx("div",{className:"text-[12px] font-semibold mb-2",children:"성과"}),g.jsx("ul",{className:"space-y-1.5 text-[12.5px] leading-relaxed text-fg-muted",children:t.achievements.map((u,s)=>g.jsxs("li",{className:"flex gap-2",children:[g.jsx("span",{className:"mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]/70"}),g.jsx("span",{className:"min-w-0",children:u})]},s))})]}):null,t.techStack?g.jsxs(g.Fragment,{children:[g.jsx("div",{className:"my-3 h-px bg-[var(--border-subtle)]/70"}),g.jsx(gv,{techStack:t.techStack})]}):null]})})]})},bv=({career:t})=>{const[a,l]=D.useState(!0);return g.jsxs("section",{className:"pb-8 last:pb-0",children:[g.jsx("header",{children:g.jsx("button",{type:"button","aria-expanded":a,onClick:()=>l(u=>!u),className:["w-full rounded-2xl border bg-[var(--bg-elevated)]","px-4 py-3 flex items-start justify-between gap-3","transition-colors duration-200 cursor-pointer",a?"border-gray-400":"border-[var(--border-subtle)]","hover:border-[var(--accent)]/50"].join(" "),children:g.jsxs("div",{className:"min-w-0 flex w-full items-center justify-between",children:[g.jsxs("div",{className:"flex items-center gap-2",children:[t.companyLogo?g.jsx("img",{src:t.companyLogo,alt:`${t.company} logo`,className:"w-9 h-9 shrink-0 object-contain rounded-full border border-[var(--border-subtle)] bg-[var(--bg-soft)] p-1",loading:"lazy"}):g.jsx("div",{className:"w-9 h-9 shrink-0 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-soft)]"}),g.jsx("div",{className:"min-w-0",children:g.jsxs("div",{className:"flex flex-wrap items-baseline gap-x-2 gap-y-1",children:[g.jsx("h3",{className:"text-[16px] font-bold leading-tight truncate",children:t.company}),g.jsx("span",{className:"text-[12px] text-fg-muted",children:t.position})]})})]}),g.jsxs("div",{className:"flex h-full items-center gap-3",children:[g.jsx("div",{className:"text-[12px] text-fg-muted uppercase tracking-wide",children:t.period}),g.jsx("svg",{className:["w-5 h-5 text-fg-muted transition-transform duration-200",a?"rotate-180":""].join(" "),fill:"none",viewBox:"0 0 24 24",stroke:"currentColor",children:g.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:2,d:"M19 9l-7 7-7-7"})})]})]})})}),g.jsx(Pg,{open:a,durationMs:420,children:g.jsx("div",{className:"space-y-4 mt-5 ml-2.5",children:t.projects.map((u,s)=>g.jsx(xv,{project:u,index:s},s))})})]})},yv=()=>g.jsx("div",{className:"space-y-0",children:pv.map(t=>g.jsx(bv,{career:t},t.id))}),vv=[{id:"pkg-1",name:"@broadcast-event-system",description:"“React 애플리케이션을 위한 타입 안전(Type-safe) 이벤트 버스 및 브로드캐스트 서비스입니다. React 훅을 사용할 때만 React가 필요하고, 그 외에는 의존성이 전혀 없는 순수 TypeScript(Zero dependencies)입니다.”",version:"1.0.3",githubUrl:"https://github.com/km-kwon/broadcast-event-system",npmUrl:"https://www.npmjs.com/package/broadcast-event-system",techStack:["React","TypeScript","event-driven","web-broadcast"]},{id:"pkg-2",name:"@circular-queue-react",description:"TypeScript와 React를 위한 고성능 원형 버퍼/큐입니다. 의존성은 없고(React는 선택 사항), 로그 처리, 스트리밍 데이터, 롤링 윈도우, 실시간 UI 업데이트에 좋습니다.",version:"1.0.2",githubUrl:"https://github.com/km-kwon/react-circular-queue",npmUrl:"https://www.npmjs.com/package/circular-queue-react",techStack:["React","TypeScript","Data Structure"]}],Sv=()=>g.jsx("svg",{className:"w-4 h-4",viewBox:"0 0 24 24",fill:"currentColor",children:g.jsx("path",{d:"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"})}),kv=()=>g.jsx("svg",{className:"w-5 h-5",viewBox:"0 0 24 24",fill:"currentColor",children:g.jsx("path",{d:"M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"})}),wv=({pkg:t})=>g.jsxs("div",{className:"bg-[var(--bg-soft)] rounded-lg p-4 border border-[var(--border-subtle)] hover:border-white/20 transition-colors",children:[g.jsxs("div",{className:"mb-3 w-full ",children:[g.jsxs("div",{className:"w-full flex justify-between items-center",children:[g.jsxs("div",{className:"flex flex-wrap items-center gap-2 mb-2",children:[g.jsx("h3",{className:"text-[15px] font-bold font-mono",children:t.name}),g.jsxs("span",{className:Yg,children:["v",t.version]}),t.downloads&&g.jsxs("span",{className:"text-[11px] text-fg-muted",children:["📦 ",t.downloads]})]}),g.jsxs("div",{className:"flex gap-3 text-[12px]",children:[t.githubUrl&&g.jsxs("a",{href:t.githubUrl,target:"_blank",rel:"noopener noreferrer",className:"flex gap-1.5 text-fg-muted hover:text-fg transition-colors",children:[g.jsx(Sv,{}),g.jsx("span",{children:"GitHub"})]}),t.npmUrl&&g.jsxs("a",{href:t.npmUrl,target:"_blank",rel:"noopener noreferrer",className:"flex gap-1.5 text-fg-muted hover:text-fg transition-colors",children:[g.jsx(kv,{}),g.jsx("span",{children:"NPM"})]})]})]}),g.jsx("p",{className:"text-[13px] text-fg-muted leading-relaxed",children:t.description})]}),g.jsx("div",{className:"flex flex-wrap gap-1.5",children:t.techStack.map(a=>g.jsx("span",{className:Ba,children:a},a))})]}),Cv=()=>g.jsx("div",{className:"grid gap-3 md:grid-cols-1",children:vv.map(t=>g.jsx(wv,{pkg:t},t.id))}),Tv=()=>{const[t,a]=D.useState("career"),l=[{key:"career",label:"경력"},{key:"opensource",label:"오픈소스"},{key:"stack",label:"기술 스택"}],u=()=>{switch(t){case"stack":return g.jsx(Mp,{});case"career":return g.jsx(yv,{});case"opensource":return g.jsx(Cv,{});default:return g.jsx(Mp,{})}};return g.jsxs("section",{id:"skills",className:"mb-14",children:[g.jsxs("div",{className:ov,children:[g.jsxs("div",{children:[g.jsx("p",{className:cv,children:"Skills"}),g.jsx("h2",{className:fv,children:"경력 & 전문성"})]}),g.jsx("p",{className:dv,children:"안전하고 견고한 제품을 만들기 위해 사용하는 기술들입니다."})]}),g.jsx("div",{className:"flex gap-2 mb-4",children:l.map(s=>g.jsx("button",{onClick:()=>a(s.key),className:hv(t===s.key),children:s.label},s.key))}),g.jsx("div",{className:sv,children:u()})]})},Ev=`요즘 개발자들 사이에서 이런 말, 한 번쯤은 들어봤을 거다.\r
+                   [html[data-theme='light']_&]:shadow-[0_10px_24px_rgba(0,0,0,0.1)]`,children:[g.jsxs("div",{className:"flex items-center justify-between gap-3",children:[g.jsxs("div",{children:[g.jsx("div",{className:"text-[16px] font-semibold",children:"Kwon Kyung-Min"}),g.jsx("div",{className:"text-[12px] text-fg-muted",children:"Frontend Engineer · Security Researcher"})]}),g.jsxs("div",{className:"inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border [html[data-theme='light']_&]:border-green-500 border-green-300 text-[11px] uppercase tracking-[0.16em]",children:[g.jsx("span",{className:"w-[7px] h-[7px] rounded-full [html[data-theme='light']_&]:bg-green-500 bg-green-300 shadow-[0_0_8px_rgba(0,255,153,0.7)] animate-pulse"}),g.jsx("span",{children:"Building Stable Products"})]})]}),g.jsxs("div",{className:"flex flex-col gap-2.5",children:[g.jsx(fc,{title:"Focus",value:"Risk Mgmt, Safety, UI Arch"}),g.jsx(fc,{title:"Strength",value:"Critical Thinking, Stability"}),g.jsx(fc,{title:"Based in",value:"Seongnam, KR (KST)"})]}),g.jsx("p",{className:"text-[11px] text-fg-muted mt-1 leading-relaxed",children:"최근에는 차량 데이터 시각화 성능 개선, Web Worker를 활용한 렌더링 최적화, 그리고 팀의 심리적 안전지대를 만드는 일에 집중하고 있습니다."})]})]}),Np="rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.32)] transition-transform transition-shadow transition-colors duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.5)] hover:border-white/20 [html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)] [html[data-theme='light']_&]:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]",tv="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-5",rv="text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3",lv="text-[20px] font-semibold tracking-[0.02em]",av="text-[13px] text-fg-muted leading-relaxed",iv="text-[11px] px-2.5 py-1 rounded-full border border-[var(--border-subtle)] text-fg-muted",uv=()=>g.jsxs("section",{id:"about",className:"mb-14",children:[g.jsxs("div",{className:tv,children:[g.jsxs("div",{children:[g.jsx("p",{className:rv,children:"About"}),g.jsx("h2",{className:lv,children:"개발자로서의 가치관"})]}),g.jsx("p",{className:av,children:"최고의 성과를 지향하되, 최악의 상황을 먼저 대비하는 '안전한 혁신'을 추구합니다."})]}),g.jsxs("div",{className:"grid gap-4.5 md:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)]",children:[g.jsxs("div",{className:Np,children:[g.jsx("div",{className:"flex items-center justify-between gap-2 mb-2",children:g.jsx("h3",{className:"text-[15px] font-bold",children:"안전한 혁신 (Safe Innovation)"})}),g.jsxs("div",{className:"text-[13px] text-fg-muted leading-[1.7]",children:[g.jsxs("p",{children:["새로운 기술로 사람들에게 가치를 주는 것을 좋아하지만, 그 과정에서",g.jsx("strong",{children:' "누군가 피해를 보지 않도록" '}),"하는 것을 더 중요하게 생각합니다.",g.jsx("br",{}),g.jsx("br",{}),"보안을 전공하며 익힌 ",g.jsx("strong",{children:"Risk Management"})," 사고방식을 개발에 적용하여, 화려한 기능 이전에 발생할 수 있는 최악의 시나리오를 먼저 방어합니다."]}),g.jsxs("ul",{className:"mt-3 pl-4 list-disc space-y-1",children:[g.jsx("li",{children:"사용자 피해 방지를 최우선으로 하는 설계"}),g.jsx("li",{children:"통제 가능한 리스크 안에서의 과감한 기술 도전"}),g.jsx("li",{children:"보안적/비판적 사고를 통한 견고한 아키텍처 구축"})]})]})]}),g.jsxs("div",{className:Np,children:[g.jsxs("div",{className:"flex items-center justify-between gap-2 mb-2",children:[g.jsx("h3",{className:"text-[15px] font-bold",children:"일하는 태도"}),g.jsx("span",{className:iv,children:"Mindset"})]}),g.jsxs("div",{className:"text-[13px] text-fg-muted leading-[1.7]",children:[g.jsxs("p",{className:"mb-2",children:[g.jsx("strong",{children:'"팀의 심리적 안전지대"'}),"가 되고자 합니다."]}),g.jsxs("ul",{className:"mt-1.5 pl-4 list-disc space-y-1",children:[g.jsx("li",{children:"'나'보다 '우리(Team)'의 이익을 먼저 고려"}),g.jsx("li",{children:"문제가 생기면 외부 탓보다 해결책과 내 안의 원인 분석"}),g.jsx("li",{children:"끝까지 파고드는 집요함 (Log Consistency 해결 경험)"}),g.jsx("li",{children:"동료가 안심하고 등을 맡길 수 있는 신뢰 구축"})]})]})]})]})]}),sv="rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.32)] transition-transform transition-shadow transition-colors duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.5)] hover:border-white/20 [html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)] [html[data-theme='light']_&]:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]",ov="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-5",cv="text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3",fv="text-[20px] font-semibold tracking-[0.02em]",dv="text-[13px] text-fg-muted leading-relaxed",Yg="text-[11px] px-2.5 py-1 rounded-full border border-[var(--border-subtle)] text-fg-muted",Ba="text-[11px] px-2.5 py-1.5 rounded-full bg-[var(--bg-soft)] border border-[var(--border-subtle)] text-fg-muted",hv=t=>`px-4 py-2 text-[13px] font-medium rounded-lg transition-all duration-200 border ${t?"bg-[var(--bg-soft)] text-fg border-[var(--border-subtle)]":"text-fg-muted hover:text-fg hover:bg-[var(--bg-soft)]/50 border-transparent"}`,yu=({title:t,chipLabel:a,skills:l})=>g.jsxs("div",{children:[g.jsxs("div",{className:"flex items-center justify-between gap-2 mb-2",children:[g.jsx("h3",{className:"text-[15px] font-bold",children:t}),a?g.jsx("span",{className:Yg,children:a}):g.jsx(g.Fragment,{})]}),g.jsx("div",{className:"flex flex-wrap gap-2 mt-1",children:l.map(u=>g.jsx("span",{className:Ba,children:u},u))})]}),Mp=()=>{const t=[{title:"Frontend Core",skills:["React.js","Next.js","TypeScript","TailwindCSS","Electron","Node.js","Zustand","Redux","ZeroMQ"]},{title:"Architecture & Perf",skills:["Domain-Driven Design","Web Worker","Event Bus / IPC","Rendering Optimization","Memory Management"]},{title:"Security & Infra",skills:["Cyber Security","Network Forensics","Docker","Linux / Shell","GitLab / CI"]},{title:"AI & Mobile",skills:["Flutter","Python","TensorFlow","Firebase","OpenCV"]}];return g.jsxs("div",{className:"space-y-3",children:[g.jsxs("div",{className:"grid gap-3 md:grid-cols-2",children:[g.jsx(yu,{...t[0]}),g.jsx(yu,{...t[1]})]}),g.jsxs("div",{className:"grid gap-3 md:grid-cols-2",children:[g.jsx(yu,{...t[2]}),g.jsx(yu,{...t[3]})]})]})},mv="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACfElEQVR4Ae2WA8wcQRiG39q2tTszu7XtNnYd1XZ7OzN7eyqDmmF/1jbipI7rhrVt97r/7SW/j81F9yTPYflh99tFmjQlQuc1BRHTQeU2EFdW0jKRCZUfg8LXQTEbICK62RtM7AGxnoLJIDQreXWf8626MqAHqqNUyNL6YOYu6N7wTu4gmJmcmtvWY//mJ+1vFRFhxgwQ/jZ0ciacA+QF0z6QuB1WBaEY10F5D0SFuvYVyprwH6DmVTCZCSpzEjAXzGvva45GTKjGcWiecOnszKl5CcQ9HEMCldHJVQ36nOrxafe79aTKiBliHA0H4FwD1NgOZX4lpAzFOALNKhAA3+ZkkCrse7VQAEweBOVNkTKYPA7dk3/7MPnCNoAOXAPlFMpSPW7belRn+MQCkVvA+B+nCjKs+A3NeA3KH4KJx3GpiidoJ+6CmRnQ+Eh0n1E12hQcCCJuQvcHoeUPkmR0jmH+AZH3ofE5iMyYcmBiGah4V/xgVgK685PQA0FQfglsCUFElEBNqMYEEPMEiHgGJj+CiQ/xab4HNb6A8L/hVjrjmPBPoNJCdPaXA7GagXk7Qrd6xW17b0+0W9odxPCBySdOJWw1aWvkImW0DtQGMbPQ3h8OIDTedyOlELka7QP51wOROSkOwJ0XQH4FqExhC4gYAMYvQPfmB6BFagGTk0DMzaB8Axhfl7jGWmhyPYi8HBpsTDoBMPEX1JWBUqHiHNqvDEL323qT0Oe8jIQyN22l85uYb6CKmRECMI47O1m27iQ189U9TlCaPBr54UZdp5wNPbbW/9EJ5gM0cTr0chMRKhZCWboXjO8E5TnJGho6RGSCCTdUrqEE0qT5B6CGc+DEAtyrAAAAAElFTkSuQmCC",pv=[{id:"career-1",company:"SURESOFTTECH",companyLogo:mv,position:"Frontend Developer",period:"2023.03 - 현재",projects:[{name:"차량 통합 제어기(CCU2) Log Monitor & Analyzer",period:"2024.07 - 2025.06",role:"Frontend Lead / 아키텍처 설계",description:"DLT/CAN/DoIP/SOMEIP 대용량 로그를 실시간 수집·분석하여 차량 상태를 진단하는 Electron 기반 Log Analyzer. 기존 DLT-Viewer 한계를 극복하고 비전문가도 쉽게 분석 가능한 UX/성능 중심 데스크톱 앱 구축.",tasks:["아키텍처 재설계: 기존 웹 뷰어(Web)를 Electron 데스크톱 앱으로 마이그레이션하여 시스템 접근성 및 성능 강화","비동기 파이프라인 구축: ZeroMQ와 IPC 통신을 활용해 대용량 로그 수집/처리 간 병목 현상 및 데이터 유실 방지","렌더링 엔진 튜닝: TraceTable 라이브러리의 내부 캐싱 로직을 오버라이딩하여 불필요한 리렌더링 차단","UX 고도화: 가상 스크롤(Virtual Scrolling) 및 gridBufferDataObj 활용 로직을 구현해 수십만 건 탐색 시 지연 시간 0.2초 미만 달성","데이터 정합성 관리: Zustand 기반의 전역 상태 관리 및 커스텀 스토어(CustomStore) 설계로 실시간 데이터 동기화 이슈 해결"],achievements:[" 성능 최적화: 렌더링 성능 2.3배 향상(1.04s → 450ms) 및 메모리 사용량 30% 절감(3.3GB → 2.0GB)"," 업무 효율화: 로그 분석 소요 시간 90% 단축(5분 → 30초) 및 분석 정확도 98% 확보"," 대용량 처리: 초당 80,000건 이상의 로그 데이터를 UI 멈춤(Freezing) 없이 실시간 시각화"," 안정성 확보: 테스트 코드 도입 및 스크립트 모듈화를 통해 기능 추가 시 장애 발생률 90% 감소"," 차트 개선: Aggregation 기법 적용으로 차트 렌더링 속도 85% 개선(3.2s → 0.48s)"],techStack:{languages:["React(TypeScript)","Electron","Node.js"],libs:["ZeroMQ","DevExtreme","Zustand","TailwindCSS"],patterns:["이벤트 버스(useEventOn)","CustomStore","무한 스크롤 버퍼링"]}},{name:"사용자 정의 필터링 기반 DLT 로그 분석 툴",period:"2025.07 - 2025.09",role:"Frontend Lead / 성능 최적화",description:"수백만 건 로그(DLT/CSV)를 실시간에 가깝게 시각화하고 사용자 맞춤 UI·필터링으로 분석 효율을 극대화하는 Electron 기반 로그 분석 툴. 현업 분석가 워크플로우 단축과 정확도 향상에 집중.",tasks:["가상 스크롤 엔진 최적화: DevExtreme DataGrid 기반의 가상 스크롤을 고도화하여 대용량 데이터 렌더링 병목 해소","스트리밍 파이프라인 구축: Node.js의 Stream 처리를 적용해 메모리 오버헤드 없이 대용량 데이터를 안정적으로 파일 시스템에 기록","UI/UX 커스터마이징: rc-dock 라이브러리를 활용해 사용자 작업 환경(패널 배치)을 저장·복원할 수 있는 도킹 레이아웃 시스템 구현","프로세스 자동화: IPC 통신을 활용하여 필터 파일 자동 생성 및 외부 DLT 뷰어 실행 과정을 원클릭으로 통합","기술 문서화: 정규식 호환성, UI 렌더링 이슈 등 반복되는 문제의 해결 과정을 문서화하여 팀 내 개발 생산성 기여"],achievements:[" 초고속 데이터 처리: 100만 건 이상의 대용량 로그 로딩 및 탐색 시 평균 응답 속도 2초 이내 달성"," 리소스 최적화: 스트리밍 방식(Stream API) 도입으로 대용량 CSV 내보내기(Export) 시 메모리 사용량 60% 절감"," 데이터 입출력 성능: 100만 행의 데이터를 3초 이내에 파일로 변환 및 저장하는 고속 Export 구현"," 업무 효율성 증대: 맞춤형 레이아웃 및 외부 뷰어 연동 자동화로 반복 작업을 제거하여 업무 워크플로우 30~40% 단축"," 운영 안정성: 정밀한 시간(μs) 동기화 및 트러블슈팅 `플레이북` 도입으로 이슈 대응 속도 향상"],techStack:{languages:["React(TypeScript)","Electron","Node.js"],libs:["rc-dock","DevExtreme DataGrid","Recharts"],patterns:["IPC 통신","가상 스크롤(Virtual Scrolling)","스트리밍 데이터 처리"]}},{name:"차량제어 시험산출물 관리 시스템 고도화(VTDM)",period:"2025.09 - 현재",role:"Frontend Developer / 유지보수·아키텍처 개선",description:"차량 테스트/평가 산출물을 클라우드에서 통합 관리하는 웹 플랫폼(SaaS) 유지보수 및 고도화. 레거시 기술 부채로 인한 유지보수 난이도와 대용량 조회 성능 문제를 해결하기 위해 도메인 중심 재설계 및 렌더링 최적화 주도.",tasks:["아키텍처 리팩토링: 기존 구조를 DDD(Domain-Driven Design)로 재편하고, 공통 로직을 커스텀 훅으로 추상화, 유지보수성 강화","스레드 최적화: 무한 스크롤의 DOM 연산 로직을 Web Worker로 분리하여 메인 스레드 블로킹(Blocking) 현상 및 UI 끊김 제거","상태 관리 개선: 불필요한 Global State를 Local State로 전환하고 렌더링 트리거를 통합 관리하여 성능 병목 해소","시각화 모듈 개발: AgGrid 및 AgChart를 커스터마이징하여 대시보드 내 시스템 로그 모니터링 및 분석 차트 구현","보안 시스템 구축: 화이트리스트 기반 접근 제어 및 이슈 대응(Hotfix) 프로세스를 정립하여 데이터 보안성 확보"],achievements:["코드 경량화: 도메인 주도 설계(DDD) 및 모듈화 도입으로 전체 코드베이스(LOC) 30% 절감","렌더링 성능: 컴포넌트 의존성 최적화로 불필요한 리렌더링 80% 감소 (5회 → 1회)","UX 최적화: 연산 부하 분산 처리를 통해 대용량 리스트 스크롤 시 프레임 드랍(Frame Drop) 0% 달성","운영 안정성: 전역 상태(Global State) 의존도 축소로 사이드 이펙트에 의한 버그 발생률 최소화"],techStack:{languages:["React(TypeScript)","Node.js"],libs:["AgGrid","AgChart"],patterns:["Domain-Driven Design(DDD)","Web Worker","Custom Hooks","Docker","Spring Boot 협업"]}}]}],gv=({techStack:t})=>g.jsxs("div",{className:"space-y-2",children:[g.jsx("div",{className:"text-[12px] font-semibold",children:"기술 스택"}),g.jsxs("div",{className:"space-y-1.5",children:[t.languages&&t.languages.length>0&&g.jsxs("div",{className:"flex gap-2 items-center",children:[g.jsx("span",{className:"text-[11px] text-fg-muted min-w-[80px] text-center",children:"언어/프레임워크"}),g.jsx("div",{className:"flex flex-wrap gap-1",children:t.languages.map(a=>g.jsx("span",{className:Ba,children:a},a))})]}),t.libs&&t.libs.length>0&&g.jsxs("div",{className:"flex gap-2 items-center",children:[g.jsx("span",{className:"text-[11px] text-fg-muted min-w-[80px] text-center",children:"라이브러리"}),g.jsx("div",{className:"flex flex-wrap gap-1",children:t.libs.map(a=>g.jsx("span",{className:Ba,children:a},a))})]}),t.patterns&&t.patterns.length>0&&g.jsxs("div",{className:"flex gap-2 items-center",children:[g.jsx("span",{className:"text-[11px] text-fg-muted min-w-[80px] text-center",children:"패턴/기법"}),g.jsx("div",{className:"flex flex-wrap gap-1",children:t.patterns.map(a=>g.jsx("span",{className:Ba,children:a},a))})]})]})]}),Pg=({open:t,children:a,durationMs:l=360})=>g.jsx("div",{className:["grid overflow-hidden","transition-[grid-template-rows]","ease-[cubic-bezier(.2,.8,.2,1)]",t?"grid-rows-[1fr]":"grid-rows-[0fr]"].join(" "),style:{transitionDuration:`${l}ms`},children:g.jsx("div",{className:"min-h-0 overflow-hidden",children:g.jsx("div",{className:["transition-[opacity,transform]","ease-[cubic-bezier(.2,.8,.2,1)]","will-change-[opacity,transform]",t?"opacity-100 translate-y-0":"opacity-0 -translate-y-1"].join(" "),style:{transitionDuration:`${Math.max(220,l-80)}ms`},children:a})})}),xv=({project:t})=>{const[a,l]=D.useState(!1);return g.jsxs("article",{className:["rounded-2xl border bg-[var(--bg-soft)] px-4 py-3","transition-colors duration-200",a?"border-gray-400":"border-[var(--border-subtle)]","hover:border-[var(--accent)]/50"].join(" "),children:[g.jsxs("button",{type:"button","aria-expanded":a,onClick:u=>{u.stopPropagation(),l(s=>!s)},className:"w-full flex items-center justify-between gap-3 text-left cursor-pointer",children:[g.jsxs("div",{className:"min-w-0 flex-1",children:[g.jsx("h4",{className:"text-[15px] font-semibold leading-snug",children:t.name}),g.jsx("div",{className:"mt-0.5 text-[12px] text-fg-muted",children:t.role})]}),g.jsx("span",{className:"shrink-0 text-[11px] text-fg-muted",children:t.period}),g.jsx("svg",{className:["w-4 h-4 shrink-0 text-fg-muted transition-transform duration-200",a?"rotate-180":""].join(" "),fill:"none",viewBox:"0 0 24 24",stroke:"currentColor",children:g.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:2,d:"M19 9l-7 7-7-7"})})]}),g.jsx(Pg,{open:a,durationMs:360,children:g.jsxs("div",{className:"mt-3",children:[t.description&&g.jsx("p",{className:"text-[12.5px] leading-relaxed text-fg-muted",children:t.description}),g.jsx("div",{className:"my-3 h-px bg-[var(--border-subtle)]/70"}),g.jsx("ul",{className:"space-y-1.5 text-[12.5px] leading-relaxed text-fg-muted",children:t.tasks.map((u,s)=>g.jsxs("li",{className:"flex gap-2",children:[g.jsx("span",{className:"mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--fg-muted)]/40"}),g.jsx("span",{className:"min-w-0",children:u})]},s))}),t.achievements?.length?g.jsxs(g.Fragment,{children:[g.jsx("div",{className:"my-3 h-px bg-[var(--border-subtle)]/70"}),g.jsx("div",{className:"text-[12px] font-semibold mb-2",children:"성과"}),g.jsx("ul",{className:"space-y-1.5 text-[12.5px] leading-relaxed text-fg-muted",children:t.achievements.map((u,s)=>g.jsxs("li",{className:"flex gap-2",children:[g.jsx("span",{className:"mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]/70"}),g.jsx("span",{className:"min-w-0",children:u})]},s))})]}):null,t.techStack?g.jsxs(g.Fragment,{children:[g.jsx("div",{className:"my-3 h-px bg-[var(--border-subtle)]/70"}),g.jsx(gv,{techStack:t.techStack})]}):null]})})]})},bv=({career:t})=>{const[a,l]=D.useState(!0);return g.jsxs("section",{className:"pb-8 last:pb-0",children:[g.jsx("header",{children:g.jsx("button",{type:"button","aria-expanded":a,onClick:()=>l(u=>!u),className:["w-full rounded-2xl border bg-[var(--bg-elevated)]","px-4 py-3 flex items-start justify-between gap-3","transition-colors duration-200 cursor-pointer",a?"border-gray-400":"border-[var(--border-subtle)]","hover:border-[var(--accent)]/50"].join(" "),children:g.jsxs("div",{className:"min-w-0 flex w-full items-center justify-between",children:[g.jsxs("div",{className:"flex items-center gap-2",children:[t.companyLogo?g.jsx("img",{src:t.companyLogo,alt:`${t.company} logo`,className:"w-9 h-9 shrink-0 object-contain rounded-full border border-[var(--border-subtle)] bg-[var(--bg-soft)] p-1",loading:"lazy"}):g.jsx("div",{className:"w-9 h-9 shrink-0 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-soft)]"}),g.jsx("div",{className:"min-w-0",children:g.jsxs("div",{className:"flex flex-wrap items-baseline gap-x-2 gap-y-1",children:[g.jsx("h3",{className:"text-[16px] font-bold leading-tight truncate",children:t.company}),g.jsx("span",{className:"text-[12px] text-fg-muted",children:t.position})]})})]}),g.jsxs("div",{className:"flex h-full items-center gap-3",children:[g.jsx("div",{className:"text-[12px] text-fg-muted uppercase tracking-wide",children:t.period}),g.jsx("svg",{className:["w-5 h-5 text-fg-muted transition-transform duration-200",a?"rotate-180":""].join(" "),fill:"none",viewBox:"0 0 24 24",stroke:"currentColor",children:g.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:2,d:"M19 9l-7 7-7-7"})})]})]})})}),g.jsx(Pg,{open:a,durationMs:420,children:g.jsx("div",{className:"space-y-4 mt-5 ml-2.5",children:t.projects.map((u,s)=>g.jsx(xv,{project:u,index:s},s))})})]})},yv=()=>g.jsx("div",{className:"space-y-0",children:pv.map(t=>g.jsx(bv,{career:t},t.id))}),vv=[{id:"pkg-1",name:"@broadcast-event-system",description:"“React 애플리케이션을 위한 타입 안전(Type-safe) 이벤트 버스 및 브로드캐스트 서비스입니다. React 훅을 사용할 때만 React가 필요하고, 그 외에는 의존성이 전혀 없는 순수 TypeScript(Zero dependencies)입니다.”",version:"1.0.3",githubUrl:"https://github.com/km-kwon/broadcast-event-system",npmUrl:"https://www.npmjs.com/package/broadcast-event-system",techStack:["React","TypeScript","event-driven","web-broadcast"]},{id:"pkg-2",name:"@circular-queue-react",description:"TypeScript와 React를 위한 고성능 원형 버퍼/큐입니다. 의존성은 없고(React는 선택 사항), 로그 처리, 스트리밍 데이터, 롤링 윈도우, 실시간 UI 업데이트에 좋습니다.",version:"1.0.2",githubUrl:"https://github.com/km-kwon/react-circular-queue",npmUrl:"https://www.npmjs.com/package/circular-queue-react",techStack:["React","TypeScript","Data Structure"]}],Sv=()=>g.jsx("svg",{className:"w-4 h-4",viewBox:"0 0 24 24",fill:"currentColor",children:g.jsx("path",{d:"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"})}),kv=()=>g.jsx("svg",{className:"w-5 h-5",viewBox:"0 0 24 24",fill:"currentColor",children:g.jsx("path",{d:"M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"})}),wv=({pkg:t})=>g.jsxs("div",{className:"bg-[var(--bg-soft)] rounded-lg p-4 border border-[var(--border-subtle)] hover:border-white/20 transition-colors",children:[g.jsxs("div",{className:"mb-3 w-full ",children:[g.jsxs("div",{className:"w-full flex justify-between items-center",children:[g.jsxs("div",{className:"flex flex-wrap items-center gap-2 mb-2",children:[g.jsx("h3",{className:"text-[15px] font-bold font-mono",children:t.name}),g.jsxs("span",{className:Yg,children:["v",t.version]}),t.downloads&&g.jsxs("span",{className:"text-[11px] text-fg-muted",children:["📦 ",t.downloads]})]}),g.jsxs("div",{className:"flex gap-3 text-[12px]",children:[t.githubUrl&&g.jsxs("a",{href:t.githubUrl,target:"_blank",rel:"noopener noreferrer",className:"flex gap-1.5 text-fg-muted hover:text-fg transition-colors",children:[g.jsx(Sv,{}),g.jsx("span",{children:"GitHub"})]}),t.npmUrl&&g.jsxs("a",{href:t.npmUrl,target:"_blank",rel:"noopener noreferrer",className:"flex gap-1.5 text-fg-muted hover:text-fg transition-colors",children:[g.jsx(kv,{}),g.jsx("span",{children:"NPM"})]})]})]}),g.jsx("p",{className:"text-[13px] text-fg-muted leading-relaxed",children:t.description})]}),g.jsx("div",{className:"flex flex-wrap gap-1.5",children:t.techStack.map(a=>g.jsx("span",{className:Ba,children:a},a))})]}),Cv=()=>g.jsx("div",{className:"grid gap-3 md:grid-cols-1",children:vv.map(t=>g.jsx(wv,{pkg:t},t.id))}),Tv=()=>{const[t,a]=D.useState("career"),l=[{key:"career",label:"경력"},{key:"opensource",label:"오픈소스"},{key:"stack",label:"기술 스택"}],u=()=>{switch(t){case"stack":return g.jsx(Mp,{});case"career":return g.jsx(yv,{});case"opensource":return g.jsx(Cv,{});default:return g.jsx(Mp,{})}};return g.jsxs("section",{id:"skills",className:"mb-14",children:[g.jsxs("div",{className:ov,children:[g.jsxs("div",{children:[g.jsx("p",{className:cv,children:"Skills"}),g.jsx("h2",{className:fv,children:"경력 & 전문성"})]}),g.jsx("p",{className:dv,children:"안전하고 견고한 제품을 만들기 위해 사용하는 기술들입니다."})]}),g.jsx("div",{className:"flex gap-2 mb-4",children:l.map(s=>g.jsx("button",{onClick:()=>a(s.key),className:hv(t===s.key),children:s.label},s.key))}),g.jsx("div",{className:sv,children:u()})]})},Ev=`요즘 개발자들 사이에서 이런 말, 한 번쯤은 들어봤을 거다.\r
 \r
 > “코딩? 이젠 AI 쓰면 되지 않냐?”\r
 >\r
@@ -2107,232 +2107,232 @@ worker도, batching도, throttle도 다 멋있다.\r
 근데 내 시스템에서는 baseline이 가장 빠르다.\r
 \r
 그리고 이건 실패가 아니라, **제대로 된 결론** 이며 나의 삽질은 나중에 다른 문제를 위한 거름을 옮긴 과정이다.\r
-`,Dv=`## 0. 시니어는 AI를 싫어하지 않았다. 오히려 너무 좋아했다.\r
-\r
-나는 막연히 **“전통적 관점의 시니어 개발자라면 AI에 대해 회의적일 것”**이라 짐작했다.\r
-하지만 현실은 정반대였다.\r
-\r
-- 시니어: “AI는 무조건 도입해야지. 이제 업무 프로세스 전체를 자동화해야 해.”\r
-- 나: “오… 그렇죠. 그런데 구체적으로 어떤 단계를 어떤 방식으로 자동화하면 좋을까요?”\r
-- 시니어: “그냥 다 자동화하면 되잖아. 신기술이잖아. 효율이 나오는데 안 할 이유가 없지.”\r
-- 나: (당황하며) “방법론을 좀 더 찾아보겠습니다…”\r
-- 시니어: “하면서 ~~기능 넣는 거, AI 쓰면 한 시간이면 충분하지? 빨리 끝내~”\r
-- 나: “(빠르긴 하겠지만… 안정적으로 돌아갈지는 검증해 봐야 할 텐데…)”\r
-\r
-이 대화가 오가는 순간, 내 머릿속에서는 심각한 오류가 발생했다.\r
-\r
-> TypeError: 구체적인 기술적 근거 is not a function\r
-\r
-AI에 반대하는 것도, 신기술을 거부하는 것도 아닌데 **기묘하게 찝찝했다.**\r
-그 말은 분명 틀린 게 없었지만, **너무나 맞는 말이라서 오히려 아무런 실체도 담고 있지 않은 ‘구호’처럼 들렸기** 때문이다.\r
-\r
----\r
-\r
-## 1. 구현의 민주화: “코드 치는 손”은 저렴해졌고, “의도를 정의하는 머리”는 비싸졌다\r
-\r
-예전에는 개발자의 가치가 곧 **‘숙련도’**였다.\r
-\r
-- 특정 언어의 문법을 깊게 파고든 사람\r
-- 프레임워크의 복잡한 생명주기를 통달한 사람\r
-- 빌드, 배포, 디버깅의 지옥을 수없이 통과한 사람\r
-\r
-이러한 숙련은 분명한 가치가 있었고, 레거시 시스템을 유지보수하는 현시점에도 여전히 유효한 역량이다.\r
-하지만 문제는 그 이후다.\r
-\r
-### ✅ AI는 “개발”이라는 행위의 단가를 낮춰버렸다\r
-\r
-리액트 컴포넌트, API 핸들러, 타입 정의, 테스트 코드, 문서화.\r
-이제 **“어떻게 구현할 것인가?”**에 대한 해답은 더 이상 개발자의 삽질이나 검색이 아니라, **“무엇을 만들겠다”는 의도를 설명하는 행위**로 대체되기 시작했다.\r
-\r
-그 결과 개발의 병목 현상은 이동했다.\r
-\r
-- 과거: 구현하는 **‘손’ (Coding)**\r
-- 현재: 문제를 정의하고 설계하는 **‘머리’ (Intent & Logic)**\r
-\r
-이것이 바로 “구현의 민주화”가 의미하는 바다.\r
-**누구나 만들 수 있다는 말은**, 뒤집어 보면 **아무나 만들 수 있다는 뜻**이고, 더 나아가면 **아무렇게나 만들 수도 있다는 위험**을 내포한다.\r
-\r
-나의 불안은 바로 이 지점에서 시작되었다.\r
-\r
----\r
-\r
-## 2. “업무 전체 자동화”가 매력적으로 들리는 이유: 조직이 선호하는 언어니까\r
-\r
-시니어가 외치는 **“업무 전체 자동화”**는 기술적인 용어라기보다 조직 운영의 언어에 가깝다.\r
-\r
-- “리드타임 단축 및 생산성 극대화”\r
-- “단순 반복 업무의 완전 제거”\r
-- “인력 운영의 효율화와 표준화”\r
-\r
-전부 맞는 말이다.\r
-시니어가 이 지점을 강조하는 이유도 충분히 이해한다.\r
-\r
-시니어는 코드 한 줄보다 **전체 업무의 흐름(Workflow)**을 책임지는 위치에 있기 때문이다.\r
-개별 구현은 팀원이 하더라도, 프로세스가 꼬여서 발생하는 사고는 결국 시니어가 수습해야 한다.\r
-그래서 그들의 뇌는 다음과 같이 작동한다.\r
-\r
-> “개발은 결국 흐름이다. 그 흐름을 자동화하면 생산성과 안정성이 동시에 잡힐 것이다.”\r
-\r
-이 논리는 완벽해 보이지만, 치명적인 함정이 있다.\r
-**“자동화”라는 단어가 너무 거대하다는 것**이다.\r
-\r
-진정한 자동화란 단순히 ‘할 수 있다’는 선언이 아니라,\r
-**“어디까지 자동화할 것이며, 무엇을 사람이 책임질 것인가”를 정밀하게 설계하는 일**이다.\r
-\r
-그 설계가 빠진 자동화는 공허한 구호에 불과하다.\r
-내가 느낀 찝찝함의 정체는 바로 그 **‘비어 있는 설계’**였다.\r
-\r
----\r
-\r
-## 3. 주니어의 실종: 자동화가 ‘성장의 사다리’를 치워버릴 때\r
-\r
-전통적인 개발자의 성장 루트는 단계적이었다.\r
-\r
-- 주니어: 사소한 UI 수정, 단위 테스트, 운영 보조, 문서 정리를 통해 시스템을 익힘\r
-- 미들: 기능 단위의 설계와 구현, 코드 리뷰를 통한 협업 능력 배양\r
-- 시니어: 전체 아키텍처 설계, 리스크 관리, 조직 조율 및 운영 책임\r
-\r
-그런데 시니어가 말하는 **“업무 전체 자동화”**가 실행되면,\r
-가장 먼저 사라지는 것은 주니어들이 경험을 쌓던 **‘사다리의 아래칸’**이다.\r
-\r
-반복적인 코드 생성, 테스트 초안 작성, 문서화, 단순 분석 업무가 자동화되는 순간, 주니어들은 설 자리를 잃는다.\r
-\r
-회사는 말할 것이다.\r
-\r
-> “주니어를 뽑아서 가르칠 시간에 AI를 쓰는 게 훨씬 싸고 빠르지 않나?”\r
-\r
-하지만 2~3년 뒤, 업계는 똑같은 목소리로 비명을 지를 것이다.\r
-\r
-> “AI가 짠 코드를 이해하고 전체를 조망할 줄 아는 미들과 시니어가 없다.”\r
-\r
-이것이 **‘숙련도의 단절’**이다.\r
-\r
-자동화는 당장의 생산성을 높여줄지 모르지만, **인재를 숙성시키는 시간과 기회를 앗아간다.**\r
-지금 아낀 비용은 훗날 **‘인간 아키텍트의 부재’**라는 더 큰 비용으로 돌아올 것이다.\r
-\r
-비극적인 것은, 이 미래 비용은 실제로 터지기 전까지 **지표상에 존재하지 않는 것처럼 취급**된다는 사실이다.\r
-\r
----\r
-\r
-## 4. 개발의 제조업화: 분업의 경계가 무너지는 지점\r
-\r
-그동안 소프트웨어 개발은 철저히 분업화된 제조업 모델을 따랐다.\r
-\r
-> 기획 → 디자인 → 프론트엔드 → 백엔드 → QA → 운영\r
-\r
-각 단계는 명확한 산출물과 승인 절차, 그리고 책임의 경계가 있었다.\r
-하지만 AI는 이 경계를 허물고 있다.\r
-\r
-- 기획자가 직접 프로토타입을 뽑아내고,\r
-- 디자이너가 코드를 생성하며,\r
-- 개발자가 인프라 배포까지 혼자 처리한다.\r
-\r
-조직은 이 **‘경계의 파괴’**를 반긴다. 흐름을 통째로 최적화할 수 있기 때문이다.\r
-\r
-그러나 분업은 비효율적이기도 했지만, 동시에 **‘느리지만 안전한’ 품질 체크포인트**이기도 했다.\r
-AI로 흐름을 통째로 연결해버리면, 사람이 책임지던 검증 단계가 함께 녹아내릴 위험이 있다.\r
-\r
-제조업에서 창작업으로 돌아가는 것은 환영할 일이지만,\r
-**책임의 주체가 모호해진 채 컨베이어 벨트만 빨라지는 상황**은 대형 사고를 기다리는 복선이 될 수 있다.\r
-\r
----\r
-\r
-## 5. 기술부채의 진화: ‘AI Sludge(찌꺼기)’라는 새로운 유형의 레거시\r
-\r
-AI가 생성한 결과물은 겉보기엔 훌륭하다.\r
-문제는 그 양이 너무 많고 생성 속도가 압도적이라는 점이다.\r
-\r
-- 누구도 깊게 읽지 않는 방대한 PR이 쌓이고,\r
-- 의미 없는 자동 생성 테스트가 늘어나며,\r
-- 서로 다른 스타일의 코드가 뒤섞여 설계 의도가 불분명해진다.\r
-\r
-결국 **“사람이 이해할 수 없는 거대한 코드와 프로세스의 덩어리”**가 형성된다.\r
-이것이 바로 최근 논의되는 **AI Sludge(AI 찌꺼기)**다.\r
-\r
-과거의 레거시가 시간이 흐르며 굳어진 괴물이었다면,\r
-AI 레거시는 **속도가 만들어낸 괴물**이다.\r
-\r
-업무량은 줄어드는 것 같지만, 역설적으로 AI가 뱉어낸 결과물을 정리하고 정합성을 유지하는 비용은 폭증한다.\r
-\r
-미래 개발자의 핵심 역량이 코드를 쓰는 것이 아니라,\r
-AI가 만든 결과물 속에서 **‘독소’를 찾아내 정화하는 능력**이 되어야 하는 이유다.\r
-\r
----\r
-\r
-## 6. 그래서 내가 느낀 찝찝함의 진짜 정체\r
-\r
-처음에는 시니어가 AI를 거부할 것이라 생각해서 불안했다.\r
-하지만 다시 생각해보니 진짜 불안의 이유는 시니어의 **“추상적인 찬성”** 때문이었다.\r
-\r
-- 구호: “AI로 업무 전체를 자동화하면 좋다.”\r
-- 엔지니어링: “어떤 업무를 어느 수준까지 자동화하고, 품질 게이트(Quality Gate)를 어디에 둘 것인가?”\r
-\r
-내가 느낀 찝찝함은 AI 그 자체가 아니라,\r
-**구체화되지 않은 자동화가 가져올 무책임함에 대한 경고**였다.\r
-\r
-실무에서 직접 손을 더럽히며 굴러본 사람들은 알고 있다.\r
-설계 없는 자동화는 ‘실수’를 개선하는 게 아니라, **‘실수’를 대량 생산하는 시스템**이 된다는 것을.\r
-\r
----\r
-\r
-## 7. 시니어가 디테일을 말하지 않는 이유에 대한 고찰\r
-\r
-물론 이것이 단순히 시니어 개인의 무능은 아닐 것이다.\r
-\r
-- **시니어의 시각**: 그들은 기술적 디테일보다 조직 전체의 리스크(보안, 비용, 책임 소재)를 먼저 고려해야 하기에, 안전하고 포괄적인 단어(혁신, 생산성) 뒤로 숨는 경향이 있다.\r
-- **도구의 특성**: AI는 너무나 범용적인 도구라 ‘정답’이라 부를만한 표준 가이드가 아직 부족하다. 디테일한 방법론을 제시하는 것 자체가 큰 리스크가 될 수 있다.\r
-\r
-하지만 리더가 구호만 남기고 디테일을 피할 때,\r
-그 공백을 메워야 하는 실무자들의 부담은 가중될 수밖에 없다.\r
-\r
----\r
-\r
-## 8. 해결책: AI를 “신기술”이 아닌 “통제 가능한 공학 도구”로 대하기\r
-\r
-내가 내린 결론은 명확하다.\r
-AI는 무조건적인 선악의 문제가 아니라,\r
-**“어디에 활용하고, 어디서부터 인간이 책임질 것인가”를 재정의하는 문제**다.\r
-\r
-“전체 자동화”라는 추상적 개념을 다음과 같이 구체적으로 분류해야 한다.\r
-\r
-### 8-1) 자동화 대상의 전략적 분류\r
-\r
-- **생성(Generation)**: 코드/문서/테스트의 초안 작성을 AI에 맡겨 속도를 높인다.\r
-- **검증(Verification)**: AI를 보조 도구로 써서 취약점을 찾되, 인간이 최종 판단한다.\r
-- **운영(Operations)**: 로그 요약이나 장애 알림 분류 등 단순 판단을 자동화한다.\r
-\r
-### 8-2) 품질 게이트(Quality Gate)의 명시화\r
-\r
-속도가 빨라질수록 검증은 더 촘촘해야 한다.\r
-\r
-- AI 생성 코드에 대한 ‘인간 리뷰어’의 필수 승인\r
-- 민감 정보 노출 방지를 위한 자동 스캔 룰 적용\r
-- AI가 이해하지 못하는 비즈니스 로직에 대한 명시적 문서화\r
-\r
----\r
-\r
-## 9. 결론: AI 시대의 핵심은 ‘자동화’가 아니라 ‘책임의 재설계’다\r
-\r
-AI는 개발자의 일을 뺏는 것이 아니라,\r
-개발자의 책임이 머무는 위치를 바꾼다.\r
-\r
-우리는 코드를 치는 기술자에서,\r
-**“자동화된 흐름의 품질을 보장하는 감시자이자 설계자”**로 진화해야 한다.\r
-\r
-구체적인 공학적 설계가 뒷받침되지 않은 자동화는 혁신이 아니라 **대량 생산형 사고**일 뿐이다.\r
-**“누가 최종 책임을 질 것인가?”** 이 질문에 답할 수 없다면 그 자동화는 멈춰야 한다.\r
-\r
----\r
-\r
-## PS. 나를 설득하기 위해 남기는 자조적 체크리스트\r
-\r
-- “자동화”는 목표가 아니라 수단일 뿐이다.\r
-- “AI를 쓴다”는 말 자체는 아무런 기술적 가치를 지니지 않는다.\r
-- AI가 만든 결과물은 ‘초안’이지 ‘면책권’이 아니다.\r
-- 주니어가 사라지면, 시니어의 자리를 이어받을 다음 세대도 사라진다.\r
-- 결국 모든 장애의 git blame은 인간인 나에게 돌아온다.\r
-\r
----\r
+`,Dv=`## 0. 시니어는 AI를 싫어하지 않았다. 오히려 너무 좋아했다.
+
+나는 막연히 **“전통적 관점의 시니어 개발자라면 AI에 대해 회의적일 것”** 이라 짐작했다.
+하지만 현실은 정반대였다.
+
+- 시니어: “AI는 무조건 도입해야지. 이제 업무 프로세스 전체를 자동화해야 해.”
+- 나: “오… 그렇죠. 그런데 구체적으로 어떤 단계를 어떤 방식으로 자동화하면 좋을까요?”
+- 시니어: “그냥 다 자동화하면 되잖아. 신기술이잖아. 효율이 나오는데 안 할 이유가 없지.”
+- 나: (당황하며) “방법론을 좀 더 찾아보겠습니다…”
+- 시니어: “하면서 ~~기능 넣는 거, AI 쓰면 한 시간이면 충분하지? 빨리 끝내~”
+- 나: “(빠르긴 하겠지만… 안정적으로 돌아갈지는 검증해 봐야 할 텐데…)”
+
+이 대화가 오가는 순간, 내 머릿속에서는 심각한 오류가 발생했다.
+
+> TypeError: 구체적인 기술적 근거 is not a function
+
+AI에 반대하는 것도, 신기술을 거부하는 것도 아닌데 **기묘하게 찝찝했다.**
+그 말은 분명 틀린 게 없었지만, **너무나 맞는 말이라서 오히려 아무런 실체도 담고 있지 않은 ‘구호’처럼 들렸기** 때문이다.
+
+---
+
+## 1. 구현의 민주화: “코드 치는 손”은 저렴해졌고, “의도를 정의하는 머리”는 비싸졌다
+
+예전에는 개발자의 가치가 곧 **‘숙련도’** 였다.
+
+- 특정 언어의 문법을 깊게 파고든 사람
+- 프레임워크의 복잡한 생명주기를 통달한 사람
+- 빌드, 배포, 디버깅의 지옥을 수없이 통과한 사람
+
+이러한 숙련은 분명한 가치가 있었고, 레거시 시스템을 유지보수하는 현시점에도 여전히 유효한 역량이다.
+하지만 문제는 그 이후다.
+
+### ✅ AI는 “개발”이라는 행위의 단가를 낮춰버렸다
+
+리액트 컴포넌트, API 핸들러, 타입 정의, 테스트 코드, 문서화.
+이제 **“어떻게 구현할 것인가?”** 에 대한 해답은 더 이상 개발자의 삽질이나 검색이 아니라, **“무엇을 만들겠다”는 의도를 설명하는 행위**로 대체되기 시작했다.
+
+그 결과 개발의 병목 현상은 이동했다.
+
+- 과거: 구현하는 **‘손’ (Coding)**
+- 현재: 문제를 정의하고 설계하는 **‘머리’ (Intent & Logic)**
+
+이것이 바로 “구현의 민주화”가 의미하는 바다.
+**누구나 만들 수 있다는 말은**, 뒤집어 보면 **아무나 만들 수 있다는 뜻**이고, 더 나아가면 **아무렇게나 만들 수도 있다는 위험**을 내포한다.
+
+나의 불안은 바로 이 지점에서 시작되었다.
+
+---
+
+## 2. “업무 전체 자동화”가 매력적으로 들리는 이유: 조직이 선호하는 언어니까
+
+시니어가 외치는 “업무 전체 자동화”는 기술적인 용어라기보다 조직 운영의 언어에 가깝다.
+
+- “리드타임 단축 및 생산성 극대화”
+- “단순 반복 업무의 완전 제거”
+- “인력 운영의 효율화와 표준화”
+
+전부 맞는 말이다.
+시니어가 이 지점을 강조하는 이유도 충분히 이해한다.
+
+시니어는 코드 한 줄보다 **전체 업무의 흐름(Workflow)** 을 책임지는 위치에 있기 때문이다.
+개별 구현은 팀원이 하더라도, 프로세스가 꼬여서 발생하는 사고는 결국 시니어가 수습해야 한다.
+그래서 그들의 뇌는 다음과 같이 작동한다.
+
+> “개발은 결국 흐름이다. 그 흐름을 자동화하면 생산성과 안정성이 동시에 잡힐 것이다.”
+
+이 논리는 완벽해 보이지만, 치명적인 함정이 있다.
+**“자동화”라는 단어가 너무 거대하다는 것**이다.
+
+진정한 자동화란 단순히 ‘할 수 있다’는 선언이 아니라,
+**“어디까지 자동화할 것이며, 무엇을 사람이 책임질 것인가”를 정밀하게 설계하는 일**이다.
+
+그 설계가 빠진 자동화는 공허한 구호에 불과하다.
+내가 느낀 찝찝함의 정체는 바로 그 **‘비어 있는 설계’** 였다.
+
+---
+
+## 3. 주니어의 실종: 자동화가 ‘성장의 사다리’를 치워버릴 때
+
+전통적인 개발자의 성장 루트는 단계적이었다.
+
+- 주니어: 사소한 UI 수정, 단위 테스트, 운영 보조, 문서 정리를 통해 시스템을 익힘
+- 미들: 기능 단위의 설계와 구현, 코드 리뷰를 통한 협업 능력 배양
+- 시니어: 전체 아키텍처 설계, 리스크 관리, 조직 조율 및 운영 책임
+
+그런데 시니어가 말하는 **“업무 전체 자동화”** 가 실행되면,
+가장 먼저 사라지는 것은 주니어들이 경험을 쌓던 **‘사다리의 아래칸’** 이다.
+
+반복적인 코드 생성, 테스트 초안 작성, 문서화, 단순 분석 업무가 자동화되는 순간, 주니어들은 설 자리를 잃는다.
+
+회사는 말할 것이다.
+
+> “주니어를 뽑아서 가르칠 시간에 AI를 쓰는 게 훨씬 싸고 빠르지 않나?”
+
+하지만 2~3년 뒤, 업계는 똑같은 목소리로 비명을 지를 것이다.
+
+> “AI가 짠 코드를 이해하고 전체를 조망할 줄 아는 미들과 시니어가 없다.”
+
+이것이 **‘숙련도의 단절’** 이다.
+
+자동화는 당장의 생산성을 높여줄지 모르지만, **인재를 숙성시키는 시간과 기회를 앗아간다.**
+지금 아낀 비용은 훗날 **‘인간 아키텍트의 부재’** 라는 더 큰 비용으로 돌아올 것이다.
+
+비극적인 것은, 이 미래 비용은 실제로 터지기 전까지 **지표상에 존재하지 않는 것처럼 취급**된다는 사실이다.
+
+---
+
+## 4. 개발의 제조업화: 분업의 경계가 무너지는 지점
+
+그동안 소프트웨어 개발은 철저히 분업화된 제조업 모델을 따랐다.
+
+> 기획 → 디자인 → 프론트엔드 → 백엔드 → QA → 운영
+
+각 단계는 명확한 산출물과 승인 절차, 그리고 책임의 경계가 있었다.
+하지만 AI는 이 경계를 허물고 있다.
+
+- 기획자가 직접 프로토타입을 뽑아내고,
+- 디자이너가 코드를 생성하며,
+- 개발자가 인프라 배포까지 혼자 처리한다.
+
+조직은 이 **‘경계의 파괴’** 를 반긴다. 흐름을 통째로 최적화할 수 있기 때문이다.
+
+그러나 분업은 비효율적이기도 했지만, 동시에 **‘느리지만 안전한’ 품질 체크포인트**이기도 했다.
+AI로 흐름을 통째로 연결해버리면, 사람이 책임지던 검증 단계가 함께 녹아내릴 위험이 있다.
+
+제조업에서 창작업으로 돌아가는 것은 환영할 일이지만,
+**책임의 주체가 모호해진 채 컨베이어 벨트만 빨라지는 상황**은 대형 사고를 기다리는 복선이 될 수 있다.
+
+---
+
+## 5. 기술부채의 진화: ‘AI Sludge(찌꺼기)’라는 새로운 유형의 레거시
+
+AI가 생성한 결과물은 겉보기엔 훌륭하다.
+문제는 그 양이 너무 많고 생성 속도가 압도적이라는 점이다.
+
+- 누구도 깊게 읽지 않는 방대한 PR이 쌓이고,
+- 의미 없는 자동 생성 테스트가 늘어나며,
+- 서로 다른 스타일의 코드가 뒤섞여 설계 의도가 불분명해진다.
+
+결국 **“사람이 이해할 수 없는 거대한 코드와 프로세스의 덩어리”** 가 형성된다.
+이것이 바로 최근 논의되는 **AI Sludge(AI 찌꺼기)** 이다.
+
+과거의 레거시가 시간이 흐르며 굳어진 괴물이었다면,
+AI 레거시는 **속도가 만들어낸 괴물**이다.
+
+업무량은 줄어드는 것 같지만, 역설적으로 AI가 뱉어낸 결과물을 정리하고 정합성을 유지하는 비용은 폭증한다.
+
+미래 개발자의 핵심 역량이 코드를 쓰는 것이 아니라,
+AI가 만든 결과물 속에서 **‘독소’를 찾아내 정화하는 능력**이 되어야 하는 이유다.
+
+---
+
+## 6. 그래서 내가 느낀 찝찝함의 진짜 정체
+
+처음에는 시니어가 AI를 거부할 것이라 생각해서 불안했다.
+하지만 다시 생각해보니 진짜 불안의 이유는 시니어의 **“추상적인 찬성”** 때문이었다.
+
+- 구호: “AI로 업무 전체를 자동화하면 좋다.”
+- 엔지니어링: “어떤 업무를 어느 수준까지 자동화하고, 품질 게이트(Quality Gate)를 어디에 둘 것인가?”
+
+내가 느낀 찝찝함은 AI 그 자체가 아니라,
+**구체화되지 않은 자동화가 가져올 무책임함에 대한 경고**였다.
+
+실무에서 직접 손을 더럽히며 굴러본 사람들은 알고 있다.
+설계 없는 자동화는 ‘실수’를 개선하는 게 아니라, **‘실수’를 대량 생산하는 시스템**이 된다는 것을.
+
+---
+
+## 7. 시니어가 디테일을 말하지 않는 이유에 대한 고찰
+
+물론 이것이 단순히 시니어 개인의 무능은 아닐 것이다.
+
+- **시니어의 시각**: 그들은 기술적 디테일보다 조직 전체의 리스크(보안, 비용, 책임 소재)를 먼저 고려해야 하기에, 안전하고 포괄적인 단어(혁신, 생산성) 뒤로 숨는 경향이 있다.
+- **도구의 특성**: AI는 너무나 범용적인 도구라 ‘정답’이라 부를만한 표준 가이드가 아직 부족하다. 디테일한 방법론을 제시하는 것 자체가 큰 리스크가 될 수 있다.
+
+하지만 리더가 구호만 남기고 디테일을 피할 때,
+그 공백을 메워야 하는 실무자들의 부담은 가중될 수밖에 없다.
+
+---
+
+## 8. 해결책: AI를 “신기술”이 아닌 “통제 가능한 공학 도구”로 대하기
+
+내가 내린 결론은 명확하다.
+AI는 무조건적인 선악의 문제가 아니라,
+**“어디에 활용하고, 어디서부터 인간이 책임질 것인가”를 재정의하는 문제**다.
+
+“전체 자동화”라는 추상적 개념을 다음과 같이 구체적으로 분류해야 한다.
+
+### 8-1) 자동화 대상의 전략적 분류
+
+- **생성(Generation)**: 코드/문서/테스트의 초안 작성을 AI에 맡겨 속도를 높인다.
+- **검증(Verification)**: AI를 보조 도구로 써서 취약점을 찾되, 인간이 최종 판단한다.
+- **운영(Operations)**: 로그 요약이나 장애 알림 분류 등 단순 판단을 자동화한다.
+
+### 8-2) 품질 게이트(Quality Gate)의 명시화
+
+속도가 빨라질수록 검증은 더 촘촘해야 한다.
+
+- AI 생성 코드에 대한 ‘인간 리뷰어’의 필수 승인
+- 민감 정보 노출 방지를 위한 자동 스캔 룰 적용
+- AI가 이해하지 못하는 비즈니스 로직에 대한 명시적 문서화
+
+---
+
+## 9. 결론: AI 시대의 핵심은 ‘자동화’가 아니라 ‘책임의 재설계’다
+
+AI는 개발자의 일을 뺏는 것이 아니라,
+개발자의 책임이 머무는 위치를 바꾼다.
+
+우리는 코드를 치는 기술자에서,
+**“자동화된 흐름의 품질을 보장하는 감시자이자 설계자”** 로 진화해야 한다.
+
+구체적인 공학적 설계가 뒷받침되지 않은 자동화는 혁신이 아니라 **대량 생산형 사고**일 뿐이다.
+**“누가 최종 책임을 질 것인가?”** 이 질문에 답할 수 없다면 그 자동화는 멈춰야 한다.
+
+---
+
+## PS. 나를 설득하기 위해 남기는 자조적 체크리스트
+
+- “자동화”는 목표가 아니라 수단일 뿐이다.
+- “AI를 쓴다”는 말 자체는 아무런 기술적 가치를 지니지 않는다.
+- AI가 만든 결과물은 ‘초안’이지 ‘면책권’이 아니다.
+- 주니어가 사라지면, 시니어의 자리를 이어받을 다음 세대도 사라진다.
+- 결국 모든 장애의 git blame은 인간인 나에게 돌아온다.
+
+---
 `,Ov=`이전 글에서\r
 \r
 > “ECMAScript(스펙) / JS 엔진(V8) / 호스트(브라우저/Node)”\r
