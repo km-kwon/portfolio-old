@@ -25,7 +25,7 @@ const ALL_POSTS_UNSORTED: Post[] = [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=80",
     category: "frontend",
     content: getMdContent(
-      "React × Zustand × Closure stale closure 방지 전략 기술"
+      "React × Zustand × Closure stale closure 방지 전략 기술",
     ),
   },
   {
@@ -106,7 +106,7 @@ const ALL_POSTS_UNSORTED: Post[] = [
       "https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=1800&q=80",
     category: "frontend",
     content: getMdContent(
-      "React 라이브러리 만들고 “테스트 + CI + 자동 배포” 붙이기"
+      "React 라이브러리 만들고 “테스트 + CI + 자동 배포” 붙이기",
     ),
   },
   {
@@ -122,7 +122,7 @@ const ALL_POSTS_UNSORTED: Post[] = [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80",
     category: "frontend",
     content: getMdContent(
-      "JS 이벤트 루프를 이해하려면, 먼저 세 개의 레이어부터 갈라야 한다 (1편)"
+      "JS 이벤트 루프를 이해하려면, 먼저 세 개의 레이어부터 갈라야 한다 (1편)",
     ),
   },
   {
@@ -137,7 +137,7 @@ const ALL_POSTS_UNSORTED: Post[] = [
       "https://images.unsplash.com/photo-1617854818583-09e7f077a156?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "frontend",
     content: getMdContent(
-      "브라우저 안에서 JS와 렌더링은 어떻게 돌아가는가 (2편)"
+      "브라우저 안에서 JS와 렌더링은 어떻게 돌아가는가 (2편)",
     ),
   },
   {
@@ -152,7 +152,7 @@ const ALL_POSTS_UNSORTED: Post[] = [
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "frontend",
     content: getMdContent(
-      "프론트엔드에서 DDD와 FSD, 그리고 ‘도메인 슬라이스’ 아키텍처"
+      "프론트엔드에서 DDD와 FSD, 그리고 ‘도메인 슬라이스’ 아키텍처",
     ),
   },
   {
@@ -167,7 +167,7 @@ const ALL_POSTS_UNSORTED: Post[] = [
       "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1800&q=80",
     category: "devloper",
     content: getMdContent(
-      "AI 시대, “유지보수도 AI가 하면 되지 않나요 ”라는 말에 대하여"
+      "AI 시대, “유지보수도 AI가 하면 되지 않나요 ”라는 말에 대하여",
     ),
   },
   {
@@ -189,7 +189,28 @@ const ALL_POSTS_UNSORTED: Post[] = [
       "https://plus.unsplash.com/premium_photo-1764695396810-3992d6bc4e51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "devloper",
     content: getMdContent(
-      "“AI로 업무 전체 자동화하면 끝 아니야 ”이라는 시니어를 보며 느낀 찝찝함"
+      "“AI로 업무 전체 자동화하면 끝 아니야 ”이라는 시니어를 보며 느낀 찝찝함",
+    ),
+  },
+  {
+    id: "reducer-migration-store",
+    slug: "reducer-migration-store",
+    title: "useState → useReducer → 도메인 분리 → Store 까지의 이야기",
+    excerpt:
+      "지역 State를 Reducer로 액션함수로 분리하는 과정에서 응집도를 낮추기 위한 고민, 어떻게 작성해야 차후 전역 State로 빼기 용이할까 생각해본 그 일련의 과정들을 공유한다. (너무 어려웠어...)",
+    date: "2026년 1월 19일",
+    tags: [
+      "State Management",
+      "Architecture",
+      "Refactoring",
+      "Junior Developers",
+      "Engineering Culture",
+    ],
+    cover:
+      "https://images.unsplash.com/photo-1687603921109-46401b201195?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "devloper",
+    content: getMdContent(
+      "useState → useReducer → 도메인 분리 → Store 까지의 이야기",
     ),
   },
 ];
@@ -204,7 +225,7 @@ export const MOCK_ALL_POSTS: Post[] = [...ALL_POSTS_UNSORTED].sort((a, b) => {
       return new Date(
         parseInt(year),
         parseInt(month) - 1, // 월은 0부터 시작
-        parseInt(day)
+        parseInt(day),
       );
     }
     return new Date(0); // 파싱 실패 시 기본값
