@@ -11,7 +11,7 @@ export const secureChatProject: Project = {
     "Java 소켓 프로그래밍으로 1:1 통신을 구현하고, RSA 비대칭키로 AES 대칭키를 안전하게 교환하여 도청이 불가능한 보안 채팅 시스템을 구축했습니다.",
   tags: ["Java", "Socket", "RSA", "AES-256", "Multi-Thread"],
   links: [
-    { label: "Github", href: "#" }, // 실제 링크 입력
+    // { label: "Github", href: "#" }, // 실제 링크 입력
   ],
   period: "2023.03 ~ 2023.06", // 기간 입력 필요 (예: 2023.xx)
   team: "Individual (100%)",

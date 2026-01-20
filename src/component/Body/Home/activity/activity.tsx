@@ -171,10 +171,10 @@ const ActivitySection: React.FC = () => {
               {activities.map((activity, idx) => (
                 <div
                   key={activity.id}
-                  className="w-full shrink-0 flex justify-center px-3"
+                  className="w-full mb-1 shrink-0 flex justify-center px-3"
                 >
                   {/* 가운데 정렬 + 좌우 여백 있는 카드 컨테이너 */}
-                  <div className="w-full max-w-3xl rounded-3xl border border-(--border-subtle) bg-(--bg-elevated) shadow-[0_14px_34px_rgba(0,0,0,0.32)] [html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+                  <div className="w-full h-full max-w-3xl rounded-3xl border border-(--border-subtle) bg-(--bg-elevated) shadow-[0_14px_34px_rgba(0,0,0,0.32)] [html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
                     <ActivityItem
                       activity={activity}
                       isActive={idx === currentIndex}

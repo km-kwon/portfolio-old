@@ -17,8 +17,8 @@ export const ssangsangProjects: Project = {
     "Agile-Scrum",
   ],
   links: [
-    { label: "Github", href: "https://github.com/your-repo" },
-    { label: "Live", href: "https://your-service.com" },
+    // { label: "Github", href: "https://github.com/your-repo" },
+    // { label: "Live", href: "https://your-service.com" },
   ],
   period: "2023.01 ~ 현재 운영중",
   team: "Frontend 2명, Backend 1명",

@@ -11,7 +11,7 @@ export const mogangProject: Project = {
     "수강하고 싶은 SW 강의를 선택하기 어려운 소비자들을 위해 1000+개의 강의 데이터를 수집·비교하는 플랫폼입니다. 2024학년도 후배들을 대상으로 배포하여 50+명의 긍정적인 반응을 얻었습니다.",
   tags: ["Next.js", "TypeScript", "SSR", "Styled-Components"],
   links: [
-    { label: "Github", href: "#" }, // 실제 링크 입력 필요
+    // { label: "Github", href: "#" }, // 실제 링크 입력 필요
   ],
   period: "2023.9 ~ 2024.03",
   team: "Frontend 1명, Backend 1명, 기획 2명, Designer 1명",

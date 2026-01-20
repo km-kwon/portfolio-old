@@ -28,7 +28,7 @@ const typeLabels: Record<Activity["type"], string> = {
 
 const ActivityItem: React.FC<ActivityItemProps> = ({ activity, isActive }) => {
   return (
-    <article className="w-full min-h-[320px] flex flex-col" aria-hidden={!isActive}>
+    <article className="w-full h-full flex flex-col" aria-hidden={!isActive}>
       <div className="w-full flex-1 px-5 py-5 md:px-7 md:py-6 flex flex-col justify-between">
         <div className="flex w-full flex-col gap-3">
           {/* 타입 배지 + 기간 */}

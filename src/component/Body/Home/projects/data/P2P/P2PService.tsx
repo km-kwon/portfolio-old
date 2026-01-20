@@ -11,7 +11,7 @@ export const p2pProject: Project = {
     "C언어와 리눅스 시스템 콜을 직접 활용하여 다중 접속을 지원하는 FTP 서버입니다. Fork 기반 멀티프로세싱과 파일 락(Flock)을 통해 데이터 무결성을 보장하는 동시성 제어를 구현했습니다.",
   tags: ["C", "Linux", "Socket Programming", "System Call", "Multi-Processing"],
   links: [
-    { label: "Github", href: "#" }, // 실제 링크 입력 필요
+    // { label: "Github", href: "#" }, // 실제 링크 입력 필요
   ],
   period: "2023.09 ~ 2023.12", // 기간 수정 필요 (예: 2023.09 – 2023.12)
   team: "Individual (100%)",

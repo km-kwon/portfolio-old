@@ -11,8 +11,8 @@ export const llmProject: Project = {
     "자연어 처리(NLP)와 딥러닝(LSTM/BERT)을 활용하여 텍스트 리뷰의 감성을 분석하고 평점을 예측하는 AI 모델을 개발했습니다. 정형화되지 않은 SNS 리뷰 데이터의 가치를 재발견했습니다.",
   tags: ["Python", "TensorFlow", "KoNLPy", "BERT", "Selenium"],
   links: [
-    { label: "Github", href: "#" }, // 실제 링크 필요
-    { label: "Demo", href: "#" },
+    // { label: "Github", href: "#" }, // 실제 링크 필요
+    // { label: "Demo", href: "#" },
   ],
   period: "2022.09 – 2022.12", // 예상 기간 (수정 가능)
   team: "AI Developer 2명, Data Analyst 1명",

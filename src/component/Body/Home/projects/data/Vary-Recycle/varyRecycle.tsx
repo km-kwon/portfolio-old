@@ -12,22 +12,21 @@ export const varyRecycleProjects: Project = {
     "UN SDGs(지속 가능한 개발 목표) 중 환경 분야를 대상으로 한 분리수거 리워드 서비스입니다. 80% 정확도의 Computer Vision AI로 쓰레기 종류를 인식하고, 올바른 분리수거 가이드를 제공하여 사용자 행동 변화를 이끌었습니다.",
   tags: [
     "Flutter",
-    "Firebase Realtime Database",
-    "Firebase Authentication",
+    "Firebase",
     "TensorFlow",
-    "Computer Vision",
+    "CV Model",
     "Google Solution Challenge",
   ],
   links: [
-    { label: "Github", href: "https://github.com/your-vary-recycle" },
-    {
-      label: "프로젝트 진행과정",
-      href: "https://your-notion-or-blog.com/vary-recycle",
-    },
-    {
-      label: "소개영상",
-      href: "https://youtu.be/your-vary-recycle-demo",
-    },
+    // { label: "Github", href: "https://github.com/your-vary-recycle" },
+    // {
+    //   label: "프로젝트 진행과정",
+    //   href: "https://your-notion-or-blog.com/vary-recycle",
+    // },
+    // {
+    //   label: "소개영상",
+    //   href: "https://youtu.be/your-vary-recycle-demo",
+    // },
   ],
   period: "2022.09 ~ 2023.08",
   team: "Frontend 2명, Backend 1명, AI 모델 2명, 데이터 생성 1명",
