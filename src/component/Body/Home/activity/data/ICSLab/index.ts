@@ -3,7 +3,7 @@ import type { Activity } from "../../types";
 export const icsLabActivity: Activity = {
   id: "ics-lab-research-tor-vpn",
   title: "ICS Lab 자기주도연구 (교내활동)",
-  subTitle: "Tor와 VPN의 익명성 메커니즘 비교 및 다크웹 포렌식 기법 연구",
+  subTitle: "다크웹 포렌식 기법 연구",
   period: ["2024.03", "2024.06"], // 활동 기간 정보가 없어서 비워두었습니다. 필요시 추가해주세요.
 
   mainContent: [

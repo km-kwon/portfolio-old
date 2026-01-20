@@ -3,7 +3,7 @@ import type { Activity } from "../../types";
 export const whoisMentorActivity: Activity = {
   id: "whois-mentor-cl123",
   title: "Whois 정보보안 소학회 (멘토)",
-  subTitle: "사이버보안학과 내 정보보안 소학회 (멘토)",
+  subTitle: "정보보안 소학회 (멘토)",
   period: ["2019.03", "2024.08"],
 
   mainContent: [

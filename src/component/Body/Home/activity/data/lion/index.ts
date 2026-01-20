@@ -3,8 +3,7 @@ import type { Activity } from "../../types";
 export const likelionActivity: Activity = {
   id: "likelion-11th-scrum-master",
   title: "멋쟁이 사자처럼 11기 (스크럼 마스터)",
-  subTitle:
-    "React.js 및 Flutter WebView 활용 일정 관리 앱 개발 (스크럼 마스터)",
+  subTitle: "일정 관리 앱 개발 (스크럼 마스터)",
   period: ["2023.03", "2023.09"],
 
   mainContent: [

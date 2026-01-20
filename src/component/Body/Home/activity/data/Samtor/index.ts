@@ -3,7 +3,7 @@ import type { Activity } from "../../types";
 export const samteoActivity: Activity = {
   id: "samteo-night-school-vp",
   title: "봉사 중앙 동아리 샘터야학 (부회장)",
-  subTitle: "야학 봉사 중앙 동아리 샘터야학 (부회장)",
+  subTitle: "야학 봉사 동아리 (부회장)",
   period: ["2022.09", "2024.08"],
 
   mainContent: [
