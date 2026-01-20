@@ -129,7 +129,7 @@ const BlogPage: React.FC = () => {
         root: null,
         rootMargin: "800px 0px", // 미리 로딩(체감 좋게)
         threshold: 0,
-      }
+      },
     );
 
     io.observe(el);
@@ -173,7 +173,7 @@ const BlogPage: React.FC = () => {
                 "cursor-pointer transition-colors hover:border-(--accent)",
                 "focus:outline-none focus:ring-2 focus:ring-(--accent)/40",
                 featuredFading ? "opacity-0" : "opacity-100",
-                "transition-opacity"
+                "transition-opacity",
               )}
               style={{ transitionDuration: `${FADE_MS}ms` }}
             >
@@ -203,19 +203,19 @@ const BlogPage: React.FC = () => {
 
                 {/* 본문 */}
                 <div className="p-5 h-full flex flex-col justify-between">
-                  <h2 className="text-[22px] md:text-[24px] font-bold leading-snug tracking-[-0.02em] mb-3">
+                  <h2 className="text-[22px] md:text-[24px] font-bold leading-snug tracking-[-0.02em] mb-3 line-clamp-1">
                     {featured.title}
                   </h2>
 
-                  <p className="text-[13px] text-fg-muted leading-relaxed mb-5 line-clamp-3">
+                  <p className="text-[13px] text-fg-muted leading-relaxed mb-5 line-clamp-2">
                     {featured.excerpt}
                   </p>
                   <div className="flex flex-col text-[12px] text-fg-muted w-full">
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-4 overflow-hidden max-h-8">
                       {featured.tags.slice(0, 6).map((t) => (
                         <span
                           key={t}
-                          className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-fg-muted"
+                          className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-green-300 [html[data-theme='light']_&]:text-green-500"
                         >
                           {t}
                         </span>
@@ -238,7 +238,7 @@ const BlogPage: React.FC = () => {
               "text-[12px] px-3 py-1.5 rounded-full border transition-colors",
               activeTag === "ALL"
                 ? "bg-(--bg-elevated) border-(--accent) text-(--fg-base)"
-                : "bg-(--bg-soft) border-(--border-subtle) text-fg-muted hover:border-(--accent)"
+                : "bg-(--bg-soft) border-(--border-subtle) text-fg-muted hover:border-(--accent)",
             )}
           >
             전체보기 ({MOCK_ALL_POSTS.length})
@@ -253,7 +253,7 @@ const BlogPage: React.FC = () => {
                 "text-[12px] px-3 py-1.5 rounded-full border transition-colors",
                 activeTag === t
                   ? "bg-(--bg-elevated) border-(--accent) text-(--fg-base)"
-                  : "bg-(--bg-soft) border-(--border-subtle) text-fg-muted hover:border-(--accent)"
+                  : "bg-(--bg-soft) border-(--border-subtle) text-fg-muted hover:border-(--accent)",
               )}
             >
               {t} ({count})
@@ -265,7 +265,7 @@ const BlogPage: React.FC = () => {
         <section
           className={cx(
             "grid gap-6 transition-opacity duration-200",
-            fading ? "opacity-0" : "opacity-100"
+            fading ? "opacity-0" : "opacity-100",
           )}
         >
           {visiblePosts.map((p) => (
@@ -280,7 +280,7 @@ const BlogPage: React.FC = () => {
               className={cx(
                 "group overflow-hidden rounded-2xl border bg-(--bg-elevated) border-(--border-subtle)",
                 "cursor-pointer transition-colors hover:border-(--accent)",
-                "focus:outline-none focus:ring-2 focus:ring-(--accent)/40"
+                "focus:outline-none focus:ring-2 focus:ring-(--accent)/40",
               )}
             >
               <div className="grid md:grid-cols-[240px_1fr] md:h-60">
@@ -298,7 +298,7 @@ const BlogPage: React.FC = () => {
                 )}
 
                 <div className="p-6 md:overflow-hidden flex flex-col h-full">
-                  <h3 className="text-[20px] font-semibold leading-snug mb-2 line-clamp-2">
+                  <h3 className="text-[20px] font-semibold leading-snug mb-2 line-clamp-1">
                     {p.title}
                   </h3>
 
@@ -306,7 +306,7 @@ const BlogPage: React.FC = () => {
                     {p.excerpt}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-4 overflow-hidden max-h-[52px]">
+                  <div className="flex flex-wrap gap-2 mb-4 overflow-hidden max-h-14">
                     {p.tags.slice(0, 8).map((t) => (
                       <span
                         key={t}

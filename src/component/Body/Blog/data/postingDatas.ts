@@ -176,15 +176,9 @@ const ALL_POSTS_UNSORTED: Post[] = [
     title:
       "“AI로 업무 전체 자동화하면 끝 아니야?” 라고 말씀하시는 시니어를 보며 느낀 찝찝함",
     excerpt:
-      "요즘 들어서 AI 쓰면 금방이잖아? 라는 말을 너무 많이 듣는다. 그리고 마치 구호처럼 느껴진다... 나에게 와닿지 않았던 이유에 대한 고찰과정과 개발자란 직업은 어떻게 변화되어가는지에 대해서 스스로 생각해 보았다. (제발 해피엔딩이었으면!!!!! 젭알!!!)",
+      "요즘 들어서 AI 쓰면 금방이잖아? 라는 말을 너무 많이 듣는다. 그리고 마치 구호처럼 느껴진다... 나에게 와닿지 않았던 이유에 대한 고찰과정과 개발자란 직업은 어떻게 변화되어가는지에 대해서 스스로 생각해 보았다.",
     date: "2026년 1월 15일",
-    tags: [
-      "AI",
-      "Automation",
-      "Technical Debt",
-      "Junior Developers",
-      "Engineering Culture",
-    ],
+    tags: ["AI", "Automation", "Technical Debt", "Engineering Culture"],
     cover:
       "https://plus.unsplash.com/premium_photo-1764695396810-3992d6bc4e51?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "devloper",
@@ -203,7 +197,6 @@ const ALL_POSTS_UNSORTED: Post[] = [
       "State Management",
       "Architecture",
       "Refactoring",
-      "Junior Developers",
       "Engineering Culture",
     ],
     cover:
