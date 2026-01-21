@@ -193,12 +193,7 @@ const ALL_POSTS_UNSORTED: Post[] = [
     excerpt:
       "지역 State를 Reducer로 액션함수로 분리하는 과정에서 응집도를 낮추기 위한 고민, 어떻게 작성해야 차후 전역 State로 빼기 용이할까 생각해본 그 일련의 과정들을 공유한다. (너무 어려웠어...)",
     date: "2026년 1월 19일",
-    tags: [
-      "State Management",
-      "Architecture",
-      "Refactoring",
-      "Engineering Culture",
-    ],
+    tags: ["State", "Architecture", "Refactoring", "Engineering Culture"],
     cover:
       "https://images.unsplash.com/photo-1687603921109-46401b201195?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     category: "devloper",
