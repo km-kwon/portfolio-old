@@ -75,7 +75,7 @@ const BlogSection: React.FC = () => {
               )}
 
               <div className="p-6 md:overflow-hidden">
-                <h3 className="text-[20px] font-semibold leading-snug mb-2">
+                <h3 className="text-[20px] font-semibold leading-snug mb-2 line-clamp-1">
                   {post.title}
                 </h3>
 
