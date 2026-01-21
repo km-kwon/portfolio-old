@@ -43,8 +43,7 @@ const AboutSection: React.FC = () => {
           <div className="text-[13px] text-fg-muted leading-[1.7]">
             <p>
               새로운 기술로 사람들에게 가치를 주는 것을 좋아하지만, 그 과정에서
-              <strong> "누군가 피해를 보지 않도록" </strong>하는 것을 더
-              중요하게 생각합니다.
+              <strong> "기술이 미칠 영향"</strong>을 한번 더 고려합니다.
               <br />
               <br />
               보안을 전공하며 익힌 <strong>Risk Management</strong> 사고방식을
@@ -71,7 +70,7 @@ const AboutSection: React.FC = () => {
             </p>
             <ul className="mt-1.5 pl-4 list-disc space-y-1">
               <li>'나'보다 '우리(Team)'의 이익을 먼저 고려</li>
-              <li>문제가 생기면 외부 탓보다 해결책과 내 안의 원인 분석</li>
+              <li>문제 발생시 즉각적인 원인 분석 및 해결책 탐색</li>
               <li>끝까지 파고드는 집요함 (Log Consistency 해결 경험)</li>
               <li>동료가 안심하고 등을 맡길 수 있는 신뢰 구축</li>
             </ul>
