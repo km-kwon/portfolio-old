@@ -197,7 +197,7 @@ const CareerCard: React.FC<CareerCardProps> = ({ career }) => {
                   <h3 className="text-[16px] font-bold leading-tight truncate">
                     {career.company}
                   </h3>
-                  <span className="text-[12px] text-fg-muted">
+                  <span className="hidden sm:inline text-[12px] text-fg-muted">
                     {career.position}
                   </span>
                 </div>

@@ -74,7 +74,7 @@ export const careerData: CareerItem[] = [
       {
         name: "차량제어 시험산출물 관리 시스템 고도화(VTDM)",
         period: "2025.09 - 현재",
-        role: "Frontend Developer / 유지보수·아키텍처 개선",
+        role: "Frontend / 유지보수·아키텍처 개선",
         description:
           "차량 테스트/평가 산출물을 클라우드에서 통합 관리하는 웹 플랫폼(SaaS) 유지보수 및 고도화. 레거시 기술 부채로 인한 유지보수 난이도와 대용량 조회 성능 문제를 해결하기 위해 도메인 중심 재설계 및 렌더링 최적화 주도.",
         tasks: [
