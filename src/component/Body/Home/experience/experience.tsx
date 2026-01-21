@@ -87,7 +87,7 @@ const BlogSection: React.FC = () => {
                   {post.tags.slice(0, 8).map((tag) => (
                     <span
                       key={tag}
-                      className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-fg-muted"
+                      className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-green-300 [html[data-theme='light']_&]:text-green-500"
                     >
                       {tag}
                     </span>
