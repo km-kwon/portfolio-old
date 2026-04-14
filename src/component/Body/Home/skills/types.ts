@@ -17,6 +17,7 @@ export interface ProjectInCareer {
   period: string;
   role: string;
   description: string;
+  impact: string;
   tasks: string[];
   achievements?: string[];
   techStack?: TechStack;
@@ -26,6 +27,8 @@ export interface CareerItem {
   id: string;
   company: string;
   companyLogo?: string;
+  transition?: string;
+  department: string;
   position: string;
   period: string;
   projects: ProjectInCareer[];
