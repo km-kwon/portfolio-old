@@ -21,6 +21,7 @@ const Header: React.FC<HeaderProps> = ({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems: { id: string; label: string }[] = [
+    { id: "top", label: "Profile" },
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
@@ -62,7 +63,7 @@ const Header: React.FC<HeaderProps> = ({
     <>
       <header className="fixed inset-x-0 top-0 h-(--header-height) z-20 border-b border-(--border-subtle)">
         <div className="max-w-(--content-max-w) mx-auto h-full px-5 flex items-center justify-between gap-4">
-          {/* LEFT */}
+          {/* LEFT - 로고 (홈 링크 역할) */}
           <Link
             to="/"
             className="tracking-[0.08em] uppercase text-[13px] font-medium text-fg-muted hover:text-(--accent) transition-colors duration-300 cursor-pointer"
@@ -70,15 +71,8 @@ const Header: React.FC<HeaderProps> = ({
             Frontend · UX
           </Link>
 
-          {/* CENTER NAV */}
+          {/* CENTER NAV - Home 제거, 섹션들 + Blog */}
           <nav className="hidden md:flex items-center gap-1 text-[13px]">
-            <Link
-              to="/"
-              className={`${navLinkBase} ${isHomePage ? navLinkActive : navLinkInactive}`}
-            >
-              Home
-            </Link>
-
             {navItems.map(({ id, label }) => (
               <button
                 key={id}
@@ -88,11 +82,14 @@ const Header: React.FC<HeaderProps> = ({
                 {label}
               </button>
             ))}
+
+            {/* 구분자 */}
+            <span className="text-fg-muted/40 mx-1">·</span>
+
             <Link
               to="/blog"
-              className={`${navLinkBase} ${
-                location.pathname === "/blog" ? navLinkActive : navLinkInactive
-              }`}
+              className={`${navLinkBase} ${location.pathname === "/blog" ? navLinkActive : navLinkInactive
+                }`}
             >
               Blog
             </Link>
@@ -128,8 +125,8 @@ const Header: React.FC<HeaderProps> = ({
               className={`hidden sm:inline-flex text-[13px] px-4 py-2 rounded-lg border
                          transition-all duration-300 ease-out
                          ${location.pathname === "/contact"
-                           ? "text-(--accent) border-(--accent-border) bg-(--accent-subtle)"
-                           : "text-fg-muted border-(--border-subtle) bg-(--bg-elevated) hover:bg-(--bg-soft) hover:border-(--border-hover)"}`}
+                  ? "text-(--accent) border-(--accent-border) bg-(--accent-subtle)"
+                  : "text-fg-muted border-(--border-subtle) bg-(--bg-elevated) hover:bg-(--bg-soft) hover:border-(--border-hover)"}`}
             >
               Contact
             </Link>
@@ -156,19 +153,7 @@ const Header: React.FC<HeaderProps> = ({
         ].join(" ")}
       >
         <nav className="flex flex-col p-6 pt-[calc(var(--header-height)+16px)] gap-1">
-          <Link
-            to="/"
-            className={[
-              "px-4 py-3 rounded-lg text-[14px] border border-transparent",
-              "transition-all duration-200 ease-out",
-              "hover:bg-(--bg-soft)",
-              isHomePage ? "text-fg bg-(--bg-soft)" : "text-fg-muted",
-            ].join(" ")}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Home
-          </Link>
-
+          {/* 모바일에서도 Home 제거 - 섹션들만 표시 */}
           {navItems.map(({ id, label }) => (
             <button
               key={id}
@@ -180,6 +165,8 @@ const Header: React.FC<HeaderProps> = ({
               {label}
             </button>
           ))}
+
+          <div className="my-2 border-t border-(--border-subtle)" />
 
           <Link
             to="/blog"
