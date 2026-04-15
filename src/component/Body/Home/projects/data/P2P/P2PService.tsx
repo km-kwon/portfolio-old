@@ -76,4 +76,16 @@ export const p2pProject: Project = {
   ],
 
   images: [], // 필요 시 시연 스크린샷 추가
+
+  highlights: [
+    { value: "10+", label: "동시 접속 처리" },
+    { value: "100%", label: "전송 성공률" },
+    { value: "0건", label: "데이터 손상" },
+  ],
+
+  techDecisions: [
+    { tech: "C", reason: "커널 시스템 콜을 직접 호출하여 OS 동작 원리를 깊이 이해하기 위해 선택" },
+    { tech: "Linux", reason: "POSIX 호환 시스템 콜(fork, flock, signal)을 활용한 시스템 프로그래밍 학습" },
+    { tech: "Socket Programming", reason: "TCP/IP 연결 수립부터 데이터 전송까지 네트워크의 근본적인 이해" },
+  ],
 };

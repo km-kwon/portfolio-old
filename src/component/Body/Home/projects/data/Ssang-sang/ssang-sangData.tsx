@@ -83,5 +83,15 @@ export const ssangsangProjects: Project = {
     // { src: "/images/ssangsang_arch.png", caption: "서비스 아키텍처 다이어그램" },
     // { src: "/images/ssangsang_ui.png", caption: "메인 화면 및 봉사 신청 Flow" },
   ],
+
+  highlights: [
+    { value: "100+", label: "실사용자" },
+    { value: "60%", label: "프론트엔드 기여도" },
+    { value: "2위", label: "교내 콘테스트" },
+  ],
+
+  techDecisions: [
+    { tech: "React.js", reason: "컴포넌트 기반 아키텍처로 재사용성과 유지보수성 확보" },
+    { tech: "Progressive Web App", reason: "하나의 코드로 웹/모바일 크로스 플랫폼 대응, 스토어 심사 없이 빠른 배포" },
+  ],
 };
-// 다른 프로젝트 데이터도 같은 형식으로 추가...

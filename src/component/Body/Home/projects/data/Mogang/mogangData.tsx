@@ -65,4 +65,16 @@ export const mogangProject: Project = {
   ],
 
   images: [], // 필요 시 이미지 경로 추가
+
+  highlights: [
+    { value: "1000+", label: "강의 데이터" },
+    { value: "50+", label: "실사용자" },
+    { value: "90+", label: "Lighthouse 점수" },
+  ],
+
+  techDecisions: [
+    { tech: "Next.js", reason: "1000+ 강의 데이터의 SSR 처리로 초기 로딩 속도와 SEO 최적화" },
+    { tech: "TypeScript", reason: "대규모 데이터 타입 안정성과 IDE 자동완성으로 개발 생산성 향상" },
+    { tech: "SSR", reason: "CSR 대비 초기 로딩 속도 개선 및 검색 엔진 최적화" },
+  ],
 };

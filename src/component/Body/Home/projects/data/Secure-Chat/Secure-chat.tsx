@@ -75,4 +75,16 @@ export const secureChatProject: Project = {
   ],
 
   images: [], // 필요 시 시연 스크린샷 추가
+
+  highlights: [
+    { value: "256bit", label: "AES 메시지 암호화" },
+    { value: "2048bit", label: "RSA 키 교환" },
+    { value: "0건", label: "평문 노출" },
+  ],
+
+  techDecisions: [
+    { tech: "Java", reason: "풍부한 암호화 라이브러리(javax.crypto)와 스레드 관리 지원" },
+    { tech: "RSA", reason: "비대칭키로 AES 키를 안전하게 교환하는 SSL/TLS 기본 원리 구현" },
+    { tech: "AES-256", reason: "RSA보다 빠른 대칭키 암호화로 실시간 채팅 메시지 처리" },
+  ],
 };
