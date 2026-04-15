@@ -41,11 +41,20 @@ function classifyResult(text: string): {
   };
 }
 
-/* ── 숫자 추출 (연도 제외) ── */
+/* ── 숫자 추출 (날짜 패턴 제외, 의미 있는 지표만) ── */
 function extractNumber(text: string): string | null {
-  const cleaned = text.replace(/\b20\d{2}(학년도|년)?\b/g, "");
-  const match = cleaned.match(/(\d[\d,.]*\+?[%점건명위개]?)/);
-  return match ? match[1] : null;
+  const cleaned = text
+    .replace(/\b20\d{2}(학년도|년도|년)?\b/g, "")
+    .replace(/\d{1,2}월/g, "")
+    .replace(/\d{1,2}일/g, "");
+
+  // 1순위: 의미 있는 단위 접미사가 붙은 숫자 (위, %, 명, 건, 점, 개)
+  const withSuffix = cleaned.match(/(\d[\d,.]*\+?[%점건명위개])/);
+  if (withSuffix) return withSuffix[1];
+
+  // 2순위: 단위 없지만 두 자릿수 이상인 숫자 (단독 한 자리는 무의미할 확률 높음)
+  const standalone = cleaned.match(/(\d{2,}[\d,.]*\+?)/);
+  return standalone ? standalone[1] : null;
 }
 
 /* ── Results Section ── */
