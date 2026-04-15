@@ -76,4 +76,16 @@ export const llmProject: Project = {
   ],
 
   images: [], // 필요 시 아키텍처 다이어그램 추가
+
+  highlights: [
+    { value: "85%", label: "모델 정확도" },
+    { value: "200K+", label: "학습 데이터" },
+    { value: "15%", label: "성능 향상" },
+  ],
+
+  techDecisions: [
+    { tech: "Python", reason: "ML/DL 생태계(TensorFlow, KoNLPy)의 주력 언어" },
+    { tech: "BERT", reason: "문맥 양방향 이해도가 높아 구어체 리뷰의 감성 분류 정확도 극대화" },
+    { tech: "Selenium", reason: "네이버·유튜브·인스타그램 등 동적 페이지의 리뷰 크롤링" },
+  ],
 };

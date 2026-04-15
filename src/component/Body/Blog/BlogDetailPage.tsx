@@ -83,7 +83,7 @@ const TocSidebar: React.FC<{
 
   return (
     <aside className="fixed left-[calc(50%+870px/2+48px)] top-[calc(var(--header-height)+48px)] hidden xl:block w-56 2xl:w-64 h-[calc(100vh-var(--header-height)-96px)] overflow-y-auto overflow-x-hidden">
-      <div className="border-l border-(--border-subtle) pl-4 pr-2">
+      <div className=" pl-4 pr-2">
         <nav aria-label="Table of contents">
           <ul className="space-y-2">
             {toc.map((item) => {
@@ -326,7 +326,7 @@ const MarkdownContent = React.memo(function MarkdownContent({
         );
       },
     }),
-    [renderSlug]
+    [renderSlug],
   );
 
   return (
@@ -343,7 +343,7 @@ const BlogDetailPage: React.FC = () => {
   // ✅ post와 content를 한번에 계산
   const post = useMemo(
     () => MOCK_ALL_POSTS.find((p) => p.slug === slug),
-    [slug]
+    [slug],
   );
   const content = useMemo(() => post?.content ?? "", [post]);
 
@@ -385,7 +385,7 @@ const BlogDetailPage: React.FC = () => {
       parseFloat(
         getComputedStyle(document.documentElement)
           .getPropertyValue("--header-height")
-          .trim()
+          .trim(),
       ) || 80;
     const offset = 24;
 

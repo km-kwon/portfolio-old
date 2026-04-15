@@ -84,4 +84,16 @@ export const varyRecycleProjects: Project = {
     // { src: "/images/vary_recycle_ui.png", caption: "촬영 → 인식 → 결과 가이드 플로우 화면" },
     // { src: "/images/vary_recycle_arch.png", caption: "Flutter–Firebase–AI 모델 연동 아키텍처" },
   ],
+
+  highlights: [
+    { value: "80%", label: "AI 인식 정확도" },
+    { value: "1위", label: "교내 최우수상" },
+    { value: "7500+", label: "학습 이미지" },
+  ],
+
+  techDecisions: [
+    { tech: "Flutter", reason: "단일 코드베이스로 iOS/Android 동시 대응, Hot Reload로 빠른 반복 개발" },
+    { tech: "Firebase", reason: "인증·DB·스토리지를 통합 제공, 서버리스로 빠른 프로토타이핑" },
+    { tech: "TensorFlow", reason: "모바일 환경에서도 실시간 이미지 분류가 가능한 경량화 모델 지원" },
+  ],
 };
