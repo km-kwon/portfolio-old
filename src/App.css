@@ -29,6 +29,13 @@
   --content-max-w: 1024px;
   --radius-card: 16px;
 
+  /* Modal */
+  --modal-backdrop: rgba(0, 0, 0, 0.5);
+  --modal-shadow:
+    0 0 0 1px rgba(255,255,255,0.04),
+    0 8px 24px rgba(0,0,0,0.4),
+    0 24px 48px rgba(0,0,0,0.3);
+
   color-scheme: dark;
 
   /* Tailwind mapping */

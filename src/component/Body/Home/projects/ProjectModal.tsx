@@ -1,41 +1,138 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { motion, type Variants } from "framer-motion";
 import type { Project } from "./types";
 
+/* ── Animation Variants ── */
+const backdropVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+  exit: { opacity: 0, transition: { duration: 0.2, ease: "easeOut" as const } },
+};
+
+const modalVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 32,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring" as const,
+      damping: 28,
+      stiffness: 380,
+      mass: 0.8,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 16,
+    scale: 0.98,
+    transition: { duration: 0.18, ease: [0.4, 0, 1, 1] as const },
+  },
+};
+
+const contentContainer: Variants = {
+  visible: {
+    transition: { staggerChildren: 0.06, delayChildren: 0.12 },
+  },
+};
+
+const contentItem: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: [0.22, 0.61, 0.36, 1] as const },
+  },
+};
+
+/* ── Close Icon SVG ── */
+const CloseIcon: React.FC = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+  >
+    <line x1="4" y1="4" x2="12" y2="12" />
+    <line x1="12" y1="4" x2="4" y2="12" />
+  </svg>
+);
+
+/* ── Component ── */
 interface ProjectModalProps {
   project: Project;
-  isVisible: boolean;
-  fromOffset: { x: number; y: number } | null;
   onClose: () => void;
 }
 
 export const ProjectModal: React.FC<ProjectModalProps> = ({
   project,
-  isVisible,
-  fromOffset,
   onClose,
 }) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  /* Focus trap — 모달 열릴 때 포커스를 모달로 이동 */
+  useEffect(() => {
+    modalRef.current?.focus();
+  }, []);
+
+  /* Escape 키 닫기 */
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [onClose]);
+
+  /* Body 스크롤 잠금 */
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   return (
-    <div
-      className={
-        "fixed inset-0 z-[9999] flex items-center justify-center px-4 transition-opacity duration-200 " +
-        (isVisible ? "opacity-100" : "opacity-0 pointer-events-none")
-      }
-    >
-      {/* Backdrop */}
-      <button
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+    <div className="fixed inset-0 z-9999 flex items-center justify-center px-4">
+      {/* ── Glassmorphism Backdrop ── */}
+      <motion.div
+        className={
+          "absolute inset-0 " +
+          "bg-(--modal-backdrop) " +
+          "backdrop-blur-xl " +
+          "[-webkit-backdrop-filter:blur(24px)_saturate(1.4)]"
+        }
+        variants={backdropVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
         onClick={onClose}
         aria-label="Close project detail"
       />
 
-      {/* Modal Card */}
-      <div
+      {/* ── Modal Card ── */}
+      <motion.div
+        ref={modalRef}
+        tabIndex={-1}
+        role="dialog"
+        aria-modal="true"
+        aria-label={project.title}
         className={
-          "relative z-50 w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl " +
-          "border border-(--border-subtle) bg-(--bg-elevated) " +
-          "shadow-[0_20px_60px_rgba(0,0,0,0.7)] " +
-          "transition-[transform,opacity] duration-200 " +
-          // 커스텀 스크롤바 스타일
+          "relative z-50 w-full max-w-3xl max-h-[85vh] overflow-y-auto " +
+          "rounded-2xl outline-none " +
+          /* Surface */
+          "bg-(--bg-elevated) " +
+          /* Layered border + shadow for depth */
+          "border border-(--border-subtle) " +
+          "shadow-(--modal-shadow) " +
+          /* Custom scrollbar */
           "[&::-webkit-scrollbar]:w-3 " +
           "[&::-webkit-scrollbar-track]:bg-transparent " +
           "[&::-webkit-scrollbar-track]:rounded-r-2xl " +
@@ -46,36 +143,59 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
           "[&::-webkit-scrollbar-thumb]:border-(--bg-elevated) " +
           "[&::-webkit-scrollbar-thumb:hover]:bg-gray-300"
         }
-        style={
-          fromOffset
-            ? {
-                transform: isVisible
-                  ? "translate3d(0,0,0) scale(1)"
-                  : `translate3d(${fromOffset.x}px, ${fromOffset.y}px, 0) scale(0.9)`,
-                transformOrigin: "center center",
-              }
-            : undefined
-        }
+        variants={modalVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
-        <div className="p-6 md:p-8">
+        {/* ── Inner Content ── */}
+        <motion.div
+          className="p-6 md:p-8"
+          variants={contentContainer}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Header */}
-          <div className="flex justify-between items-start mb-6">
+          <motion.div
+            className="flex justify-between items-start mb-6"
+            variants={contentItem}
+          >
             <div>
               <h3 className="text-2xl font-bold mb-1">{project.title}</h3>
               {project.subtitle && (
                 <p className="text-sm text-fg-muted">{project.subtitle}</p>
               )}
             </div>
+
+            {/* Close Button — micro-interaction */}
             <button
               onClick={onClose}
-              className="p-2 rounded-full hover:bg-(--bg-soft) transition-colors"
+              aria-label="모달 닫기"
+              className={
+                "relative p-2 rounded-full cursor-pointer " +
+                "text-fg-muted " +
+                "transition-all duration-250 ease-out " +
+                "hover:text-fg " +
+                "hover:bg-(--bg-soft) " +
+                "hover:scale-110 " +
+                "active:scale-95 " +
+                /* Animated ring on hover */
+                "before:absolute before:inset-0 before:rounded-full " +
+                "before:border before:border-transparent " +
+                "before:transition-all before:duration-300 " +
+                "hover:before:border-(--border-hover) " +
+                "hover:before:scale-110 before:scale-75 before:opacity-0 hover:before:opacity-100"
+              }
             >
-              ✕
+              <CloseIcon />
             </button>
-          </div>
+          </motion.div>
 
           {/* Meta Info */}
-          <div className="flex flex-wrap gap-4 text-xs text-fg-muted mb-8 p-4 bg-(--bg-soft) rounded-xl">
+          <motion.div
+            className="flex flex-wrap gap-4 text-xs text-fg-muted mb-8 p-4 bg-(--bg-soft) rounded-xl"
+            variants={contentItem}
+          >
             {project.period && <div>📅 {project.period}</div>}
             {project.team && (
               <>
@@ -83,39 +203,21 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 <div>👥 {project.team}</div>
               </>
             )}
-            {/* {project.links.length > 0 && (
-              <>
-                <div className="w-px h-3 bg-(--border-subtle) self-center" />
-                <div className="flex gap-2">
-                  {project.links.map((l) => (
-                    <a
-                      key={l.label}
-                      href={l.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline hover:text-fg"
-                    >
-                      {l.label}
-                    </a>
-                  ))}
-                </div>
-              </>
-            )} */}
-          </div>
+          </motion.div>
 
-          {/* Body Content */}
+          {/* Body Content — staggered sections */}
           <div className="space-y-10 text-sm leading-relaxed text-fg-muted">
             {/* 1. Overview */}
-            <section>
+            <motion.section variants={contentItem}>
               <h4 className="text-fg font-semibold text-base mb-3">
                 🔎 프로젝트 개요
               </h4>
               <p>{project.overview}</p>
-            </section>
+            </motion.section>
 
             {/* 2. Images */}
             {project.images && project.images.length > 0 && (
-              <section>
+              <motion.section variants={contentItem}>
                 <h4 className="text-fg font-semibold text-base mb-3">
                   📸 Screen & Architecture
                 </h4>
@@ -137,12 +239,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                     </div>
                   ))}
                 </div>
-              </section>
+              </motion.section>
             )}
 
             {/* 3. Why & Tech Decisions */}
             {project.why && (
-              <section>
+              <motion.section variants={contentItem}>
                 <h4 className="text-fg font-semibold text-base mb-3">
                   💡 기술적 의사결정 (Why?)
                 </h4>
@@ -159,12 +261,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                     </div>
                   ))}
                 </div>
-              </section>
+              </motion.section>
             )}
 
             {/* 4. Role & Tasks */}
             {project.role && (
-              <section>
+              <motion.section variants={contentItem}>
                 <h4 className="text-fg font-semibold text-base mb-3">
                   👩🏻‍💻 수행 역할 ( 기여도 {project.role.percentage} )
                 </h4>
@@ -173,12 +275,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                     <li key={idx}>{task}</li>
                   ))}
                 </ul>
-              </section>
+              </motion.section>
             )}
 
             {/* 5. Troubleshooting */}
             {project.troubleshooting && (
-              <section>
+              <motion.section variants={contentItem}>
                 <h4 className="text-fg font-semibold text-base mb-3">
                   🚨 트러블 슈팅
                 </h4>
@@ -212,12 +314,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                     </div>
                   ))}
                 </div>
-              </section>
+              </motion.section>
             )}
 
             {/* 6. Results */}
             {project.results && (
-              <section>
+              <motion.section variants={contentItem}>
                 <h4 className="text-fg font-semibold text-base mb-3">
                   ✨ 성과
                 </h4>
@@ -229,11 +331,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                     </li>
                   ))}
                 </ul>
-              </section>
+              </motion.section>
             )}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

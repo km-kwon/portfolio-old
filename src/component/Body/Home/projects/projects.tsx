@@ -1,5 +1,6 @@
 // src/ProjectsSection.tsx
 import React, { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import { ProjectModal } from "./ProjectModal";
 import CircularProgress from "../../../common/CircularProgress";
 import {
@@ -32,10 +33,6 @@ const ProjectsSection: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false); // 모바일 여부
 
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [fromOffset, setFromOffset] = useState<{ x: number; y: number } | null>(
-    null
-  );
 
   // 터치 스크롤을 위한 상태
   const touchStartX = React.useRef<number>(0);
@@ -82,59 +79,15 @@ const ProjectsSection: React.FC = () => {
 
   const activeProject = projects.find((p) => p.id === activeId) || null;
 
-  // 카드 → 모달로 확대되는 느낌을 위한 open 함수
-  const openModal = (id: string, cardEl: HTMLElement) => {
-    const rect = cardEl.getBoundingClientRect();
-    const vw = window.innerWidth;
-    const vh = window.innerHeight;
-
-    const cardCenterX = rect.left + rect.width / 2;
-    const cardCenterY = rect.top + rect.height / 2;
-    const viewportCenterX = vw / 2;
-    const viewportCenterY = vh / 2;
-
-    const x = cardCenterX - viewportCenterX;
-    const y = cardCenterY - viewportCenterY;
-
+  const openModal = (id: string) => {
     setActiveId(id);
-    setFromOffset({ x, y });
-
-    requestAnimationFrame(() => {
-      setIsVisible(true);
-    });
   };
 
   const closeModal = () => {
-    setIsVisible(false);
-    setTimeout(() => {
-      setActiveId(null);
-      setFromOffset(null);
-    }, 220);
+    setActiveId(null);
   };
 
-  // ESC 닫기
-  useEffect(() => {
-    if (!activeProject) return;
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        closeModal();
-      }
-    };
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [activeProject]);
-
-  // 모달 열릴 때 body 스크롤 막기
-  useEffect(() => {
-    if (activeProject) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [activeProject]);
+  // ESC 닫기 & body 스크롤 잠금은 ProjectModal 내부에서 처리
 
   // 📐 화면 크기에 따른 baseSpread 계산 (대충 감성 튜닝값)
   const getBaseSpread = () => {
@@ -221,9 +174,7 @@ const ProjectsSection: React.FC = () => {
                     <article
                       data-project-id={project.id}
                       className="w-full max-w-3xl min-h-80 flex flex-col rounded-2xl bg-(--bg-elevated) [html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)] [html[data-theme='light']_&]:hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-(--border-subtle) cursor-pointer overflow-hidden"
-                      onClick={(e) =>
-                        openModal(project.id, e.currentTarget as HTMLElement)
-                      }
+                      onClick={() => openModal(project.id)}
                     >
                       {project.banner && (
                         <div className="relative w-full h-32 shrink-0 overflow-hidden">
@@ -379,16 +330,14 @@ const ProjectsSection: React.FC = () => {
                       opacity,
                       filter,
                     }}
-                    onClick={(e) =>
-                      openModal(project.id, e.currentTarget as HTMLElement)
-                    }
+                    onClick={() => openModal(project.id)}
                     onMouseEnter={() => setFocusedIndex(idx)}
                     onFocus={() => setFocusedIndex(idx)}
                     tabIndex={0}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.preventDefault();
-                        openModal(project.id, e.currentTarget as HTMLElement);
+                        openModal(project.id);
                       }
                     }}
                     role="button"
@@ -488,13 +437,7 @@ const ProjectsSection: React.FC = () => {
 
                   const handlePointActivate = () => {
                     setFocusedIndex(idx);
-
-                    const cardEl = document.querySelector<HTMLElement>(
-                      `[data-project-id="${project.id}"]`
-                    );
-                    if (cardEl) {
-                      openModal(project.id, cardEl);
-                    }
+                    openModal(project.id);
                   };
 
                   return (
@@ -543,14 +486,15 @@ const ProjectsSection: React.FC = () => {
         )}
       </section>
 
-      {activeProject && (
-        <ProjectModal
-          project={activeProject}
-          isVisible={isVisible}
-          fromOffset={fromOffset}
-          onClose={closeModal}
-        />
-      )}
+      <AnimatePresence>
+        {activeProject && (
+          <ProjectModal
+            key={activeProject.id}
+            project={activeProject}
+            onClose={closeModal}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };
