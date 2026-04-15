@@ -1,6 +1,6 @@
 import React from "react";
 import type { OpenSourcePackage } from "../types";
-import { pillClass, chipClass } from "../styles";
+import { pillClass, chipClass } from "../../../../../styles/tokens";
 import { openSourceData } from "./openSourceData";
 
 interface PackageCardProps {
@@ -21,7 +21,7 @@ const NpmIcon: React.FC = () => (
 
 const PackageCard: React.FC<PackageCardProps> = ({ pkg }) => {
   return (
-    <div className="bg-[var(--bg-soft)] rounded-lg p-4 border border-[var(--border-subtle)] hover:border-white/20 transition-colors">
+    <div className="bg-(--bg-soft) rounded-lg p-4 border border-(--border-subtle) hover:border-(--border-hover) transition-colors">
       {/* 패키지 헤더 */}
 
       <div className="mb-3 w-full ">

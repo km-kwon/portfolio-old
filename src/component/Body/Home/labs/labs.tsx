@@ -1,25 +1,14 @@
 // src/WorkerLab.tsx
 import React, { useEffect, useRef, useState } from "react";
 import FibWorker from "./worker/fibWorker?worker";
-
-// 공통 스타일 토큰 (다른 섹션이랑 맞춤)
-const cardBase =
-  "rounded-3xl border border-(--border-subtle) bg-(--bg-elevated) p-5 " +
-  "shadow-[0_14px_34px_rgba(0,0,0,0.32)] " +
-  "transition-transform transition-shadow transition-colors duration-200 ease-out " +
-  "hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(0,0,0,0.5)] hover:border-white/20 " +
-  "[html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)] " +
-  "[html[data-theme='light']_&]:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]";
-
-const sectionHeaderBase =
-  "flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-5";
-
-const labelClass = "text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3";
-const sectionTitleClass = "text-[20px] font-semibold tracking-[0.02em]";
-const sectionSubTitleClass = "text-[13px] text-fg-muted leading-relaxed";
-
-const chipClass =
-  "text-[11px] px-2.5 py-1 rounded-full border border-(--border-subtle) text-fg-muted";
+import {
+  cardBase,
+  sectionHeaderBase,
+  labelClass,
+  sectionTitleClass,
+  sectionSubTitleClass,
+  chipClass,
+} from "../../../../styles/tokens";
 
 type FibWorkerResponse = {
   result: number;
@@ -75,7 +64,7 @@ export const WorkerLab: React.FC = () => {
   };
 
   return (
-    <section id="lab" className="mb-14">
+    <section id="lab" className="mb-20">
       {/* 섹션 헤더 */}
       <div className={sectionHeaderBase}>
         <div>
@@ -108,11 +97,11 @@ export const WorkerLab: React.FC = () => {
               onClick={runWorkerTask}
               disabled={isCalculating}
               className={
-                "w-full inline-flex items-center justify-center gap-2 text-[13px] px-4 py-2.5 rounded-full " +
-                "border border-(--border-subtle) " +
-                "bg-(--bg-elevated) text-fg " +
-                "enabled:hover:bg-(--bg-soft) enabled:hover:border-white/20 enabled:hover:-translate-y-0.5 " +
-                "transition-all duration-200 ease-out " +
+                "w-full inline-flex items-center justify-center gap-2 text-[13px] px-4 py-2.5 rounded-lg " +
+                "border border-(--accent-border) " +
+                "bg-(--accent-subtle) text-fg " +
+                "enabled:hover:bg-(--accent)/10 enabled:hover:border-(--accent) enabled:hover:-translate-y-0.5 " +
+                "transition-all duration-300 ease-out " +
                 "cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
               }
             >
@@ -131,7 +120,7 @@ export const WorkerLab: React.FC = () => {
           </div>
 
           {/* 우측: 시각화 패널 */}
-          <div className="relative flex flex-col items-center justify-center min-h-[160px] h-full rounded-2xl border border-(--border-subtle) bg-(--bg) px-5 py-4 overflow-hidden">
+          <div className="relative flex flex-col items-center justify-center min-h-40 h-full rounded-2xl border border-(--border-subtle) bg-(--bg) px-5 py-4 overflow-hidden">
             <div className="absolute top-3 right-3 text-[10px] text-fg-muted">
               Main Thread UI
             </div>

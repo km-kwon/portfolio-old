@@ -141,10 +141,9 @@ const CircleIcon: React.FC<{ dir: "left" | "right" }> = ({ dir }) => (
   <span
     className={[
       "shrink-0 w-11 h-11 rounded-full flex items-center justify-center",
-      // ✅ 아이콘 테두리/색 green-400 로 변경
-      "border border-green-400 text-green-400",
-      "bg-transparent group-hover:bg-green-400/10",
-      "transition-colors duration-200",
+      "border border-(--accent) text-(--accent)",
+      "bg-transparent group-hover:bg-(--accent-subtle)",
+      "transition-colors duration-300",
     ].join(" ")}
   >
     <svg
@@ -182,16 +181,16 @@ const CardShell: React.FC<{
     onClick={onClick}
     className={[
       "group relative w-full overflow-hidden rounded-2xl",
-      "border border-white/10",
-      "bg-white/5 hover:bg-white/8",
-      "transition-colors duration-200",
+      "border border-(--border-subtle)",
+      "bg-(--bg-soft) hover:bg-(--bg-elevated)",
+      "transition-all duration-300",
       "focus:outline-none focus-visible:ring-2 focus-visible:ring-(--accent)/60 focus-visible:ring-offset-2 focus-visible:ring-offset-(--bg-base)",
       align === "left" ? "text-left" : "text-right",
     ].join(" ")}
   >
     {/* hover 시 은은한 띠 그라데이션 */}
     <span className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-      <span className="absolute inset-0 bg-gradient-to-r from-(--accent)/0 via-(--accent)/10 to-(--accent)/0" />
+      <span className="absolute inset-0 bg-linear-to-r from-(--accent)/0 via-(--accent)/10 to-(--accent)/0" />
     </span>
 
     <div className="relative p-6 cursor-pointer">{children}</div>
@@ -477,7 +476,7 @@ const BlogDetailPage: React.FC = () => {
           </h1>
           <button
             onClick={() => navigate("/blog")}
-            className="px-4 py-2 rounded-full border border-(--border-subtle) bg-white/5 hover:bg-white/10 transition-colors"
+            className="px-4 py-2 rounded-full border border-(--border-subtle) bg-(--bg-soft) hover:bg-(--bg-elevated) transition-colors duration-300"
           >
             블로그로 돌아가기
           </button>
@@ -488,7 +487,7 @@ const BlogDetailPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-(--bg-base) text-(--fg-base) overflow-x-hidden">
-      <div className="mx-auto max-w-[870px] px-5 md:px-8 pt-[calc(var(--header-height)+48px)] pb-16">
+      <div className="mx-auto max-w-(--content-max-w) px-5 md:px-8 pt-[calc(var(--header-height)+48px)] pb-16">
         <article className="w-full">
           <button
             onClick={() => navigate("/blog")}
@@ -520,7 +519,7 @@ const BlogDetailPage: React.FC = () => {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[13px] text-green-300 [html[data-theme='light']_&]:text-green-500 px-2.5 py-1.5"
+                    className="text-[13px] text-(--accent) px-2.5 py-1.5"
                   >
                     {tag}
                   </span>

@@ -1,6 +1,6 @@
 import React from "react";
 import type { SkillCategory } from "../types";
-import { chipClass, pillClass } from "../styles";
+import { chipClass, pillClass } from "../../../../../styles/tokens";
 
 interface SkillCategoryProps {
   title: string;

@@ -2,15 +2,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MOCK_ALL_POSTS } from "../../Blog/data/postingDatas";
+import {
+  sectionHeaderBase,
+  labelClass,
+  sectionTitleClass,
+} from "../../../../styles/tokens";
 
-const sectionHeaderBase =
-  "flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-5 w-full";
-
-const labelClass = "text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3";
-
-const sectionTitleClass = "text-[20px] font-semibold tracking-[0.02em]";
-const sectionSubTitleClass =
-  "text-[13px] text-fg-muted leading-relaxed cursor-pointer";
+const sectionSubTitleClickable =
+  "text-[14px] text-fg-muted leading-relaxed cursor-pointer hover:text-(--accent) transition-colors duration-300";
 
 // 컴포넌트 외부에서 랜덤 선택 (한 번만 실행)
 const getRandomPosts = () => {
@@ -32,7 +31,7 @@ const BlogSection: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="mb-14">
+    <section id="experience" className="mb-20">
       <div className={sectionHeaderBase}>
         <div className="w-full">
           <p className={labelClass}>Blog</p>
@@ -40,7 +39,7 @@ const BlogSection: React.FC = () => {
             <h2 className={sectionTitleClass}>기술 블로그</h2>
 
             {/* 블로그 전체 보기 버튼 */}
-            <p className={sectionSubTitleClass} onClick={handleViewAllClick}>
+            <p className={sectionSubTitleClickable} onClick={handleViewAllClick}>
               포스팅 전체 보기 →
             </p>
           </div>
@@ -58,7 +57,12 @@ const BlogSection: React.FC = () => {
               if (e.key === "Enter" || e.key === " ")
                 handlePostClick(post.slug);
             }}
-            className="group overflow-hidden rounded-2xl border bg-(--bg-elevated) border-(--border-subtle) cursor-pointer transition-colors hover:border-(--accent) focus:outline-none focus:ring-2 focus:ring-(--accent)/40"
+            className="group overflow-hidden rounded-2xl border bg-(--bg-elevated) border-(--border-subtle) cursor-pointer
+                       transition-all duration-300 ease-out
+                       hover:border-(--accent-border) hover:-translate-y-0.5
+                       [html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)]
+                       [html[data-theme='light']_&]:hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]
+                       focus:outline-none focus:ring-2 focus:ring-(--accent)/30"
           >
             <div className="grid md:grid-cols-[240px_1fr] md:h-[200px]">
               {/* 왼쪽 커버(있을 때만) */}
@@ -70,7 +74,7 @@ const BlogSection: React.FC = () => {
                     className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-r from-black/55 via-black/15 to-transparent" />
                 </div>
               )}
 
@@ -87,7 +91,7 @@ const BlogSection: React.FC = () => {
                   {post.tags.slice(0, 8).map((tag) => (
                     <span
                       key={tag}
-                      className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-green-300 [html[data-theme='light']_&]:text-green-500"
+                      className="text-[11px] px-2.5 py-1 rounded-full bg-(--accent-subtle) border border-(--accent-border) text-(--accent)"
                     >
                       {tag}
                     </span>

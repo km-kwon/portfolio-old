@@ -145,7 +145,7 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-(--bg-base) text-(--fg-base)">
-      <div className="max-w-[1040px] mx-auto px-5 pt-[calc(var(--header-height)+32px)] pb-16">
+      <div className="max-w-[1100px] mx-auto px-5 pt-[calc(var(--header-height)+32px)] pb-16">
         {/* 헤더 */}
         <div className="flex items-end justify-between gap-4 mb-6">
           <div>
@@ -170,7 +170,7 @@ const BlogPage: React.FC = () => {
               }}
               className={cx(
                 "group relative overflow-hidden rounded-3xl border bg-(--bg-elevated) border-(--border-subtle)",
-                "cursor-pointer transition-colors hover:border-(--accent)",
+                "cursor-pointer transition-all duration-300 hover:border-(--accent)",
                 "focus:outline-none focus:ring-2 focus:ring-(--accent)/40",
                 featuredFading ? "opacity-0" : "opacity-100",
                 "transition-opacity",
@@ -188,7 +188,7 @@ const BlogPage: React.FC = () => {
                         className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/15 to-transparent" />
                     </>
                   ) : (
                     <div className="absolute inset-0 bg-(--bg-soft)" />
@@ -215,7 +215,7 @@ const BlogPage: React.FC = () => {
                       {featured.tags.slice(0, 6).map((t) => (
                         <span
                           key={t}
-                          className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-green-300 [html[data-theme='light']_&]:text-green-500"
+                          className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-(--accent)"
                         >
                           {t}
                         </span>
@@ -293,7 +293,7 @@ const BlogPage: React.FC = () => {
                       className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-r from-black/55 via-black/15 to-transparent" />
                   </div>
                 )}
 
@@ -310,7 +310,7 @@ const BlogPage: React.FC = () => {
                     {p.tags.slice(0, 8).map((t) => (
                       <span
                         key={t}
-                        className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-green-300 [html[data-theme='light']_&]:text-green-500"
+                        className="text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-(--accent)"
                       >
                         {t}
                       </span>

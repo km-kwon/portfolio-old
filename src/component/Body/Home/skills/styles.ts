@@ -1,27 +1,47 @@
+/**
+ * 재사용 스타일 토큰 — 디자인 시스템 v2
+ *
+ * 카드: surface bg + 1px border, 다크 그림자 X, 라이트만 미세 shadow
+ * hover: translateY(-2px) + border-color accent/30% (300ms)
+ * radius: 16px
+ */
+
+/* ── Card ── */
 export const cardBase =
-  "rounded-3xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-5 shadow-[0_14px_34px_rgba(0,0,0,0.32)] " +
-  "transition-transform transition-shadow transition-colors duration-200 ease-out " +
-  "hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(0,0,0,0.5)] hover:border-white/20 " +
-  "[html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)] " +
-  "[html[data-theme='light']_&]:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12)]";
+  "rounded-[16px] border border-(--border-subtle) bg-(--bg-elevated) p-6 " +
+  "transition-all duration-300 ease-out " +
+  "hover:-translate-y-0.5 hover:border-(--accent-border) " +
+  "[html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)] " +
+  "[html[data-theme='light']_&]:hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]";
 
+/* ── Section Header ── */
 export const sectionHeaderBase =
-  "flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-5";
+  "flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between mb-8";
 
-export const labelClass = "text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3";
+/* ── Label (섹션 상단 카테고리) ── */
+export const labelClass =
+  "text-[12px] uppercase tracking-[0.12em] text-(--accent) font-medium mb-1";
 
-export const sectionTitleClass = "text-[20px] font-semibold tracking-[0.02em]";
-export const sectionSubTitleClass = "text-[13px] text-fg-muted leading-relaxed";
+/* ── Title / Subtitle ── */
+export const sectionTitleClass =
+  "text-[22px] font-bold tracking-tight text-fg";
 
+export const sectionSubTitleClass =
+  "text-[14px] text-fg-muted leading-relaxed";
+
+/* ── Chip (작은 뱃지) ── */
 export const chipClass =
-  "text-[11px] px-2.5 py-1 rounded-full border border-[var(--border-subtle)] text-fg-muted";
+  "text-[11px] px-2.5 py-1 rounded-full border border-(--accent-border) text-(--accent) bg-(--accent-subtle)";
 
+/* ── Pill (태그) ── */
 export const pillClass =
-  "text-[11px] px-2.5 py-1.5 rounded-full bg-[var(--bg-soft)] border border-[var(--border-subtle)] text-fg-muted";
+  "text-[11px] px-2.5 py-1 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-fg-muted " +
+  "transition-colors duration-200 hover:border-(--border-hover)";
 
+/* ── Tab Button ── */
 export const tabButtonClass = (isActive: boolean) =>
-  `px-4 py-2 text-[13px] font-medium rounded-lg transition-all duration-200 border ${
+  `px-4 py-2 text-[13px] font-medium rounded-lg transition-all duration-300 border cursor-pointer ${
     isActive
-      ? "bg-[var(--bg-soft)] text-fg border-[var(--border-subtle)]"
-      : "text-fg-muted hover:text-fg hover:bg-[var(--bg-soft)]/50 border-transparent"
+      ? "bg-(--accent-subtle) text-(--accent) border-(--accent-border)"
+      : "text-fg-muted border-transparent hover:text-fg hover:bg-(--bg-soft)"
   }`;

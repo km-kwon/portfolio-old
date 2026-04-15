@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <main className="max-w-[1040px] mx-auto px-5 pt-[calc(var(--header-height)+32px)] pb-16 text-sm text-fg">
+    <main className="max-w-(--content-max-w) mx-auto px-5 pt-[calc(var(--header-height)+40px)] pb-20 text-[14px] text-fg leading-[1.6]">
       {/* HERO */}
       <HeroSection onScrollTo={handleScrollTo} />
 

@@ -13,7 +13,7 @@ const cardBase =
   "relative rounded-3xl border border-(--border-subtle) bg-(--bg-elevated)/70 p-6 " +
   "backdrop-blur-xl " +
   "shadow-[0_14px_34px_rgba(0,0,0,0.32)] " +
-  "transition-all duration-200 ease-out " +
+  "transition-all duration-300 ease-out " +
   "hover:-translate-y-0.5 hover:shadow-[0_20px_46px_rgba(0,0,0,0.55)] hover:border-white/20 " +
   "[html[data-theme='light']_&]:bg-white/70 " +
   "[html[data-theme='light']_&]:shadow-[0_10px_26px_rgba(0,0,0,0.08)] " +
@@ -36,12 +36,12 @@ const ContactPage: React.FC = () => {
   return (
     <main className={pageBg}>
       <div className={bgDecor} />
-      <div className="max-w-[760px] mx-auto relative">
+      <div className="max-w-(--content-max-w) mx-auto relative">
         {/* Hero Section */}
         <section className="text-center mb-12">
           <div className="flex justify-center mb-4">
             <span className={`${pill} gap-2`}>
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+              <span className="w-1.5 h-1.5 rounded-full bg-(--accent)" />
               <span className={labelClass}>Contact</span>
             </span>
           </div>
@@ -182,9 +182,9 @@ const ContactItem: React.FC<ContactItemProps> = ({
     download={download}
     className="group relative flex items-center gap-3 rounded-2xl px-4 py-3
                border border-(--border-subtle) bg-(--bg-soft)
-               [html[data-theme='light']_&]:bg-[#f5f5fb]
+               [html[data-theme='light']_&]:bg-(--bg-soft)
                hover:border-(--accent)/35 hover:bg-(--bg-elevated)
-               transition-all duration-150 ease-out"
+               transition-all duration-300 ease-out"
   >
     <div
       className="w-9 h-9 rounded-full bg-(--bg-elevated) border border-(--border-subtle)
@@ -208,13 +208,13 @@ const ContactItem: React.FC<ContactItemProps> = ({
 
     {download ? (
       <DownloadIcon
-        className="w-4 h-4 text-fg-muted group-hover:text-fg transition-colors shrink-0
-                   group-hover:translate-y-0.5 transition-transform"
+        className="w-4 h-4 text-fg-muted group-hover:text-fg shrink-0
+                   group-hover:translate-y-0.5 transition-all duration-300"
       />
     ) : (
       <ArrowUpRightIcon
-        className="w-4 h-4 text-fg-muted group-hover:text-fg transition-colors shrink-0
-                   group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+        className="w-4 h-4 text-fg-muted group-hover:text-fg shrink-0
+                   group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
       />
     )}
   </a>
@@ -228,7 +228,7 @@ const InfoStat: React.FC<{
 }> = ({ icon, title, value, sub }) => (
   <div
     className="flex items-start gap-3 rounded-2xl p-4 border border-(--border-subtle) bg-(--bg-soft)
-                  [html[data-theme='light']_&]:bg-[#f5f5fb]"
+                  [html[data-theme='light']_&]:bg-(--bg-soft)"
   >
     <div
       className="w-10 h-10 rounded-full bg-(--bg-elevated) border border-(--border-subtle)

@@ -7,7 +7,7 @@ import {
   sectionTitleClass,
   sectionSubTitleClass,
   tabButtonClass,
-} from "./styles";
+} from "../../../../styles/tokens";
 import StackTab from "./stack/StackTab";
 import CareerTab from "./career/CareerTab";
 import OpenSourceTab from "./opensource/OpenSourceTab";
@@ -35,7 +35,7 @@ const SkillsSection: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="mb-14">
+    <section id="skills" className="mb-20">
       <div className={sectionHeaderBase}>
         <div>
           <p className={labelClass}>Skills</p>
@@ -47,7 +47,7 @@ const SkillsSection: React.FC = () => {
       </div>
 
       {/* 탭 네비게이션 */}
-      <div className="flex gap-2 mb-4">
+      <div className="flex gap-2.5 mb-6">
         {tabs.map((tab) => (
           <button
             key={tab.key}

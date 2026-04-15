@@ -3,6 +3,11 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import type { Activity } from "./types";
 import ActivityItem from "./ActivityItem";
 import CircularProgress from "../../../common/CircularProgress";
+import {
+  sectionHeaderBase,
+  labelClass,
+  sectionTitleClass,
+} from "../../../../styles/tokens";
 
 const AUTO_SLIDE_DURATION = 4000; // 자동 슬라이드 지속 시간 (ms)
 const ACTIVITY_HEIGHT = 500; // 데스크탑 세로 슬라이드 높이(px)
@@ -13,13 +18,6 @@ const modules = import.meta.glob("./data/**/index.ts", { eager: true });
 const activities: Activity[] = Object.values(modules).map((m: any) => {
   return m.default ?? Object.values(m)[0];
 });
-
-// 스타일 토큰
-const sectionHeaderBase =
-  "flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-3";
-
-const labelClass = "text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3";
-const sectionTitleClass = "text-[20px] font-semibold tracking-[0.02em]";
 
 const ActivitySection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -131,7 +129,7 @@ const ActivitySection: React.FC = () => {
   };
 
   return (
-    <section id="activity" className="mb-13">
+    <section id="activity" className="mb-20">
       {/* 섹션 헤더 */}
       <div className={sectionHeaderBase}>
         <div>
@@ -174,7 +172,7 @@ const ActivitySection: React.FC = () => {
                   className="w-full mb-1 shrink-0 flex justify-center px-3"
                 >
                   {/* 가운데 정렬 + 좌우 여백 있는 카드 컨테이너 */}
-                  <div className="w-full h-full max-w-3xl rounded-3xl border border-(--border-subtle) bg-(--bg-elevated) shadow-[0_14px_34px_rgba(0,0,0,0.32)] [html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+                  <div className="w-full h-full max-w-3xl rounded-2xl border border-(--border-subtle) bg-(--bg-elevated) transition-all duration-300 hover:border-(--accent-border) [html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                     <ActivityItem
                       activity={activity}
                       isActive={idx === currentIndex}
@@ -262,7 +260,7 @@ const ActivitySection: React.FC = () => {
                       {/* 포인트/인디케이터 */}
                       <div className="relative z-10 flex items-center justify-center w-8 h-8 shrink-0">
                         {isActive && (
-                          <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-sm" />
+                          <div className="absolute inset-0 bg-(--accent-subtle) rounded-full" />
                         )}
 
                         <CircularProgress
@@ -319,7 +317,7 @@ const ActivitySection: React.FC = () => {
                   className="h-full w-full shrink-0 flex items-center justify-center"
                 >
                   {/* 가운데 카드 컨테이너 */}
-                  <div className="w-full max-h-full overflow-y-auto rounded-3xl border border-(--border-subtle) bg-(--bg-elevated) shadow-[0_14px_34px_rgba(0,0,0,0.32)] [html[data-theme='light']_&]:shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+                  <div className="w-full max-h-full overflow-y-auto rounded-2xl border border-(--border-subtle) bg-(--bg-elevated) transition-all duration-300 hover:border-(--accent-border) [html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                     <ActivityItem
                       activity={activity}
                       isActive={idx === currentIndex}

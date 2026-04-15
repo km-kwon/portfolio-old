@@ -2,6 +2,13 @@
 import React, { useEffect, useState } from "react";
 import { ProjectModal } from "./ProjectModal";
 import CircularProgress from "../../../common/CircularProgress";
+import {
+  sectionHeaderBase,
+  labelClass,
+  sectionTitleClass,
+  sectionSubTitleClass,
+  pillClass,
+} from "../../../../styles/tokens";
 
 const AUTO_SLIDE_DURATION = 3000; // 자동 슬라이드 지속 시간 (ms)
 
@@ -11,15 +18,6 @@ const projects = Object.values(modules).map((m: any) => {
   // 각 module이 export default 또는 named export일 경우 처리
   return m.default ?? Object.values(m)[0];
 });
-const sectionHeaderBase =
-  "flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between mb-8";
-
-const labelClass = "text-[11px] uppercase tracking-[0.16em] text-fg-muted mb-3";
-const sectionTitleClass = "text-[20px] font-semibold tracking-[0.02em]";
-const sectionSubTitleClass = "text-[13px] text-fg-muted leading-relaxed";
-
-const pillClass =
-  "text-[11px] px-2.5 py-1.5 rounded-full bg-(--bg-soft) border border-(--border-subtle) text-fg-muted";
 
 // ➜ 이제는 baseX/baseY를 안 들고 있고, 랜덤 흔들림만 저장
 type CardLayout = {
@@ -183,7 +181,7 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <>
-      <section id="projects" className="mb-16">
+      <section id="projects" className="mb-20">
         <div className={sectionHeaderBase}>
           <div>
             <p className={labelClass}>Projects</p>
@@ -222,7 +220,7 @@ const ProjectsSection: React.FC = () => {
                   >
                     <article
                       data-project-id={project.id}
-                      className="w-full max-w-3xl min-h-[320px] flex flex-col rounded-2xl bg-(--bg-elevated) shadow-[0_16px_36px_rgba(0,0,0,0.55)] [html[data-theme='light']_&]:shadow-[0_10px_24px_rgba(0,0,0,0.12)] border border-(--border-subtle) cursor-pointer overflow-hidden"
+                      className="w-full max-w-3xl min-h-80 flex flex-col rounded-2xl bg-(--bg-elevated) [html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)] [html[data-theme='light']_&]:hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-(--border-subtle) cursor-pointer overflow-hidden"
                       onClick={(e) =>
                         openModal(project.id, e.currentTarget as HTMLElement)
                       }
@@ -232,9 +230,9 @@ const ProjectsSection: React.FC = () => {
                           <img
                             src={project.banner}
                             alt=""
-                            className="w-full h-full object-cover grayscale-[30%]"
+                            className="w-full h-full object-cover grayscale-30"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[color:rgba(0,0,0,0.6)] to-transparent" />
+                          <div className="absolute inset-0 bg-linear-to-t from-[rgba(0,0,0,0.6)] to-transparent" />
                         </div>
                       )}
 
@@ -312,7 +310,7 @@ const ProjectsSection: React.FC = () => {
                         strokeWidth={2}
                       />
 
-                      <span className="mt-1 text-[9px] sm:text-[10px] text-fg-muted max-w-[60px] sm:max-w-[80px] text-center line-clamp-2">
+                      <span className="mt-1 text-[9px] sm:text-[10px] text-fg-muted max-w-[60px] sm:max-w-20 text-center line-clamp-2">
                         {project.subTitle}
                       </span>
                     </button>
@@ -362,17 +360,17 @@ const ProjectsSection: React.FC = () => {
                       "group absolute w-full",
                       "max-w-[260px] sm:max-w-[300px] lg:max-w-[320px]", // 🔥 폭을 화면 크기에 따라 줄이기
                       "rounded-2xl bg-(--bg-elevated)",
-                      "shadow-[0_16px_36px_rgba(0,0,0,0.55)]",
-                      "[html[data-theme='light']_&]:shadow-[0_10px_24px_rgba(0,0,0,0.12)]",
+                      "[html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)]",
+                      "[html[data-theme='light']_&]:hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)]",
                       "border border-(--border-subtle)",
                       "cursor-pointer overflow-hidden",
-                      "transition-all duration-250 ease-out",
+                      "transition-all duration-300 ease-out",
                       isActive
                         ? [
-                            "ring-2 ring-(--accent)",
-                            "ring-offset-2",
-                            "ring-offset-[color:var(--bg-soft)]", // 🔧 라이트 모드에서 테두리 판
-                          ].join(" ")
+                          "ring-2 ring-(--accent)",
+                          "ring-offset-2",
+                          "ring-offset-(--bg-soft)", // 🔧 라이트 모드에서 테두리 판
+                        ].join(" ")
                         : "ring-0",
                     ].join(" ")}
                     style={{
@@ -406,15 +404,15 @@ const ProjectsSection: React.FC = () => {
                         <img
                           src={project.banner}
                           alt=""
-                          className="w-full h-full object-cover grayscale-[30%]"
+                          className="w-full h-full object-cover grayscale-30"
                         />
                         {/* 🔧 활성일 때는 아래쪽 그라디언트를 좀 더 진하게 */}
                         <div
                           className={[
-                            "absolute inset-0 bg-gradient-to-t to-transparent transition-colors duration-200",
+                            "absolute inset-0 bg-linear-to-t to-transparent transition-colors duration-200",
                             isActive
-                              ? "from-[color:rgba(0,0,0,0.6)] [html[data-theme='light']_&]:from-[color:rgba(0,0,0,0.52)]"
-                              : "from-[color:rgba(0,0,0,0.35)] [html[data-theme='light']_&]:from-[color:rgba(0,0,0,0.3)]",
+                              ? "from-[rgba(0,0,0,0.6)] [html[data-theme='light']_&]:from-[rgba(0,0,0,0.52)]"
+                              : "from-[rgba(0,0,0,0.35)] [html[data-theme='light']_&]:from-[rgba(0,0,0,0.3)]",
                           ].join(" ")}
                         />
                       </div>
@@ -533,7 +531,7 @@ const ProjectsSection: React.FC = () => {
                       />
 
                       {/* 라벨 (축약 title) */}
-                      <span className="mt-1 text-[10px] text-fg-muted max-w-[80px] text-center line-clamp-2">
+                      <span className="mt-1 text-[10px] text-fg-muted max-w-20 text-center line-clamp-2">
                         {project.subTitle}
                       </span>
                     </button>

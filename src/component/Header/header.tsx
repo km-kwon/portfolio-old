@@ -25,20 +25,16 @@ const Header: React.FC<HeaderProps> = ({
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "lab", label: "Lab" },
-    // { id: "contact", label: "Contact" },
   ];
 
   const handleNavClick = (id: string) => {
     setIsMobileMenuOpen(false);
     if (!isHomePage) {
-      // 블로그 페이지나 다른 페이지에서 클릭했을 때
       navigate("/");
-      // 홈페이지로 이동한 후 스크롤
       setTimeout(() => {
         onNavClick(id);
       }, 100);
     } else {
-      // 이미 홈페이지에 있을 때
       onNavClick(id);
     }
   };
@@ -55,26 +51,30 @@ const Header: React.FC<HeaderProps> = ({
     };
   }, [isMobileMenuOpen]);
 
+  const navLinkBase =
+    "px-3 py-1.5 rounded-lg text-[13px] font-medium border border-transparent cursor-pointer " +
+    "transition-all duration-300 ease-out hover:text-fg hover:bg-(--bg-soft)";
+
+  const navLinkActive = "text-fg bg-(--bg-soft)";
+  const navLinkInactive = "text-fg-muted";
+
   return (
     <>
-      <header className="fixed inset-x-0 top-0 h-(--header-height) z-20 border-b backdrop-blur-xl [html[data-theme='dark']_&]:border-white/5 [html[data-theme='light']_&]:border-black/5">
-        <div className="max-w-[1040px] mx-auto h-full px-5 flex items-center justify-between gap-3">
+      <header className="fixed inset-x-0 top-0 h-(--header-height) z-20 border-b border-(--border-subtle)">
+        <div className="max-w-(--content-max-w) mx-auto h-full px-5 flex items-center justify-between gap-4">
           {/* LEFT */}
           <Link
             to="/"
-            className="tracking-[0.08em] uppercase text-[14px] text-fg-muted hover:text-fg transition-colors cursor-pointer"
+            className="tracking-[0.08em] uppercase text-[13px] font-medium text-fg-muted hover:text-(--accent) transition-colors duration-300 cursor-pointer"
           >
             Frontend · UX
           </Link>
 
           {/* CENTER NAV */}
-          <nav className="hidden md:flex items-center gap-4 text-[13px]">
+          <nav className="hidden md:flex items-center gap-1 text-[13px]">
             <Link
               to="/"
-              className={`px-2.5 py-1.5 rounded-full text-[13px] border border-transparent cursor-pointer
-                         transition-all duration-150 ease-out
-                         hover:text-fg hover:bg-(--bg-soft) hover:border-(--border-subtle) hover:-translate-y-px
-                         ${isHomePage ? "text-fg" : "text-fg-muted"}`}
+              className={`${navLinkBase} ${isHomePage ? navLinkActive : navLinkInactive}`}
             >
               Home
             </Link>
@@ -82,9 +82,7 @@ const Header: React.FC<HeaderProps> = ({
             {navItems.map(({ id, label }) => (
               <button
                 key={id}
-                className="px-2.5 py-1.5 rounded-full text-[13px] text-fg-muted border border-transparent cursor-pointer
-                           transition-all duration-150 ease-out
-                           hover:text-fg hover:bg-(--bg-soft) hover:border-(--border-subtle) hover:-translate-y-px"
+                className={`${navLinkBase} ${navLinkInactive}`}
                 onClick={() => handleNavClick(id)}
               >
                 {label}
@@ -92,14 +90,9 @@ const Header: React.FC<HeaderProps> = ({
             ))}
             <Link
               to="/blog"
-              className={`px-2.5 py-1.5 rounded-full text-[13px] border border-transparent cursor-pointer
-                         transition-all duration-150 ease-out
-                         hover:text-fg hover:bg-(--bg-soft) hover:border-(--border-subtle) hover:-translate-y-px
-                         ${
-                           location.pathname === "/blog"
-                             ? "text-fg"
-                             : "text-fg-muted"
-                         }`}
+              className={`${navLinkBase} ${
+                location.pathname === "/blog" ? navLinkActive : navLinkInactive
+              }`}
             >
               Blog
             </Link>
@@ -109,10 +102,10 @@ const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-2">
             {/* 햄버거 메뉴 버튼 (모바일) */}
             <button
-              className="md:hidden w-9 h-9 rounded-full border border-(--border-subtle) bg-(--bg-elevated)
+              className="md:hidden w-9 h-9 rounded-lg border border-(--border-subtle) bg-(--bg-elevated)
                          flex items-center justify-center cursor-pointer
-                         transition-all duration-150 ease-out
-                         hover:bg-(--bg-soft) hover:border-(--accent)/50"
+                         transition-all duration-300 ease-out
+                         hover:bg-(--bg-soft) hover:border-(--border-hover)"
               aria-label="Toggle menu"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -121,10 +114,10 @@ const Header: React.FC<HeaderProps> = ({
 
             {/* 테마 토글 */}
             <button
-              className="w-9 h-9 rounded-full border border-(--border-subtle) bg-(--bg-elevated)
+              className="w-9 h-9 rounded-lg border border-(--border-subtle) bg-(--bg-elevated)
                          flex items-center justify-center cursor-pointer
-                         transition-all duration-150 ease-out
-                         hover:-translate-y-px hover:bg-(--bg-soft) hover:border-(--accent)/50"
+                         transition-all duration-300 ease-out
+                         hover:bg-(--bg-soft) hover:border-(--border-hover)"
               aria-label="Toggle theme"
               onClick={onToggleTheme}
             >
@@ -132,10 +125,11 @@ const Header: React.FC<HeaderProps> = ({
             </button>
             <Link
               to="/contact"
-              className={`hidden sm:inline-flex text-[13px] px-4 py-2 rounded-full border border-(--border-subtle)
-                         bg-(--bg-soft) hover:bg-(--bg-elevated) hover:border-(--accent)/50 hover:-translate-y-px
-                         transition-all duration-150 ease-out
-                         ${location.pathname === "/contact" ? "text-fg border-(--accent)/50" : ""}`}
+              className={`hidden sm:inline-flex text-[13px] px-4 py-2 rounded-lg border
+                         transition-all duration-300 ease-out
+                         ${location.pathname === "/contact"
+                           ? "text-(--accent) border-(--accent-border) bg-(--accent-subtle)"
+                           : "text-fg-muted border-(--border-subtle) bg-(--bg-elevated) hover:bg-(--bg-soft) hover:border-(--border-hover)"}`}
             >
               Contact
             </Link>
@@ -146,7 +140,7 @@ const Header: React.FC<HeaderProps> = ({
       {/* 모바일 메뉴 오버레이 */}
       {isMobileMenuOpen && (
         <div
-          className="md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-9998"
+          className="md:hidden fixed inset-0 bg-black/50 z-9998"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
@@ -155,20 +149,19 @@ const Header: React.FC<HeaderProps> = ({
       <div
         className={[
           "md:hidden fixed top-0 right-0 bottom-0 w-[280px] z-9999",
-          "bg-[#0a0a0a] [html[data-theme='light']_&]:bg-white",
+          "bg-(--bg-elevated)",
           "border-l border-(--border-subtle)",
-          "shadow-[-8px_0_24px_rgba(0,0,0,0.5)]",
           "transition-transform duration-300 ease-out",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
         ].join(" ")}
       >
-        <nav className="flex flex-col p-6 pt-[calc(var(--header-height)+16px)] gap-2">
+        <nav className="flex flex-col p-6 pt-[calc(var(--header-height)+16px)] gap-1">
           <Link
             to="/"
             className={[
               "px-4 py-3 rounded-lg text-[14px] border border-transparent",
-              "transition-all duration-150 ease-out",
-              "hover:bg-(--bg-soft) hover:border-(--border-subtle)",
+              "transition-all duration-200 ease-out",
+              "hover:bg-(--bg-soft)",
               isHomePage ? "text-fg bg-(--bg-soft)" : "text-fg-muted",
             ].join(" ")}
             onClick={() => setIsMobileMenuOpen(false)}
@@ -180,8 +173,8 @@ const Header: React.FC<HeaderProps> = ({
             <button
               key={id}
               className="px-4 py-3 rounded-lg text-[14px] text-fg-muted border border-transparent text-left
-                         transition-all duration-150 ease-out
-                         hover:bg-(--bg-soft) hover:border-(--border-subtle) hover:text-fg"
+                         transition-all duration-200 ease-out
+                         hover:bg-(--bg-soft) hover:text-fg"
               onClick={() => handleNavClick(id)}
             >
               {label}
@@ -192,8 +185,8 @@ const Header: React.FC<HeaderProps> = ({
             to="/blog"
             className={[
               "px-4 py-3 rounded-lg text-[14px] border border-transparent",
-              "transition-all duration-150 ease-out",
-              "hover:bg-(--bg-soft) hover:border-(--border-subtle)",
+              "transition-all duration-200 ease-out",
+              "hover:bg-(--bg-soft)",
               location.pathname === "/blog"
                 ? "text-fg bg-(--bg-soft)"
                 : "text-fg-muted",
@@ -206,10 +199,9 @@ const Header: React.FC<HeaderProps> = ({
           <div className="mt-4 pt-4 border-t border-(--border-subtle)">
             <Link
               to="/contact"
-              className={`block w-full text-center text-[14px] px-4 py-3 rounded-lg border border-(--border-subtle)
-                         bg-(--bg-soft) hover:bg-(--bg-elevated) hover:border-(--accent)/50
-                         transition-all duration-150 ease-out text-fg
-                         ${location.pathname === "/contact" ? "border-(--accent)/50" : ""}`}
+              className="block w-full text-center text-[14px] px-4 py-3 rounded-lg border border-(--border-subtle)
+                         bg-(--bg-soft) hover:border-(--border-hover)
+                         transition-all duration-200 ease-out text-fg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
@@ -221,7 +213,7 @@ const Header: React.FC<HeaderProps> = ({
   );
 };
 
-/** 아이콘들도 헤더 안으로 포함 */
+/** 아이콘들 */
 const SunIcon: React.FC = () => (
   <svg className="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true">
     <path
@@ -241,36 +233,14 @@ const MoonIcon: React.FC = () => (
 );
 
 const HamburgerIcon: React.FC = () => (
-  <svg
-    className="w-5 h-5"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M4 6h16M4 12h16M4 18h16"
-    />
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
   </svg>
 );
 
 const CloseIcon: React.FC = () => (
-  <svg
-    className="w-5 h-5"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M6 18L18 6M6 6l12 12"
-    />
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
   </svg>
 );
 
