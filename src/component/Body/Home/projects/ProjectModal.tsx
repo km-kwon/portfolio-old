@@ -192,18 +192,30 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             {project.why && (
               <motion.section variants={contentItem}>
                 <h4 className="text-fg font-semibold text-base mb-3">
-                  💡 기술적 의사결정 (Why?)
+                  💡 기술적 의사결정
                 </h4>
                 <div className="grid gap-4 md:grid-cols-2">
                   {project.why.map((item, idx) => (
                     <div
                       key={idx}
-                      className="p-4 rounded-xl border border-(--border-subtle) bg-(--bg)"
+                      className="rounded-xl border border-(--border-subtle) overflow-hidden"
                     >
-                      <div className="font-medium text-fg mb-2">
-                        {item.title}
+                      {/* 헤더 영역 - 배경색으로 명확히 분리 */}
+                      <div className="px-4 py-2.5 bg-(--bg-soft) border-b border-(--border-subtle)">
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm">🤔</span>
+                          <span className="text-sm font-medium text-fg">
+                            {item.title}
+                          </span>
+                        </div>
                       </div>
-                      <p className="text-xs">{item.desc}</p>
+
+                      {/* 콘텐츠 영역 */}
+                      <div className="px-4 py-3 bg-(--bg)">
+                        <p className="text-xs text-fg-muted leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
