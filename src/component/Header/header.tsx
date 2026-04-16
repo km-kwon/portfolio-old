@@ -25,7 +25,6 @@ const Header: React.FC<HeaderProps> = ({
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
-    { id: "lab", label: "Lab" },
   ];
 
   const handleNavClick = (id: string) => {
@@ -86,6 +85,13 @@ const Header: React.FC<HeaderProps> = ({
             {/* 구분자 */}
             <span className="text-fg-muted/40 mx-1">·</span>
 
+            <Link
+              to="/lab"
+              className={`${navLinkBase} ${location.pathname === "/lab" ? navLinkActive : navLinkInactive
+                }`}
+            >
+              Lab
+            </Link>
             <Link
               to="/blog"
               className={`${navLinkBase} ${location.pathname === "/blog" ? navLinkActive : navLinkInactive
@@ -168,6 +174,20 @@ const Header: React.FC<HeaderProps> = ({
 
           <div className="my-2 border-t border-(--border-subtle)" />
 
+          <Link
+            to="/lab"
+            className={[
+              "px-4 py-3 rounded-lg text-[14px] border border-transparent",
+              "transition-all duration-200 ease-out",
+              "hover:bg-(--bg-soft)",
+              location.pathname === "/lab"
+                ? "text-fg bg-(--bg-soft)"
+                : "text-fg-muted",
+            ].join(" ")}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Lab
+          </Link>
           <Link
             to="/blog"
             className={[
