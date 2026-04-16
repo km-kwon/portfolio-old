@@ -151,17 +151,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* Body Sections */}
           <div className="space-y-10 text-sm leading-relaxed text-fg-muted">
-            {/* 1. Overview */}
-            {project.overview && (
-              <motion.section variants={contentItem}>
-                <h4 className="text-fg font-semibold text-base mb-3">
-                  🔎 프로젝트 개요
-                </h4>
-                <p>{project.overview}</p>
-              </motion.section>
-            )}
-
-            {/* 2. Images */}
+            {/* 1. Images — 시각적 첫인상 */}
             {project.images && project.images.length > 0 && (
               <motion.section variants={contentItem}>
                 <h4 className="text-fg font-semibold text-base mb-3">
@@ -188,7 +178,25 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               </motion.section>
             )}
 
-            {/* 3. Why & Tech Decisions */}
+            {/* 2. Overview + Results — 임팩트 즉시 확인 */}
+            {project.overview && (
+              <motion.section variants={contentItem}>
+                <h4 className="text-fg font-semibold text-base mb-3">
+                  🔎 프로젝트 개요
+                </h4>
+                <p>{project.overview}</p>
+              </motion.section>
+            )}
+
+            {/* 3. Results — 성과를 앞쪽에 배치 */}
+            {project.results && project.results.length > 0 && (
+              <ResultsSection results={project.results} />
+            )}
+
+            {/* 4. Role & Tasks */}
+            {project.role && <RoleSection role={project.role} />}
+
+            {/* 5. Why & Tech Decisions */}
             {project.why && (
               <motion.section variants={contentItem}>
                 <h4 className="text-fg font-semibold text-base mb-3">
@@ -200,7 +208,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                       key={idx}
                       className="rounded-xl border border-(--border-subtle) overflow-hidden"
                     >
-                      {/* 헤더 영역 - 배경색으로 명확히 분리 */}
                       <div className="px-4 py-2.5 bg-(--bg-soft) border-b border-(--border-subtle)">
                         <div className="flex items-center gap-2">
                           <span className="text-sm">🤔</span>
@@ -209,8 +216,6 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                           </span>
                         </div>
                       </div>
-
-                      {/* 콘텐츠 영역 */}
                       <div className="px-4 py-3 bg-(--bg)">
                         <p className="text-xs text-fg-muted leading-relaxed">
                           {item.desc}
@@ -222,17 +227,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               </motion.section>
             )}
 
-            {/* 4. Role & Tasks */}
-            {project.role && <RoleSection role={project.role} />}
-
-            {/* 5. Troubleshooting */}
+            {/* 6. Troubleshooting */}
             {project.troubleshooting && project.troubleshooting.length > 0 && (
               <TroubleshootingSection items={project.troubleshooting} />
-            )}
-
-            {/* 6. Results */}
-            {project.results && project.results.length > 0 && (
-              <ResultsSection results={project.results} />
             )}
           </div>
         </motion.div>
