@@ -146,41 +146,62 @@ const ActivitySection: React.FC = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          {/* 카드 슬라이더 */}
-          <div
-            ref={carouselRef}
-            className="w-full overflow-hidden"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
+          {/* 카드 슬라이더 + 좌우 화살표 */}
+          <div className="relative">
             <div
-              className="
-                flex w-full
-                transition-transform
-                duration-700
-                ease-[cubic-bezier(0.22,0.61,0.36,1)]
-                will-change-transform
-              "
-              style={{
-                transform: `translate3d(-${currentIndex * 100}%, 0, 0)`,
-              }}
+              ref={carouselRef}
+              className="w-full overflow-hidden"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
-              {activities.map((activity, idx) => (
-                <div
-                  key={activity.id}
-                  className="w-full mb-1 shrink-0 flex justify-center px-3"
-                >
-                  {/* 가운데 정렬 + 좌우 여백 있는 카드 컨테이너 */}
-                  <div className="w-full h-full max-w-3xl rounded-2xl border border-(--border-subtle) bg-(--bg-elevated) transition-all duration-300 hover:border-(--accent-border) [html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-                    <ActivityItem
-                      activity={activity}
-                      isActive={idx === currentIndex}
-                    />
+              <div
+                className="
+                  flex w-full
+                  transition-transform
+                  duration-700
+                  ease-[cubic-bezier(0.22,0.61,0.36,1)]
+                  will-change-transform
+                "
+                style={{
+                  transform: `translate3d(-${currentIndex * 100}%, 0, 0)`,
+                }}
+              >
+                {activities.map((activity, idx) => (
+                  <div
+                    key={activity.id}
+                    className="w-full mb-1 shrink-0 flex justify-center px-3"
+                  >
+                    <div className="w-full h-full max-w-3xl rounded-2xl border border-(--border-subtle) bg-(--bg-elevated) transition-all duration-300 hover:border-(--accent-border) [html[data-theme='light']_&]:shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                      <ActivityItem
+                        activity={activity}
+                        isActive={idx === currentIndex}
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+            {/* 좌우 화살표 */}
+            <button
+              onClick={goToPrev}
+              aria-label="이전 활동"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full border border-(--border-subtle) bg-(--bg-elevated)/90 backdrop-blur-sm flex items-center justify-center text-fg-muted hover:text-fg hover:border-(--border-hover) transition-all duration-200 cursor-pointer"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={goToNext}
+              aria-label="다음 활동"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full border border-(--border-subtle) bg-(--bg-elevated)/90 backdrop-blur-sm flex items-center justify-center text-fg-muted hover:text-fg hover:border-(--border-hover) transition-all duration-200 cursor-pointer"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
 
           {/* 아래 가로선 + 포인트 */}
