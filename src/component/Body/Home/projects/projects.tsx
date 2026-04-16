@@ -197,6 +197,20 @@ const ProjectsSection: React.FC = () => {
                             {project.summary}
                           </p>
 
+                          {/* 핵심 성과 배지 (모바일) */}
+                          {project.highlights && project.highlights.length > 0 && (
+                            <div className="flex flex-wrap gap-1.5 mb-2.5">
+                              {project.highlights.slice(0, 2).map((h: { value: string; label: string }, i: number) => (
+                                <span
+                                  key={i}
+                                  className="text-[10px] px-2 py-0.5 rounded-full bg-(--accent-subtle) border border-(--accent-border) text-(--accent) font-medium"
+                                >
+                                  {h.value} {h.label}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+
                           <div className="flex flex-wrap gap-1.5">
                             {project.tags.slice(0, 6).map((t: string) => (
                               <span key={t} className={pillClass}>
@@ -386,12 +400,26 @@ const ProjectsSection: React.FC = () => {
                           "transition-all duration-200",
                           "text-[12px] mb-2.5 line-clamp-2",
                           isActive
-                            ? "text-fg opacity-100" // 활성: 더 진하게/선명하게
-                            : "text-fg-muted opacity-80", // 비활성: 살짝 흐리게
+                            ? "text-fg opacity-100"
+                            : "text-fg-muted opacity-80",
                         ].join(" ")}
                       >
                         {project.summary}
                       </p>
+
+                      {/* 핵심 성과 배지 */}
+                      {project.highlights && project.highlights.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-2.5">
+                          {project.highlights.slice(0, 2).map((h: { value: string; label: string }, i: number) => (
+                            <span
+                              key={i}
+                              className="text-[10px] px-2 py-0.5 rounded-full bg-(--accent-subtle) border border-(--accent-border) text-(--accent) font-medium"
+                            >
+                              {h.value} {h.label}
+                            </span>
+                          ))}
+                        </div>
+                      )}
 
                       <div className="flex flex-wrap gap-1.5 mb-2.5">
                         {project.tags.slice(0, 6).map((t: string) => (
