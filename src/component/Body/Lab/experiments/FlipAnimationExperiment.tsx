@@ -23,10 +23,8 @@ const initialItems: Item[] = Array.from({ length: 8 }, (_, i) => ({
 
 const FlipAnimationExperiment: React.FC = () => {
   const [items, setItems] = useState<Item[]>(initialItems);
-  const [activeStep, setActiveStep] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const rectsRef = useRef<Map<number, DOMRect>>(new Map());
-  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   const captureFirst = useCallback(() => {
     if (!containerRef.current) return;
@@ -67,48 +65,28 @@ const FlipAnimationExperiment: React.FC = () => {
     }
   }, []);
 
-  const clearTimers = useCallback(() => {
-    timersRef.current.forEach(clearTimeout);
-    timersRef.current = [];
-  }, []);
-
-  const enqueue = useCallback((fn: () => void, ms: number) => {
-    timersRef.current.push(setTimeout(fn, ms));
-  }, []);
-
   const shuffle = useCallback(() => {
-    clearTimers();
-
-    // Step 1: First — 변경 전 위치 저장
-    setActiveStep("First");
     captureFirst();
-
-    // Step 2: Last — DOM 변경 후 새 위치 측정
-    enqueue(() => {
-      setActiveStep("Last");
-      setItems((prev) => {
-        const arr = [...prev];
-        for (let i = arr.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [arr[i], arr[j]] = [arr[j], arr[i]];
-        }
-        return arr;
-      });
-
-      // Step 3: Invert → Play
-      enqueue(() => {
-        setActiveStep("Invert → Play");
-        requestAnimationFrame(() => {
-          playFlip();
-          enqueue(() => setActiveStep(null), 300);
-        });
-      }, 150);
-    }, 150);
-  }, [captureFirst, playFlip, clearTimers, enqueue]);
+    setItems((prev) => {
+      const arr = [...prev];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    });
+    requestAnimationFrame(() => playFlip());
+  }, [captureFirst, playFlip]);
 
   const reverse = useCallback(() => {
     captureFirst();
     setItems((prev) => [...prev].reverse());
+    requestAnimationFrame(() => playFlip());
+  }, [captureFirst, playFlip]);
+
+  const rotate = useCallback(() => {
+    captureFirst();
+    setItems((prev) => [...prev.slice(1), prev[0]]);
     requestAnimationFrame(() => playFlip());
   }, [captureFirst, playFlip]);
 
@@ -118,17 +96,8 @@ const FlipAnimationExperiment: React.FC = () => {
     requestAnimationFrame(() => playFlip());
   }, [captureFirst, playFlip]);
 
-  const steps = [
-    { key: "First", desc: "변경 전 위치(getBoundingClientRect) 저장" },
-    { key: "Last", desc: "DOM 변경 후 새 위치 측정" },
-    {
-      key: "Invert → Play",
-      desc: "차이만큼 transform 후 transition으로 애니메이션",
-    },
-  ];
-
   return (
-    <div className="grid items-start gap-5 md:grid-cols-2">
+    <div className="grid items-center gap-5 md:grid-cols-2">
       {/* Controls */}
       <div>
         <p className="text-[13px] text-fg-muted leading-[1.7] mb-4">
@@ -137,7 +106,7 @@ const FlipAnimationExperiment: React.FC = () => {
           60fps를 유지할 수 있습니다.
         </p>
 
-        <div className="flex gap-2 mb-3">
+        <div className="flex gap-2 mb-2">
           <button
             onClick={shuffle}
             className="flex-1 text-[12px] px-3 py-2 rounded-lg border border-(--accent-border) bg-(--accent-subtle) text-(--accent) cursor-pointer transition-all duration-200 hover:brightness-110"
@@ -151,41 +120,27 @@ const FlipAnimationExperiment: React.FC = () => {
             뒤집기
           </button>
           <button
-            onClick={reset}
+            onClick={rotate}
             className="flex-1 text-[12px] px-3 py-2 rounded-lg border border-(--border-subtle) bg-(--bg-soft) text-fg-muted hover:border-(--border-hover) hover:text-fg cursor-pointer transition-all duration-200"
           >
-            리셋
+            한칸 밀기
           </button>
         </div>
-
-        {/* Step explanation — always visible */}
-        <div className="mt-3 space-y-2">
-          {steps.map((s) => (
-            <div
-              key={s.key}
-              className={
-                "flex items-start gap-2 px-3 py-2 rounded-lg border text-[11px] transition-colors duration-300 " +
-                (activeStep === s.key
-                  ? "border-(--accent-border) bg-(--accent-subtle) text-(--accent)"
-                  : "border-(--border-subtle) bg-(--bg-soft) text-fg-muted")
-              }
-            >
-              <span className="font-mono font-semibold shrink-0 w-20">
-                {s.key}
-              </span>
-              <span>{s.desc}</span>
-            </div>
-          ))}
-        </div>
+        <button
+          onClick={reset}
+          className="w-full text-[11px] px-3 py-1.5 rounded-lg border border-(--border-subtle) text-fg-muted hover:text-fg hover:border-(--border-hover) transition-all duration-200 cursor-pointer"
+        >
+          초기화
+        </button>
       </div>
 
       {/* Visualization */}
       <div
         className="relative rounded-2xl border border-(--border-subtle) bg-(--bg) overflow-hidden p-4"
-        style={{ minHeight: 280 }}
+        style={{ minHeight: 180 }}
       >
         <div className="absolute top-3 right-3 text-[10px] text-fg-muted z-10">
-          {activeStep ? `단계: ${activeStep}` : "버튼을 눌러 보세요"}
+          버튼을 눌러 보세요
         </div>
 
         <div ref={containerRef} className="grid grid-cols-4 gap-2 mt-6">
@@ -201,9 +156,6 @@ const FlipAnimationExperiment: React.FC = () => {
           ))}
         </div>
 
-        <div className="absolute bottom-3 left-3 right-3 text-[10px] font-mono text-fg-dimmed">
-          순서: [{items.map((i) => i.id + 1).join(", ")}]
-        </div>
       </div>
     </div>
   );
