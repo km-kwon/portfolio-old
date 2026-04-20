@@ -1,6 +1,6 @@
 import React from "react";
 import type { OpenSourcePackage } from "../types";
-import { pillClass, chipClass } from "../../../../../styles/tokens";
+import { pillClass } from "../../../../../styles/tokens";
 import { openSourceData } from "./openSourceData";
 
 interface PackageCardProps {
@@ -21,66 +21,70 @@ const NpmIcon: React.FC = () => (
 
 const PackageCard: React.FC<PackageCardProps> = ({ pkg }) => {
   return (
-    <div className="bg-(--bg-soft) rounded-lg p-4 border border-(--border-subtle) hover:border-(--border-hover) transition-colors">
-      {/* 패키지 헤더 */}
-
-      <div className="mb-3 w-full ">
-        <div className="w-full flex justify-between items-center">
-          <div className="flex flex-wrap items-center gap-2 mb-2">
-            <h3 className="text-[15px] font-bold font-mono">{pkg.name}</h3>
-            <span className={chipClass}>v{pkg.version}</span>
-            {pkg.downloads && (
-              <span className="text-[11px] text-fg-muted">
-                📦 {pkg.downloads}
-              </span>
-            )}
+    <section className="py-5 border-b border-(--border-subtle)/60 last:border-b-0 group">
+      <div className="grid grid-cols-[110px_1fr_auto] gap-5 items-start">
+        {/* 왼쪽: 버전 */}
+        <div className="pt-1">
+          <div className="text-[11px] font-mono text-fg-dimmed leading-relaxed uppercase tracking-wide">
+            v{pkg.version}
           </div>
-          {/* 링크 */}
-          <div className="flex gap-3 text-[12px]">
-            {pkg.githubUrl && (
-              <a
-                href={pkg.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex gap-1.5 text-fg-muted hover:text-fg transition-colors"
-              >
-                <GitHubIcon />
-                <span>GitHub</span>
-              </a>
-            )}
-            {pkg.npmUrl && (
-              <a
-                href={pkg.npmUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex gap-1.5 text-fg-muted hover:text-fg transition-colors"
-              >
-                <NpmIcon />
-                <span>NPM</span>
-              </a>
-            )}
+          {pkg.downloads && (
+            <div className="mt-1 text-[11px] font-mono text-fg-muted">
+              📦 {pkg.downloads}
+            </div>
+          )}
+        </div>
+
+        {/* 중앙: 패키지명 + 설명 + 기술 스택 */}
+        <div className="min-w-0">
+          <h3 className="text-[16px] font-bold font-mono leading-tight group-hover:text-(--accent) transition-colors break-all">
+            {pkg.name}
+          </h3>
+          <p className="mt-2 text-[12.5px] text-fg-muted leading-relaxed">
+            {pkg.description}
+          </p>
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {pkg.techStack.map((tech) => (
+              <span key={tech} className={pillClass}>
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
-        <p className="text-[13px] text-fg-muted leading-relaxed">
-          {pkg.description}
-        </p>
-      </div>
 
-      {/* 기술 스택 */}
-      <div className="flex flex-wrap gap-1.5">
-        {pkg.techStack.map((tech) => (
-          <span key={tech} className={pillClass}>
-            {tech}
-          </span>
-        ))}
+        {/* 오른쪽: 링크 */}
+        <div className="flex flex-col gap-2 text-[12px] shrink-0">
+          {pkg.githubUrl && (
+            <a
+              href={pkg.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-fg-muted hover:text-(--accent) transition-colors"
+            >
+              <GitHubIcon />
+              <span>GitHub</span>
+            </a>
+          )}
+          {pkg.npmUrl && (
+            <a
+              href={pkg.npmUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-fg-muted hover:text-(--accent) transition-colors"
+            >
+              <NpmIcon />
+              <span>NPM</span>
+            </a>
+          )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 const OpenSourceTab: React.FC = () => {
   return (
-    <div className="grid gap-3 md:grid-cols-1">
+    <div>
       {openSourceData.map((pkg) => (
         <PackageCard key={pkg.id} pkg={pkg} />
       ))}
