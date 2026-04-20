@@ -5,11 +5,11 @@ import { ProjectModal } from "./ProjectModal";
 import CircularProgress from "../../../common/CircularProgress";
 import {
   sectionHeaderBase,
-  labelClass,
   sectionTitleClass,
   sectionSubTitleClass,
   pillClass,
 } from "../../../../styles/tokens";
+import SectionMarker from "../../../common/SectionMarker";
 
 const AUTO_SLIDE_DURATION = 3000; // 자동 슬라이드 지속 시간 (ms)
 
@@ -135,9 +135,9 @@ const ProjectsSection: React.FC = () => {
   return (
     <>
       <section id="projects" className="mb-20">
+        <SectionMarker number="05" label="Projects" />
         <div className={sectionHeaderBase}>
           <div>
-            <p className={labelClass}>Projects</p>
             <h2 className={sectionTitleClass}>주요 프로젝트</h2>
           </div>
           <p className={sectionSubTitleClass}>

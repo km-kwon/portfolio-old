@@ -256,7 +256,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
    CareerCard
    ─────────────────────────────────────────── */
 const CareerCard: React.FC<CareerCardProps> = ({ career }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <section className="pb-8 last:pb-0">

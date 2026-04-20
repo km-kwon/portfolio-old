@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { MOCK_ALL_POSTS } from "../../Blog/data/postingDatas";
 import {
   sectionHeaderBase,
-  labelClass,
   sectionTitleClass,
 } from "../../../../styles/tokens";
+import SectionMarker from "../../../common/SectionMarker";
 
 const sectionSubTitleClickable =
   "text-[14px] text-fg-muted leading-relaxed cursor-pointer hover:text-(--accent) transition-colors duration-300";
@@ -32,9 +32,9 @@ const BlogSection: React.FC = () => {
 
   return (
     <section id="experience" className="mb-20">
+      <SectionMarker number="07" label="Blog" />
       <div className={sectionHeaderBase}>
         <div className="w-full">
-          <p className={labelClass}>Blog</p>
           <div className="w-full flex justify-between">
             <h2 className={sectionTitleClass}>기술 블로그</h2>
 

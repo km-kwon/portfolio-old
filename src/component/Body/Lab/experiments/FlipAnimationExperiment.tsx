@@ -115,13 +115,13 @@ const FlipAnimationExperiment: React.FC = () => {
           </button>
           <button
             onClick={reverse}
-            className="flex-1 text-[12px] px-3 py-2 rounded-lg border border-(--border-subtle) bg-(--bg-soft) text-fg-muted hover:border-(--border-hover) hover:text-fg cursor-pointer transition-all duration-200"
+            className="flex-1 text-[12px] px-3 py-2 rounded-lg border border-(--accent-border) bg-(--accent-subtle) text-(--accent) cursor-pointer transition-all duration-200 hover:brightness-110"
           >
             뒤집기
           </button>
           <button
             onClick={rotate}
-            className="flex-1 text-[12px] px-3 py-2 rounded-lg border border-(--border-subtle) bg-(--bg-soft) text-fg-muted hover:border-(--border-hover) hover:text-fg cursor-pointer transition-all duration-200"
+            className="flex-1 text-[12px] px-3 py-2 rounded-lg border border-(--accent-border) bg-(--accent-subtle) text-(--accent) cursor-pointer transition-all duration-200 hover:brightness-110"
           >
             한칸 밀기
           </button>

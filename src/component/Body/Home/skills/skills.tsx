@@ -3,11 +3,11 @@ import type { SkillTabType } from "./types";
 import {
   cardBase,
   sectionHeaderBase,
-  labelClass,
   sectionTitleClass,
   sectionSubTitleClass,
   tabButtonClass,
 } from "../../../../styles/tokens";
+import SectionMarker from "../../../common/SectionMarker";
 import StackTab from "./stack/StackTab";
 import CareerTab from "./career/CareerTab";
 import OpenSourceTab from "./opensource/OpenSourceTab";
@@ -36,9 +36,9 @@ const SkillsSection: React.FC = () => {
 
   return (
     <section id="skills" className="mb-20">
+      <SectionMarker number="03" label="Skills" />
       <div className={sectionHeaderBase}>
         <div>
-          <p className={labelClass}>Skills</p>
           <h2 className={sectionTitleClass}>경력 &amp; 전문성</h2>
         </div>
         <p className={sectionSubTitleClass}>

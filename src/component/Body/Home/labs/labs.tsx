@@ -2,12 +2,12 @@ import React, { Suspense } from "react";
 import { Link } from "react-router-dom";
 import {
   sectionHeaderBase,
-  labelClass,
   sectionTitleClass,
   sectionSubTitleClass,
 } from "../../../../styles/tokens";
 import { experiments } from "../../Lab/experiments";
 import ExperimentCard from "../../Lab/ExperimentCard";
+import SectionMarker from "../../../common/SectionMarker";
 
 // 모듈 로드 시 한 번만 랜덤 선택 (페이지 새로고침마다 변경)
 const shuffled = [...experiments].sort(() => Math.random() - 0.5);
@@ -17,9 +17,9 @@ export const WorkerLab: React.FC = () => {
 
   return (
     <section id="lab" className="mb-20">
+      <SectionMarker number="06" label="Lab" />
       <div className={sectionHeaderBase}>
         <div>
-          <p className={labelClass}>Lab</p>
           <h2 className={sectionTitleClass}>프론트엔드 실험실</h2>
         </div>
         <p className={sectionSubTitleClass}>
