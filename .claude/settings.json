@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls c:\\\\\\\\Users\\\\\\\\sure\\\\\\\\Desktop\\\\\\\\intern\\\\\\\\project\\\\\\\\99_npm\\\\\\\\portfolio)"
+    ]
+  }
+}

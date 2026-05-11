@@ -10,6 +10,7 @@ import BlogPage from "./component/Body/Blog/BlogPage";
 import BlogDetailPage from "./component/Body/Blog/BlogDetailPage";
 import ContactPage from "./component/Body/Contact/ContactPage";
 import LabPage from "./component/Body/Lab/LabPage";
+import MinimalPortfolio from "./component/Body/Minimal/MinimalPortfolio";
 
 type Theme = "light" | "dark";
 
@@ -80,6 +81,7 @@ const App: React.FC = () => {
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/lab" element={<LabPage />} />
+        <Route path="/minimal" element={<MinimalPortfolio />} />
       </Routes>
 
       {/* FOOTER */}
